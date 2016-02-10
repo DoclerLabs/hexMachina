@@ -1,2 +1,2 @@
-# hexMachinaFull
-Contains the full hexMachina project
+# hexMachinaBundle
+Contains the full hexMachina framework
