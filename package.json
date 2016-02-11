@@ -1,0 +1,28 @@
+{
+  "name": "hexmachina",
+  "version": "0.9.0",
+  "description": "Bundle package for hexMachina framework",
+  
+  "directories": {
+    "test": "test",
+	"src": "src"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoclerLabs/hexMachina.git"
+  },
+  "keywords": [
+    "mvc", 
+    "haxe",
+    "framework" 
+  ],
+  "author": "DoclerLabs",
+  "license": "ISC",
+  
+  "dependencies": {
+	"hexcore": "git+https://github.com/DoclerLabs/hexCore.git#master"
+  }
+}
