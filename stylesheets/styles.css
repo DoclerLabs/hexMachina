@@ -727,7 +727,7 @@ dt {
 }
 #header nav li a {
   color: white;
-  border: 1px solid #5d910b;
+  border: 1px solid #900000;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #93bd20), color-stop(100%, #659e10));
   background: -webkit-linear-gradient(#93bd20, #659e10);
   background: -moz-linear-gradient(#93bd20, #659e10);
