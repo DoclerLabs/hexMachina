@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section>
+
+  <div id="title">
+    <h1>{{ page.title }}</h1>
+    <h5>{{ page.secondary-title }}</h5>
+    <hr>
+    <span class="credits left">{% for tag in page.categories %}<a href="{{ site.url }}/categories/index.html#{{ page.categories | cgi_encode }}" data-toggle="tooltip" title="Other posts from the {{ tag | capitalize }} category" rel="tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}</span>
+  </div>
+
+  {{ content }}
+
+  <div class="page-navigation">
+    <div class="left">
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}" title="Previous Post:
+{{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+    </div>
+
+    <div class="right">
+      {% if page.next.url %}
+      <a href="{{page.next.url}}" title="next Post:
+{{page.next.title}}">{{page.next.title}} &raquo; </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
