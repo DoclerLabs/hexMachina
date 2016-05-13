@@ -10,7 +10,7 @@ title: hexMachina - Haxe multi-modular MVC framework
 email: info@hexmachina.org
 description: A powerful multi-modular MVC+S system written in Haxe
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://doclerlabs.github.io/hexMachina/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  DoclerLabs
 
