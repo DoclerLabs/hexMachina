@@ -1,5 +1,6 @@
 ---
 published: true
+layout: post
 ---
 ## Classical MVC Module Event mechanism
 
