@@ -1,6 +1,7 @@
 ---
 published: true
 layout: post
+title: ApplicationContext Event mechanism
 ---
 We have a strong DSL layer to manage multi-modular applications. You can see now some typical cases of event flows between modules, and the possible ways of communications.
 
