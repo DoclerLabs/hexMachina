@@ -1,11 +1,8 @@
 ---
 published: true
 layout: post
+title: Classical MVC Module Event mechanism
 ---
-# Classical MVC Module Event mechanism
-
-
-## Inroduction
 MVC was always a hype since the years 70', and hexMachina also have a classical implementation for this actitectural pattern. Let's see how it looks like in practice.
 
 _In this article my goal is not to to explain the principles of MVC, but more to describe the implementation and typical usage of it in hexMachina._
