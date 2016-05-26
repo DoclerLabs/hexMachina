@@ -41,8 +41,37 @@ This layer fills the mediator role between the MVC structure and the View itself
 It transform for example the click events to concrete business requests (like load a picture), and it converts the business information to a simple data for the view, that it can represent after.
 Also it managed the main manipulations of the view, so it also acts like a helper, to manage the view itself.
 
-#### Controller
+### Controller
+In the controller layer we we use command pattern to ensure noone tries to store any state here.
+We have basically two type of commands:
+- BasicCommand. That is a synchronous command
+- AsyncCommand. Usage is normally the same, but it can wait any async call's result, and after manage it.
+Uppon on the commands there is an extra layer, that we call Macro. These Macros are able to run a series of commands, so this way if you need to chain a lot of commands for an action, Macros are the right tools for doing it.
 
+### Service locator
+The Service locator is responsible to provide the API of the injected services inside the modules. Because we always put service implementations outside of the modules, we need a service locator, that can provide us the correct service insances when ie a Command want to inject them and use throug it's interface.
+Inside this layer we can find two types of services: 
+- StatefulService (ie. WebSocket)
+- StatelessService (ie. Http)
 
+### Front controller
+Let's say the Front controller is the heart of a module. Here you normally don't write any business logic, but this is the layer that is responsible to fire the commands through CommandExecutor, and this layer reacts to the events of the privateDispatcher of the Module.
+
+## Example flow
+So now as we have an overview of the different layers of the module, take an example event flow, that after you can follow on the above diagram.
+
+Let's imagine we have a gallery application and for a click event we need to load a new random picture from a Service. What should we do for this?
+
+1. The user triggers with his mouse a native `HTMLEvent.CLICK` on the `UI` (in our case let's assume he clicks on the image).
+2. We catch this natvie event in our `GalleryView` and forward this information as an abstract `ImageViewMessage.CLICK` (that we implemented, so it's independent from the platform that we use).
+3. The `GalleryViewHelper` catch this message and forward as a business request` GalleryMessage.LOAD_IMAGE` to the `privateDispatcher`.
+4. The `FrontControlle` runs the previously mapped `LoadGalleryImageMacro` for this message. Inside the Macro it runs through it's mapped commands.
+5. The `LoadRandomImageAsyncCommand` calls the `RandomImageStatelessService` and tells to it to load a new random image.
+6. The `RandomImageStatelessService` notifies the `LoadRandomImageAsyncCommand` about it's done.
+7. The `LoadGalleryImageMacro` goes to the second `UpdateGalleryImageCommand`, using the output of the previous AsyncCommand. And this command stores the new url information the the `GalleryModel`
+8. As the `GalleryMdel` gets the new url, it immediately notifies it's listeners about the change. So the `GalleryViewHelper` is notified about the change.
+9. The `GalleryViewHelper` tells the `GalleryView` to load the new image url.
+
+<br/>
 
 _Later in a different post, you can read more detailed information about the responsibilities of the layers, and it's tools. The goal was now to give an overview of the system parts and the communication between them.
