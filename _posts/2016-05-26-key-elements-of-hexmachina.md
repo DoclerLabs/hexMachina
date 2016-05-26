@@ -1,9 +1,8 @@
 ---
 published: true
 layout: post
+title: Key elements of the framework
 ---
-## Key elements of the framework
-
 Without the detailed descriptions, here are the key featured elements of hexMachina, that gives you great flexibility to fulfill your needs according to different problems.
 
  - Module 
