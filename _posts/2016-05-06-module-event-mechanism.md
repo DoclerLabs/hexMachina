@@ -62,7 +62,7 @@ So now as we have an overview of the different layers of the module, take an exa
 
 Let's imagine we have a gallery application and for a click event we need to load a new random picture from a Service. What should we do for this?
 
-1. The user triggers with his mouse a native `HTMLEvent.CLICK` on the `UI` (in our case let's assume he clicks on the image).
+1. The user triggers with his mouse a native `HTMLEvent.CLICK` on the image `UI` (in our case let's assume he clicks on the image).
 2. We catch this natvie event in our `GalleryView` and forward this information as an abstract `ImageViewMessage.CLICK` (that we implemented, so it's independent from the platform that we use).
 3. The `GalleryViewHelper` catch this message and forward as a business request` GalleryMessage.LOAD_IMAGE` to the `privateDispatcher`.
 4. The `FrontControlle` runs the previously mapped `LoadGalleryImageMacro` for this message. Inside the Macro it runs through it's mapped commands.
@@ -71,7 +71,13 @@ Let's imagine we have a gallery application and for a click event we need to loa
 7. The `LoadGalleryImageMacro` goes to the second `UpdateGalleryImageCommand`, using the output of the previous AsyncCommand. And this command stores the new url information the the `GalleryModel`
 8. As the `GalleryMdel` gets the new url, it immediately notifies it's listeners about the change. So the `GalleryViewHelper` is notified about the change.
 9. The `GalleryViewHelper` tells the `GalleryView` to load the new image url.
+10. The `GalleryView` sets the src parameter of the image `UI`, so we have the new image.
+
+Huh, we've survived! :) 
+So yes, as you see, there are a lot of steps, and we've heard a lot of times the typical question:
+Why do I need to make a lot of classes to just change an image?
+But if someones has ever experienced problems of code reuse, refactoring, testability, single responsibility, etc... so then he knows the answer, why... :)
 
 <br/>
 
-_Later in a different post, you can read more detailed information about the responsibilities of the layers, and it's tools. The goal was now to give an overview of the system parts and the communication between them.
+_Later in a different posts, you can read more detailed information about the responsibilities of the layers, and it's tools. The goal was now to give an overview of the system parts and the communication between them.
