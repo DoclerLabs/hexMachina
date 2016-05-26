@@ -7,3 +7,6 @@ We have a strong DSL layer to manage multi-modular applications. You can see now
 
 ## ApplicationContext flow diagram
 <a href="/images/hexMachina_ApplicationContext_Flow_Diagram.png" target="_blank">![Module Flow Diagram]({{site.baseurl}}/images/hexMachina_ApplicationContext_Flow_Diagram.png)</a>
+
+## Explanation
+Coming soon...
