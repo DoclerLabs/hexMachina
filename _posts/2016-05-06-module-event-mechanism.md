@@ -10,6 +10,7 @@ MVC was always a hype since the years 70', and hexMachina also have a classical 
 
 ### MVC flow diagram
 [![Module Flow Diagram](/images/hexMachina_Module_Flow_Diagram.png)](/images/hexMachina_Module_Flow_Diagram.png)
+<a href="example.com" target="_blank">New Tab</a>
 
 ### Explanation
 Before anyone would get scared of 11 steps of chain let me explain it in details. :)
