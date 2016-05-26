@@ -12,4 +12,4 @@ MVC was always a hype since the years 70', and hexMachina also have a classical 
 <a href="/images/hexMachina_Module_Flow_Diagram.png" target="_blank">![Module Flow Diagram]({{site.baseurl}}//images/hexMachina_Module_Flow_Diagram.png)</a>
 
 ### Explanation
-Before anyone would get scared of 11 steps of chain let me explain it in details. :)
+Before anyone would get scared of 11 steps of chain let me explain it in details.  :)
