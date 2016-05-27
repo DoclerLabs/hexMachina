@@ -267,19 +267,46 @@ section {
   }
 }
 
-.left {
-	display: block;
-	float:left; 
+.table_cell {
+	display: table-cell;
+	background-color: #1a1a1a;
 	width:33%;
-	padding: 0px 10px;
 	text-align:justify;
+	padding: 0px 10px 10px 10px;
 }
 
-.left.h3 {
+.spacer {
+	display: table-cell;
+	width: 20px;
+}
+
+.table
+{
+	display: table;
+}
+
+
+@media (max-width: 830px) {
+	.table_cell {
+		width:100%;
+		display: block;
+	}
+
+	.spacer {
+		display: none;
+	}
+
+	.table
+	{
+		display: block;
+	}
+}
+
+.table_cell h3 {
 	text-align: left;
 }
 
-.after_clear:after {
+.table:after {
 	content: '';
     display: block;
     clear: both;
@@ -294,6 +321,8 @@ section {
 .header_image img {
 	display: block;
 }
+
+
 
 @media print, screen and (max-width: 720px) {
 
