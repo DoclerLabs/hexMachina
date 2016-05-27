@@ -25,6 +25,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
+  clear: both;
 }
 
 p, ul, ol, table, pre, dl {
@@ -193,7 +194,6 @@ dt {
       display: inline-block;
       line-height: 36px;
       font-size: 12px;
-      text-transform: uppercase;
       color: rgba(#fff, .6);
       margin-right: 15px;
     }
@@ -202,7 +202,6 @@ dt {
       display: inline-block;
       line-height: 36px;
       font-size: 12px;
-      text-transform: uppercase;
       color: rgba(#fff, .6);
       margin: 0;
     }
@@ -322,7 +321,10 @@ section {
 	margin-top: 12px;
 }
 
-
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}
 
 @media print, screen and (max-width: 720px) {
 
