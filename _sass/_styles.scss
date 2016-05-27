@@ -291,15 +291,8 @@ section {
 	background-color: #1f3646;
 }
 
-.header_image {
-	background: url(/images/hexmachinalogo_darkened.jpg) 0 0 no-repeat;
-	
-	transition: background 1.5s linear;
-}
-
 .header_image img {
 	display: block;
-	visibility: hidden;
 }
 
 @media print, screen and (max-width: 720px) {
