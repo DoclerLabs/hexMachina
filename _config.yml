@@ -33,3 +33,4 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
+exclude: [".git", "hex*"]

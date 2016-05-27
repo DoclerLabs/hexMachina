@@ -91,7 +91,7 @@ strong {
 }
 
 .wrapper {
-  max-width:650px;
+  max-width:1050px;
   margin:0 auto;
   position:relative;
   padding: 0 20px;
@@ -170,7 +170,7 @@ dt {
 
 .wrapper {
   width: 100%;
-  max-width: 650px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -233,11 +233,11 @@ section {
   #title {
     border: 0;
     outline: none;
-    margin: 0 0 50px 0;
+    margin: 0 0 0px 0;
     padding: 0 0 5px 0;
 
     h1 {
-      text-align: center;
+      text-align: left;
       line-height: 1em;
       padding-bottom: 0;
       margin-bottom: 0;
@@ -265,6 +265,41 @@ section {
       }
     }
   }
+}
+
+.left {
+	display: block;
+	float:left; 
+	width:33%;
+	padding: 0px 10px;
+	text-align:justify;
+}
+
+.left.h3 {
+	text-align: left;
+}
+
+.after_clear:after {
+	content: '';
+    display: block;
+    clear: both;
+}
+
+.blue_ruler {
+	width: 100%;
+	height: 16px;
+	background-color: #1f3646;
+}
+
+.header_image {
+	background: url(/images/hexmachinalogo_darkened.jpg) 0 0 no-repeat;
+	
+	transition: background 1.5s linear;
+}
+
+.header_image img {
+	display: block;
+	visibility: hidden;
 }
 
 @media print, screen and (max-width: 720px) {
