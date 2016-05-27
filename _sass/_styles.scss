@@ -31,7 +31,7 @@ p, ul, ol, table, pre, dl {
   margin-bottom: 20px;
 }
 
-h1 { font-size: 2.5em; }
+h1 { font-size: 2.25em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.75em; }
 h4 { font-size: 1.5em; }
@@ -46,7 +46,6 @@ a {
   color: $color-yellow;
   font-weight: 400;
   text-decoration: none;
-  border-bottom: 1px dotted;
   transition: color 150ms ease;
 
   &:hover {
