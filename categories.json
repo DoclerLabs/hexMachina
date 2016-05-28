@@ -1,0 +1,17 @@
+---
+layout: none
+---
+
+{
+{% for page in site.pages %}
+	{% if page.category == true %}
+		"{{ page.id }}" : {
+			"id": {{ page.id }},
+			"title": "{{ page.title }}",
+			"url": "{{ site.url }}{{ page.url }}",
+			"icon": "{{ page.icon }}"
+		},
+	{% endif %}
+{% endfor %}
+	"nothing": {}
+}
