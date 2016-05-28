@@ -21,6 +21,14 @@ var disqus_title = threadName;
 var disqus_category_id = categoryId;
 var disqus_url = '{{ site.url }}/thread.html?thread=' + encodeURIComponent(qs['thread']) + '&category=' + categoryId;
 
+var discus_config = function()
+{
+	this.page.identifier = disqus_identifier;
+	this.page.title = disqus_title;
+	this.page.category_id = disqus_category_id;
+	this.page.url = disqus_url;
+}
+
 // Update the page based on the thread
 document.title = threadName + ' | ' + document.title;
 $('.thread-title').html(threadName);
