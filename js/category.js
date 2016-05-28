@@ -1,3 +1,5 @@
+---
+---
 var loadThreads = function(cursor){
 	$("#threads").html('');
 	$('#thread-loader').show();
