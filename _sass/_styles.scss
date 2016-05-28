@@ -175,10 +175,6 @@ dt {
 }
 
 #header {
-  z-index: 100;
-  position: fixed;
-  left:0;
-  top: 0px;
   width: 100%;
   background: url(../images/nav-bg.gif) #353535;
   border-bottom: 4px solid #434343;
@@ -217,12 +213,9 @@ dt {
 }
 
 section {
-  padding: 30px 0px 50px 0px;
-  margin: 20px 0;
+  padding: 0px 0px 50px 0px;
+  margin: 0px 0;
 
-  &:first-child {
-    margin-top: 70px;
-  }
 
   ul li {
     line-height: 2.4em;
