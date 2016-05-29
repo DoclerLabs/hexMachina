@@ -1,0 +1,9 @@
+-lib hexmachina
+-D doc-gen
+--no-output
+--macro include('hex')
+--each
+
+--next
+-xml bin/docs/js.xml
+-js bin/MainDoc.js

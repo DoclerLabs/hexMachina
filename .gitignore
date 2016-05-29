@@ -5,3 +5,5 @@ _site/
 Gemfile.lock
 .DS_Store
 hexMachina.hxproj
+build/.haxelib/
+build/bin/docs/js.xml
