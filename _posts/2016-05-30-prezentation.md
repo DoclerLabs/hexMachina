@@ -1,6 +1,7 @@
 ---
 published: true
 title: Structural prezentation
+layout: post
 ---
 Here is an online prezentation of the structure of the framework.
 
