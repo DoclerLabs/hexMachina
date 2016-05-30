@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Structural prezentation
 ---
 Here is an online prezentation of the structure of the framework.
