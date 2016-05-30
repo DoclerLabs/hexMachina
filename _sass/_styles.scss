@@ -322,6 +322,49 @@ section {
 	}
 }
 
+.clear {
+	clear: both;
+}
+
+.blog_box {
+	display: table;
+	width: 100%;
+	margin: 10px;
+	background: #191919;
+	border-spacing: 10px;
+	position: relative;
+	
+	.post_content {
+		display: table-cell;
+		background: #191919;
+		padding: 0 100px 10px 10px;
+		
+		h1 {
+			padding-top: 0;
+			margin: 0;
+		}
+	}
+	
+	.circle
+    {
+		width:80px;
+		height:80px;
+		border-radius:40px;
+		border: 2px solid #7FABE6;
+		font-size:12px;
+		color:#fff;
+		font-weight: bold;
+		line-height:80px;
+		text-align:center;
+		background:#4679BD;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+    }
+}
+
+
+
 @media (max-width: 830px) {
 	.blue_ruler {
 		a {

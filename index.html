@@ -24,8 +24,8 @@ latest: "/downloads/framework/hexMachina-framework-v0.2.5.zip"
 	
 	<div class="table_cell">
 		<h3>Try it!</h3>
-		<center>
 		Install from command line (recommended):<br/>
+		<center>
 		<code>haxelib install hexmachina</code><br/><br/>
 		<a href="{{ page.latest }}" class="btn">Download Latest</a>
 		</center>
@@ -41,21 +41,21 @@ latest: "/downloads/framework/hexMachina-framework-v0.2.5.zip"
 		<li>Follow and read our website for updates.</li>
 	</ul>
 <hr/>
-</section>
-<section>
 
 {% for post in site.posts %}
-
-      <div id="title">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	<div class="blog_box">
+      <div class="post_content">
+		<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 		{% if post.secondary-title != null %}
         <h5>{{ post.secondary-title }}</h5>
 		{% endif %}
 		<br/>
-		{{ post.date | date: '%B %d, %Y' }}
-        <hr>
+		{{ post.excerpt }}
+		<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="btn">Read more</a>
       </div>
-      {{ post.excerpt }}
-      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Read more</a>
+	  <div class="circle">{{ post.date | date: '%B %d' }}</div>
+	</div>
 {% endfor %}
+
+<div class="clear"> </div>
 </section>
