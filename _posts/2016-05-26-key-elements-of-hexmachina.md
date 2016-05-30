@@ -9,7 +9,6 @@ Without the detailed descriptions, here are the key featured elements of hexMach
 	 - Model layer 
 		 - Model 
 		 - ModelDispatcher 
-		 - VO 
 		 - Model Interfaces
 			 - IModel
 			 - IModelRO
@@ -17,14 +16,16 @@ Without the detailed descriptions, here are the key featured elements of hexMach
 	 - View layer
 		 - ViewHelper
 		 - View (implements IView)
-		 - UI 
 		 - ViewHelperManager
 	 - Controller layer 
 		 - Command 
+		 - Order
 		 - AsyncCommand 
+		 - Payloads/PayloadEvent
 		 - Macro 
 			 - MacroExecutor 
 		 - Guard
+		 - Controller/s
 		 - FrontController
 			 - CommandExecutor 
 	 - Service layer 
@@ -37,34 +38,57 @@ Without the detailed descriptions, here are the key featured elements of hexMach
 			 - CommandConfiguration 
 			 - ModuleConfiguration
 		 - Stateful 
-			 - ServiceLocator 
+			 - MappingConfiguration 
+			 - ServiceLocator
 			 - ApplicationContext 
  - DSL
 	 - Instantiation 
 	 - Properties 
 	 - Method call 
-	 - EventType registration 
+	 - MessageType registration 
 	 - Injection
 		 - by DSL 
 		 - by Injector 
+	- Implementation
+		- Compiler
+			- XmlCompiler
+			- CompileTimeApplicationAssembler
+			- CompileTimeContextFactory
+			- Factories
+		- Reader
+			- XmlReader
+			- ApplicationAssembler
+			- ContextFactory
+			- Factories
 	 - XML description 
 		 - Flat structure 
 		 - Instantiation
 		 - Properties 
 		 - Method call 
-		 - EventType registration 
+		 - MessageType registration 
 		 - Map to injector 
-		 - Staticreferencing 
+		 - Static referencing 
+		 - States
+		 - Conditional Parsing
+		 - Pre-processing
 	 - Communication 
 		 - Direct communication 
 		 - Strategy
 			 - AdapterStrategy 
 			 - MacroStrategy 
+			 - EventProxy
+			 - Event trigger
 		 - ApplicationDomainDispatcher 
  - Injector
 	 - Property injection
 	 - Constructor injection
 	 - Method injection
- - AnnotationProvider
- - Dispatcher 
+ - AnnotationProvider aka 'gipsy injections'
+ - Two event systems with many implementations
+ - Logging API
+ - 
  - StateMachine
+ 	- Controller
+ 	- Enter/exit commands
+ 	- Execution scope (context or module)
+ 	- Custom states from a context
