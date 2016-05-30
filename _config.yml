@@ -33,7 +33,7 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
-exclude: [".git", "hex*"]
+exclude: [".git", "hex*", "build.bat", "build"]
 
 disqus_shortname: hexmachina
 disqus_publickey: nB9WCx4oEOsvmKPvKtoGtIxp2xre054EU7c7kqHyn09BoP1skkTDw109FXJSAOVJ

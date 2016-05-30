@@ -322,6 +322,15 @@ section {
 	}
 }
 
+@media (max-width: 830px) {
+	.blue_ruler {
+		a {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}
+
 .header_image {
 	display: block;
 	margin-top: 12px;
