@@ -1,9 +1,16 @@
 -lib hexmachina
 -D doc-gen
 --no-output
---macro include('hex')
 --each
 
 --next
 -xml bin/docs/js.xml
+--macro include('hex', true, ["hex.unittest.matcher.object.IsDeepEqual"])
 -js bin/MainDoc.js
+
+#TODO: make flash documentation too
+#--next
+#-xml bin/docs/flash.xml
+#-swf bin/MainDoc.swf
+#--macro include('hex', true, ["hex.unittest.matcher.object.IsDeepEqual", "hex.log.layout.JavaScriptConsoleLayout", "hex.log.layout.LogLayoutHTMLView", "hex.log.layout.SimpleBrowserLayout"])
+#-swf-version 12.0
