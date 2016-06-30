@@ -1,0 +1,118 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+$c1: #FFF;
+$c2: #e0e6ee;
+$c3: #1a467f;
+$c4: #d1dae5;
+$c5: #f42233;
+$c6: #262c35;
+$c7: #1c1c1c;
+
+$actionButtonBottomGradient: #a7121d;
+$actionButtonTopGradient: #de2432;
+
+// FONTS //
+// thin = 100, light 300, regular 400, bold 700
+
+body {
+	font-family: "Lato";
+	.btn {
+		&.action-btn {
+			color: $c1 !important;
+			background: $actionButtonBottomGradient;
+			background: -moz-linear-gradient(top,  $actionButtonBottomGradient 0%, $actionButtonTopGradient 0%, #de2432 0%, $actionButtonBottomGradient 100%);
+			background: -webkit-linear-gradient(top,  $actionButtonBottomGradient 0%,$actionButtonTopGradient 0%,#de2432 0%,$actionButtonBottomGradient 100%);
+			background: linear-gradient(to bottom,  $actionButtonBottomGradient 0%,$actionButtonTopGradient 0%,#de2432 0%,$actionButtonBottomGradient 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7121d', endColorstr='#a7121d',GradientType=0 );
+			padding: 12px 27px 14px;
+			font: 700 18px 'Lato';
+			border-radius: 25px;
+			outline: none !important;
+		}
+	}
+	&.ui {
+		background: $c2;
+		.blog-posts {
+			padding: 20px 0;
+			.blog-post {
+				float: none;
+				margin: auto;
+			}
+		}
+		.container {
+			margin-bottom: 100px;
+		}
+	}
+	.blog-post {
+		background: $c1;
+		border-radius: 10px;
+		color: $c3;
+		padding: 0;
+		img {
+			border-radius: 10px 10px 0 0;
+			width: 100%;
+		}
+		&.fixed {
+			width: 785px;
+		}
+		.content {
+			padding: 40px 33px 30px;
+		}
+		h2 {
+			font: 300 30px 'Lato';
+			margin: 7px 0 14px;
+		}
+		p {
+			color: $c6;
+			font: 300 20px 'Lato';
+			margin: 15px 0 27px;
+			a {
+				font-weight: 700;
+			}
+		}
+		time {
+			font: 700 19px 'Lato';
+		}
+		.category {
+			color: $c5;
+			float: right;
+			font: 700 19px 'Lato';
+		}
+		.tags {
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				margin: 0 0 10px;
+				&.first-child {
+					padding: 0 8px 0;
+				}
+				a {
+					border: 1px solid $c4;
+					border-radius: 11px;
+					margin: 0 2px 0;
+					padding: 0 8px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	hr.divider {
+		display: inline-block;
+		border: 2px solid $c5;
+		max-width: 36px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.navbar {
+		padding: 55px 0;
+		background: $c7;
+		border: 0;
+		.navbar-brand {
+			padding: 0;
+		}
+	}
+}
