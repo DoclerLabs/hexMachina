@@ -13,3 +13,4 @@
 3. Header Size change after scroll
 4. Parallax
 5. Carousel full round
+6. Create&Setup pages
