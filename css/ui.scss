@@ -9,6 +9,7 @@ $c4: #d1dae5;
 $c5: #f42233;
 $c6: #262c35;
 $c7: #1c1c1c;
+$c8: #e8ecf2;
 
 $actionButtonBottomGradient: #a7121d;
 $actionButtonTopGradient: #de2432;
@@ -18,6 +19,7 @@ $actionButtonTopGradient: #de2432;
 
 body {
 	font-family: "Lato";
+	background: $c8;
 	.btn {
 		&.action-btn {
 			color: $c1 !important;
@@ -108,11 +110,21 @@ body {
 		padding: 0;
 	}
 	.navbar {
+		height: 160px;
 		padding: 55px 0;
 		background: $c7;
 		border: 0;
 		.navbar-brand {
 			padding: 0;
+		}
+		.container {
+			padding: 0;
+		}
+	}
+	.hex-machina-banner {
+		margin-top: 160px;
+		img {
+			width: 100%;
 		}
 	}
 }
