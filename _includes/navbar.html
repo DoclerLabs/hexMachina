@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><img src="/img/hex-machina-logo.png"/></a>
+			<a class="navbar-brand" href="/"><img src="/img/hex-machina-logo.png"/></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,12 +17,12 @@
 				<li class="hidden">
 					<a href="#"></a>
 				</li>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Docs</a></li>
-				<li><a href="#">Downloads</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Roadmap</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/docs/getstarted" {% if page.url contains "/docs" %}class="active"{% endif %}>Docs</a></li>
+				<li><a href="/downloads" {% if page.url contains "/downloads" %}class="active"{% endif %}>Downloads</a></li>
+				<li><a href="/blog" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>
+				<li><a href="/roadmap" {% if page.url contains "/roadmap" %}class="active"{% endif %}>Roadmap</a></li>
+				<li><a href="/help" {% if page.url contains "/help" %}class="active"{% endif %}>Help</a></li>
 				{% if site.github_username %}
 				<li>
 					<a href="https://github.com/{{ site.github_username }}" class="btn action-btn">View on GitHub</a>

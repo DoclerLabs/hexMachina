@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="container">
+	<div class="docs_wrapper">
+		<div class="col-lg-8">
+			{{ content }}
+		</div>
+		<div class="col-lg-4">
+			<ul class="vertical_menu">
+				<li><a href="/docs/getstarted" {% if page.url contains "/getstarted" %}class="active"{% endif %}>Get started</a></li>
+				<li><a href="/docs/codesamples" {% if page.url contains "/codesamples" %}class="active"{% endif %}>Code Samples</a></li>
+				<li><a href="/docs/examples" {% if page.url contains "/examples" %}class="active"{% endif %}>Example applications</a></li>
+				<li><a href="/docs/tutorials" {% if page.url contains "/tutorials" %}class="active"{% endif %}>Tutorials</a></li>
+				<li><a href="/docs/api">API documentation</a></li>
+				<li><a href="/docs/tools" {% if page.url contains "/tools" %}class="active"{% endif %}>Tools & Libraries</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
