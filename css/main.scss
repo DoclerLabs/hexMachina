@@ -2,4 +2,7 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import 'font-awesome.min.css', 'bootstrap.min.css', 'ui.css', 'global.css';
+@import 'font-awesome.min.css', 'bootstrap.min.css', 'ui.css', 'global.css', 'docs.css';
+@import '../lib/codemirror/codemirror.css';
+@import '../lib/codemirror/theme/3024-night.css';
+@import '../lib/codemirror/theme/second-gray.css';

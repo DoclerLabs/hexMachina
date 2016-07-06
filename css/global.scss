@@ -21,4 +21,53 @@ body {
 			text-decoration: none;
 		}
 	}
+	.site_wrapper {
+		margin-top: 160px;
+	}
+	.vertical_menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 300px;
+		background-color: #ffffff;
+		font-size: 26px;
+
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		li {
+			a {
+				display: block;
+				color: #1a467f;
+				padding: 8px 0 8px 16px;
+				text-decoration: none;
+				&.active{
+					background-color: #1a467f;
+					color: #ffffff;
+				}
+			}
+			&:last-child {
+				a {
+					-webkit-border-radius: 0 0 5px 5px;
+					-moz-border-radius: 0 0 5px 5px;
+					border-radius: 0 0 5px 5px;
+				}
+			}
+			&:first-child {
+				a {
+					-webkit-border-radius: 5px 5px 0 0;
+					-moz-border-radius: 5px 5px 0 0;
+					border-radius: 5px 5px 0 0;
+				}
+			}
+		}
+	}
+	h2 {
+		font-size: 40px;
+		color: #1a467f;
+	}
+	h3 {
+		font-size: 26px;
+		color: #1a467f;
+	}
 }
