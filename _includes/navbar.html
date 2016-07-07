@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/"><img src="/img/hex-machina-logo.png"/></a>
+			<a class="navbar-brand" href="/"><img src="/img/hex-machina-logo.png" alt="hexMachina" /></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,7 +17,7 @@
 				<li class="hidden">
 					<a href="#"></a>
 				</li>
-				<li><a href="/">Home</a></li>
+				<li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
 				<li><a href="/docs/getstarted" {% if page.url contains "/docs" %}class="active"{% endif %}>Docs</a></li>
 				<li><a href="/downloads" {% if page.url contains "/downloads" %}class="active"{% endif %}>Downloads</a></li>
 				<li><a href="/blog" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>

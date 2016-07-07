@@ -1,0 +1,38 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+header {
+	.navbar {
+		height: 160px;
+		padding: 55px 0 0;
+		background: #1c1c1c;
+		border: 0;
+		.navbar-brand {
+			padding: 0;
+			margin-left: 0 !important;
+		}
+		.navbar-right {
+			margin-right: 0;
+		}
+		li {
+			a {
+				padding: 15px 25px;
+				font-size: 20px;
+				color: #FFFFFF !important;
+
+				&.active {
+					color: #f42233 !important;
+				}
+			}
+			&:last-child a {
+				margin: 5px 0 0 13px;
+			}
+		}
+		.action-btn {
+			height: 40px;
+			font: 700 16px/40px 'Lato';
+			padding: 0 20px;
+		}
+	}
+}

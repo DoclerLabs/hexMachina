@@ -1,0 +1,19 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+.hex-machina-banner {
+	position: relative;
+	.banner-text {
+		width: 50%;
+		height: 240px;
+		position: absolute;
+		top: calc(50% - 120px);
+		.btn {
+			margin-top: 20px;
+		}
+	}
+	img {
+		width: 100%;
+	}
+}

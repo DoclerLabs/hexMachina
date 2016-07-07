@@ -1,53 +1,90 @@
 <!-- Footer -->
 <footer class="text-center">
-    <div class="footer-above">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col col-md-4">
-                    <h3>Location</h3>
-                    <p>{{ site.address_street }}
-                        <br>{{ site.address_city }}, {{ site.address_state }} {{ site.address_zip }}</p>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
-                    <ul class="list-inline">
-                        {% if site.facebook_username %}
-                        <li>
-                            <a href="https://www.facebook.com/{{ site.facebook_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.twitter_username %}
-                        <li>
-                            <a href="https://twitter.com/{{ site.twitter_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.github_username %}
-                        <li>
-                            <a href="https://github.com/{{ site.github_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>About {{ site.title }}</h3>
-                    <p><a href="#"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-below">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    Copyright &copy; Your Website {{ site.time | date: "%Y" }}
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="footer-above">
+		<div class="container">
+
+					<div class="banner-text">
+						<h1>Let’s get started!</h1>
+						<h4>Fusce iaculis ultrices ipsum, sit amet elementum nisi scelerisque id.<br>Nulla ullamcorper quis sapien ac tristique.</h4>
+						<button type="button" class="btn action-btn">Get started hexMachina</button>
+					</div>
+		</div>
+		<img class="img-responsive" src="/img/hex-machina-get-started-bg.jpg">
+	</div>
+	<div class="footer-below">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<h5>Copyright &copy; Your Website {{ site.time | date: "%Y" }}</h5>
+					<ul class="nav">
+						<li><a href="#">Follow on GitHub</a></li>
+						<li><a href="#">Like on Facebook</a></li>
+						<li><a href="#">Subscribe via RSS</a></li>
+					</ul>
+					<ul class="list-inline">
+						{% if site.facebook_username %}
+						<li>
+							<a href="https://www.facebook.com/{{ site.facebook_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+						</li>
+						{% endif %}
+						{% if site.twitter_username %}
+						<li>
+							<a href="https://twitter.com/{{ site.twitter_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+						</li>
+						{% endif %}
+						{% if site.github_username %}
+						<li>
+							<a href="https://github.com/{{ site.github_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+				<div class="col-lg-2">
+					<div class="col-roadmap">
+						<h5>Roadmap</h5>
+						<ul class="nav">
+							<li><a href="#">Docs</a></li>
+							<li><a href="#">Downloads</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Roadmap</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<img src="/img/hex-machina-footer-logo.png" alt="hexMachina" />
+				</div>
+				<div class="col-lg-2">
+					<div class="col-docs">
+						<h5>Docs</h5>
+						<ul class="nav">
+							<li><a href="#">Get started</a></li>
+							<li><a href="#">Code samples</a></li>
+							<li><a href="#">Example applications</a></li>
+							<li><a href="#">Tutorials</a></li>
+							<li><a href="#">API documentation</a></li>
+							<li><a href="#">Tools & Libraries</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="col-facebook">
+						<h5>Contact us on Facebook</h5>
+						<ul class="nav">
+							<li><a href="#">Francis Bourre</a></li>
+							<li><a href="#">Balazs Zubak</a></li>
+							<li><a href="#">Laurent Deketelaere</a></li>
+							<li><a href="#">@DoclerLabs</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-    <a class="btn btn-primary" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-    </a>
+	<a class="btn btn-primary" href="#page-top">
+		<i class="fa fa-chevron-up"></i>
+	</a>
 </div>
