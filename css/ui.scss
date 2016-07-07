@@ -28,10 +28,12 @@ body {
 			background: -webkit-linear-gradient(top,  $actionButtonBottomGradient 0%,$actionButtonTopGradient 0%,#de2432 0%,$actionButtonBottomGradient 100%);
 			background: linear-gradient(to bottom,  $actionButtonBottomGradient 0%,$actionButtonTopGradient 0%,#de2432 0%,$actionButtonBottomGradient 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7121d', endColorstr='#a7121d',GradientType=0 );
-			padding: 12px 27px 14px;
-			font: 700 18px 'Lato';
+			padding: 0 28px;
+			height: 50px;
+			font: 700 18px/50px 'Lato';
 			border-radius: 25px;
 			outline: none !important;
+			border: 0;
 		}
 	}
 	&.ui {

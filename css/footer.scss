@@ -1,0 +1,58 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+footer {
+	.footer-above {
+		position: relative;
+		padding-top: 0 !important;
+		.banner-text {
+			text-align: center;
+			width: 50%;
+			height: 240px;
+			position: absolute;
+			top: calc(50% - 120px);
+			left: 25%;
+			.btn {
+				margin-top: 20px;
+			}
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	.footer-below {
+		height: 300px;
+		padding-top: 46px !important;
+		background: url(../img/hex-machina-footer-bg.jpg) top center;
+		text-align: left;
+		img {
+			display: block;
+			margin: 26px auto 0;
+			padding-right: 7px;
+		}
+		.nav {
+			li {
+				padding: 2px 0 3px;
+				a {
+					padding: 0;
+					color: #aacfff;
+					display: inline;
+					&:hover {
+						background: none;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+		.col-roadmap {
+			padding-left: 35%;
+		}
+		.col-docs {
+			padding-left: 38%;
+		}
+		.col-facebook {
+			padding-left: 24%;
+		}
+	}
+}
