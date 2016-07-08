@@ -2,18 +2,131 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-.hex-machina-banner {
+.home-section {
+	background: #dde3ec;
+	background: -moz-linear-gradient(top, #ffffff 0%, #dde3ec 0%, #dde3ec 0%, #ffffff 100%);
+	background: -webkit-linear-gradient(top,  #ffffff 0%, #dde3ec 0%,#dde3ec 0%, #ffffff 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#dde3ec 0%,#dde3ec 0%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dde3ec', endColorstr='#ffffff',GradientType=0 );
+
+	.col-left {
+		padding-right: 30px;
+	}
+	.col-right {
+		padding-left: 30px;
+	}
+	h2 {
+		margin-bottom: 12px;
+		color: #122556;
+		text-transform: none;
+		font-size: 40px;
+		font-weight: 300;
+	}
+	h6 {
+		margin: 18px 0 0;
+		color: #1a467f;
+		text-transform: none;
+		font-size: 26px;
+	}
+	p {
+		margin-top: 18px;
+		color: #262c35;
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 32px;
+		&.text-small {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		&.code {
+			margin-top: 5px;
+			font: normal 20px/20px "Courier New";
+			color: #aacfff;
+		}
+	}
+	a {
+		color: #f42233;
+		font-size: 26px;
+		font-weight: 300;
+	}
+}
+
+.banner-section {
+	padding: 0;
 	position: relative;
 	.banner-text {
 		width: 50%;
-		height: 240px;
 		position: absolute;
-		top: calc(50% - 120px);
+		top: calc(50% - 172px);
 		.btn {
-			margin-top: 20px;
+			margin-top: 25px;
 		}
 	}
 	img {
 		width: 100%;
+	}
+}
+
+.news-section {
+	padding: 50px 0;
+	.more {
+		text-align: center;
+		hr {
+			margin: 40px 0 20px;
+		}
+	}
+}
+
+.carousel-section {
+	padding: 0;
+	position: relative;
+	text-align: center;
+	.banner-text {
+		width: 70%;
+		position: absolute;
+		top: 25%;
+		left: 15%;
+	}
+	img {
+		width: 100%;
+	}
+	h4 {
+		font-weight: 100;
+		font-size: 40px;
+		line-height: 50px;
+		text-transform: none;
+	}
+	p {
+		margin: 20px 0 0;
+		font-size: 20px;
+		color: #aacfff;
+		text-transform: uppercase;
+	}
+	span {
+		font-size: 16px;
+		color: #FFFFFF;
+	}
+
+	nav {
+		position: absolute;
+		width: 50%;
+		left: 25%;
+		bottom: 30px;
+		span {
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+			border: 2px solid #aacfff;
+			border-radius: 12px;
+			margin: 0 5px;
+			&:hover {
+				background: #aacfff;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+			&.active {
+				background: #aacfff;
+			}
+		}
 	}
 }
