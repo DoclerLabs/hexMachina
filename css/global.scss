@@ -22,31 +22,48 @@ body {
 			text-decoration: none;
 		}
 	}
+	a, a:hover, a:focus, a:active, a.active {
+		color: #f42233;
+	}
 	.site-wrapper {
 		margin-top: 160px;
-	}
-	section {
-		padding: 0;
 	}
 	.container {
 		padding: 0;
 	}
+	.row {
+		margin: 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Lato';
+	}
 	h1 {
-		font-family: "Lato";
 		color: #FFFFFF;
 		font-weight: 100;
 		font-size: 60px;
+		line-height: 72px;
 		text-transform: none;
+		margin-bottom: 25px;
+	}
+	h2 {
+		font-size: 40px;
+		color: #1a467f;
+	}
+	h3 {
+		font-size: 26px;
+		color: #1a467f;
 	}
 	h4 {
-		font-family: "Lato";
 		color: #FFFFFF;
 		font-size: 20px;
+		line-height: 24px;
+		span {
+			color: #f42233;
+		}
 	}
 	h5 {
-		font-family: "Lato";
 		color: #FFFFFF;
-		font-weight: 100;
+		font-weight: 300;
 		font-size: 19px;
 		text-transform: none;
 	}
@@ -94,13 +111,5 @@ body {
 				}
 			}
 		}
-	}
-	h2 {
-		font-size: 40px;
-		color: #1a467f;
-	}
-	h3 {
-		font-size: 26px;
-		color: #1a467f;
 	}
 }

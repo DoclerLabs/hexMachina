@@ -54,6 +54,15 @@ body {
 		border-radius: 10px;
 		color: $c3;
 		padding: 0;
+		box-shadow: 0 20px 15px rgba(26,70,127, 0.1);
+		&.col-lg-6:nth-child(odd) {
+			margin-left: 15px;
+			width: calc(50% - 15px);
+		}
+		&.col-lg-6:nth-child(even) {
+			margin-right: 15px;
+			width: calc(50% - 15px);
+		}
 		img {
 			border-radius: 10px 10px 0 0;
 			width: 100%;
@@ -62,27 +71,32 @@ body {
 			width: 785px;
 		}
 		.content {
-			padding: 40px 33px 30px;
+			padding: 40px 40px 30px;
 		}
 		h2 {
 			font: 300 30px 'Lato';
 			margin: 7px 0 14px;
+			color: #1a467f;
 		}
 		p {
 			color: $c6;
 			font: 300 20px 'Lato';
 			margin: 15px 0 27px;
 			a {
+				color: #1a467f;
+				font-size: 20px;
 				font-weight: 700;
 			}
 		}
 		time {
-			font: 700 19px 'Lato';
+			font: 700 16px 'Lato';
+			text-transform: uppercase;
 		}
 		.category {
 			color: $c5;
 			float: right;
-			font: 700 19px 'Lato';
+			font: 700 16px 'Lato';
+			text-transform: uppercase;
 		}
 		.tags {
 			margin: 0;
@@ -94,11 +108,13 @@ body {
 					padding: 0 8px 0;
 				}
 				a {
-					border: 1px solid $c4;
+					border: 2px solid $c4;
 					border-radius: 11px;
 					margin: 0 2px 0;
-					padding: 0 8px;
-					font-weight: bold;
+					padding: 2px 10px 3px;
+					font-size: 12px;
+					font-weight: 700;
+					color: #1a467f;
 				}
 			}
 		}
