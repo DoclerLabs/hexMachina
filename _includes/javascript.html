@@ -2,3 +2,22 @@
 <script src="/lib/codemirror/codemirror.js"></script>
 <!-- Code Mirror Haxe mode-->
 <script src="/lib/codemirror/mode/haxe/haxe.js"></script>
+
+<script>
+	var elements = document.getElementsByClassName("code-haxe");
+	for(var i=0; i<elements.length; i++) {
+		var editor = CodeMirror.fromTextArea(elements[i], {
+			mode: "haxe",
+			lineNumbers: true,
+			theme: "second-gray",
+			lineWrapping: true,
+			extraKeys: {
+				"Ctrl-Q": function (cm) {
+					cm.foldCode(cm.getCursor());
+				}
+			},
+			foldGutter: true,
+			gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+		});
+	}
+</script>

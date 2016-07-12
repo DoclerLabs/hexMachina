@@ -26,7 +26,24 @@ body {
 		color: #f42233;
 	}
 	.site-wrapper {
-		margin-top: 160px;
+		margin-top: 220px;
+		margin-bottom: 60px;
+	}
+	p {
+		margin: 18px 0;
+		color: #262c35;
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 32px;
+		&.text-small {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		&.code {
+			margin-top: 5px;
+			font: normal 20px/20px "Courier New";
+			color: #aacfff;
+		}
 	}
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Lato';
@@ -40,12 +57,16 @@ body {
 		margin-bottom: 25px;
 	}
 	h2 {
+		margin-top: 0;
 		font-size: 40px;
+		font-weight: 400;
 		color: #1a467f;
+		text-transform: none;
 	}
 	h3 {
 		font-size: 26px;
 		color: #1a467f;
+		text-transform: none;
 	}
 	h4 {
 		color: #FFFFFF;
@@ -62,6 +83,7 @@ body {
 		text-transform: none;
 	}
 	.vertical_menu {
+		float: right;
 		list-style-type: none;
 		margin: 0;
 		padding: 20px 0;
