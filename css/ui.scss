@@ -55,14 +55,6 @@ body {
 		color: $c3;
 		padding: 0;
 		box-shadow: 0 20px 15px rgba(26,70,127, 0.1);
-		&.col-lg-6:nth-child(odd) {
-			margin-left: 15px;
-			width: calc(50% - 15px);
-		}
-		&.col-lg-6:nth-child(even) {
-			margin-right: 15px;
-			width: calc(50% - 15px);
-		}
 		img {
 			border-radius: 10px 10px 0 0;
 			width: 100%;
