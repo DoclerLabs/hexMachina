@@ -8,7 +8,7 @@
 
 */
 
-.cm-s-second-gray.CodeMirror { background: transparent; height: auto; font-size: 20px; }
+.cm-s-second-gray.CodeMirror { background: transparent; height: auto; font-size: 20px; line-height: 26px; }
 /*.cm-s-second-gray div.CodeMirror-selected { background: #3a3432; }*/
 /*.cm-s-second-gray .CodeMirror-line::selection, .cm-s-second-gray .CodeMirror-line > span::selection, .cm-s-second-gray .CodeMirror-line > span > span::selection { background: rgba(58, 52, 50, .99); }*/
 /*.cm-s-second-gray .CodeMirror-line::-moz-selection, .cm-s-second-gray .CodeMirror-line > span::-moz-selection, .cm-s-second-gray .CodeMirror-line > span > span::-moz-selection { background: rgba(58, 52, 50, .99); }*/

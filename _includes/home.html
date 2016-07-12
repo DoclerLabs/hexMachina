@@ -51,7 +51,7 @@
 			<div class="col-lg-6 col-left">
 				<h6>hexMVC</h6>
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern. Lightweight experimental MVP is provided as well.</p>
-				<textarea name="code-haxe" id="code-haxe1" class="cm-s-second-gray">
+				<textarea class="code-haxe cm-s-second-gray">
 	for (name in people.keys()) {
 		var job = people[name];
 		trace('$name does $job for a living!');
@@ -61,7 +61,7 @@
 			<div class="col-lg-6 col-right">
 				<h6>hexInject</h6>
 				<p class="text-small">Powerful and easy-to-use Dependency Injection system based on @annotations. It supports property, method and constructor injections predefined in injector mappings.mocking and assertion system. FlexUnit and JUnit like syntax.</p>
-				<textarea name="code-haxe" id="code-haxe2" class="cm-s-second-gray">
+				<textarea class="code-haxe cm-s-second-gray">
 	for (name in people.keys()) {
 		var job = people[name];
 		trace('$name does $job for a living!');
@@ -73,7 +73,7 @@
 			<div class="col-lg-6 col-left">
 				<h6>hexIoC</h6>
 				<p class="text-small">Inverion of Control system to make multi-modular applications. With this layer you can have an extremely powerful DSL layer (Domain Specific Language), where you can connect togethet any modules, componends of your system and make them working together.</p>
-				<textarea name="code-haxe" id="code-haxe3" class="cm-s-second-gray">
+				<textarea class="code-haxe cm-s-second-gray">
 	for (name in people.keys()) {
 		var job = people[name];
 		trace('$name does $job for a living!');
@@ -83,7 +83,7 @@
 			<div class="col-lg-6 col-right">
 				<h6>hexUnit</h6>
 				<p class="text-small">Extendable UnitTest runner with the basic assertions. It works well together with any mocking and assertion system. FlexUnit and JUnit like syntax.</p>
-				<textarea name="code-haxe" id="code-haxe4" class="cm-s-second-gray">
+				<textarea class="code-haxe cm-s-second-gray">
 	for (name in people.keys()) {
 		var job = people[name];
 		trace('$name does $job for a living!');
@@ -164,42 +164,3 @@
 		</div>
 	</div>
 </section>
-
-<script>
-	var editor1 = CodeMirror.fromTextArea(document.getElementById("code-haxe1"), {
-		mode: "haxe",
-		lineNumbers: true,
-		theme: "second-gray",
-		lineWrapping: true,
-		extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
-		foldGutter: true,
-		gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-	});
-	var editor2 = CodeMirror.fromTextArea(document.getElementById("code-haxe2"), {
-		mode: "haxe",
-		lineNumbers: true,
-		theme: "second-gray",
-		lineWrapping: true,
-		extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
-		foldGutter: true,
-		gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-	});
-	var editor3 = CodeMirror.fromTextArea(document.getElementById("code-haxe3"), {
-		mode: "haxe",
-		lineNumbers: true,
-		theme: "second-gray",
-		lineWrapping: true,
-		extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
-		foldGutter: true,
-		gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-	});
-	var editor4 = CodeMirror.fromTextArea(document.getElementById("code-haxe4"), {
-		mode: "haxe",
-		lineNumbers: true,
-		theme: "second-gray",
-		lineWrapping: true,
-		extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
-		foldGutter: true,
-		gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
-	});
-</script>

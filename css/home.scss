@@ -2,6 +2,11 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+.home-wrapper {
+	margin-top: 160px !important;
+	margin-bottom: 0 !important;
+}
+
 .home-section {
 	background: #dde3ec;
 	background: -moz-linear-gradient(top, #ffffff 0%, #dde3ec 0%, #dde3ec 0%, #ffffff 100%);
@@ -27,22 +32,6 @@
 		color: #1a467f;
 		text-transform: none;
 		font-size: 26px;
-	}
-	p {
-		margin-top: 18px;
-		color: #262c35;
-		font-size: 26px;
-		font-weight: 400;
-		line-height: 32px;
-		&.text-small {
-			font-size: 20px;
-			line-height: 24px;
-		}
-		&.code {
-			margin-top: 5px;
-			font: normal 20px/20px "Courier New";
-			color: #aacfff;
-		}
 	}
 	a {
 		color: #f42233;
