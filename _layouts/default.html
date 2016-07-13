@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
-	<body>
+	<body id="page-top" class="{{page.title}}">
 		{% include header.html %}
-		<div class="site-wrapper {% if page.url == "/" %}home-wrapper{% endif %}">
+		<div class="site-wrapper">
 			{{ content }}
 		</div>
 		{% include footer.html %}
+		{% include javascript.html %}
 	</body>
-	{% include javascript.html %}
 </html>
