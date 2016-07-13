@@ -18,8 +18,10 @@
 					<a href="#"></a>
 				</li>
 				<li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+				<li><a href="/docs/getstarted" {% if page.url contains "/docs" %}class="active"{% endif %}>Docs</a></li>
 				<li><a href="/downloads" {% if page.url contains "/downloads" %}class="active"{% endif %}>Downloads</a></li>
 				<li><a href="/blog" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>
+				<li><a href="/roadmap" {% if page.url contains "/roadmap" %}class="active"{% endif %}>Roadmap</a></li>
 				<li><a href="/help" {% if page.url contains "/help" %}class="active"{% endif %}>Help</a></li>
 				{% if site.github_username %}
 				<li>
