@@ -4,26 +4,33 @@
 footer {
 	.footer-above {
 		position: relative;
-		padding-top: 0 !important;
+		background: #1a467f;
+		background: -moz-linear-gradient(top,  #1a467f 0%, #2561ae 50%);
+		background: -webkit-linear-gradient(top,  #1a467f 0%,#2561ae 50%);
+		background: linear-gradient(to bottom,  #1a467f 0%,#2561ae 50%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a467f', endColorstr='#2561ae',GradientType=0 );
+		overflow: hidden;
 		.banner-text {
 			text-align: center;
-			width: 50%;
-			height: 240px;
-			position: absolute;
-			top: calc(50% - 120px);
-			left: 25%;
+			position: relative;
+			z-index: 1;
+			padding: 78px 0;
 			.btn {
 				margin-top: 20px;
 			}
 		}
 		img {
+			position: absolute;
 			width: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+			display: none;
 		}
 	}
 
 	.footer-below {
-		height: 300px;
-		padding-top: 46px !important;
+		padding: 46px 0 64px;
 		background: url(../img/hex-machina-footer-bg.jpg) top center;
 		text-align: left;
 		img {

@@ -2,24 +2,13 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-.home-wrapper {
-	margin-top: 160px !important;
-	margin-bottom: 0 !important;
-}
-
-.home-section {
+.home section {
 	background: #dde3ec;
 	background: -moz-linear-gradient(top, #ffffff 0%, #dde3ec 0%, #dde3ec 0%, #ffffff 100%);
 	background: -webkit-linear-gradient(top,  #ffffff 0%, #dde3ec 0%,#dde3ec 0%, #ffffff 100%);
 	background: linear-gradient(to bottom,  #ffffff 0%,#dde3ec 0%,#dde3ec 0%, #ffffff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dde3ec', endColorstr='#ffffff',GradientType=0 );
-
-	.col-left {
-		padding-right: 30px;
-	}
-	.col-right {
-		padding-left: 30px;
-	}
+	overflow: hidden;
 	h2 {
 		margin-bottom: 12px;
 		color: #122556;
@@ -43,15 +32,20 @@
 .banner-section {
 	padding: 0;
 	position: relative;
+	overflow: hidden;
 	.banner-text {
 		width: 50%;
-		position: absolute;
+		position: relative;
 		top: calc(50% - 172px);
+		z-index: 1;
+		padding: 86px 0;
 		.btn {
 			margin-top: 25px;
 		}
 	}
 	img {
+		position: absolute;
+		top: -190px;
 		width: 100%;
 	}
 }
@@ -66,18 +60,30 @@
 	}
 }
 
-.carousel-section {
+.home .carousel-section {
 	padding: 0;
 	position: relative;
 	text-align: center;
+	background: #1a467f;
+	background: -moz-linear-gradient(top,  #1a467f 0%, #2561ae 50%);
+	background: -webkit-linear-gradient(top,  #1a467f 0%,#2561ae 50%);
+	background: linear-gradient(to bottom,  #1a467f 0%,#2561ae 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a467f', endColorstr='#2561ae',GradientType=0 );
 	.banner-text {
+		position: relative;
 		width: 70%;
-		position: absolute;
-		top: 25%;
-		left: 15%;
+		margin: auto;
+		text-align: center;
+		z-index: 1;
+		padding: 84px 0;
 	}
 	img {
+		position: absolute;
 		width: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0.3;
+		display: none;
 	}
 	h4 {
 		font-weight: 100;

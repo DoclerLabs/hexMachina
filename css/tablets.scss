@@ -1,6 +1,46 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+@media all and (max-width: 991px) {
+	body {
+		.banner-section {
+			.banner-text {
+				padding: 35px 0;
+				h1 {
+					font-size: 36px;
+					line-height: normal;
+				}
+			}
+			p, h4, button {
+				display: none;
+			}
+			img {
+				top: -125px;
+			}
+		}
+		h2 {
+			font-size: 30px !important;
+		}
+		p {
+			font-size: 20px !important;
+		}
+		h6 {
+			font-size: 26px !important;
+		}
+	}
+}
+@media all and (max-width: 768px) {
+	body {
+		.banner-section {
+			img {
+				top: -125px;
+				max-width: none;
+				width: 136%;
+				right: 0;
+			}
+		}
+	}
+}
 @media all and (max-width: 1200px) {
 	.blog-post {
 		margin: 20px 0;
