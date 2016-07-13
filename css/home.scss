@@ -9,6 +9,7 @@
 	background: linear-gradient(to bottom,  #ffffff 0%,#dde3ec 0%,#dde3ec 0%, #ffffff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dde3ec', endColorstr='#ffffff',GradientType=0 );
 	overflow: hidden;
+	padding: 100px 0;
 	h2 {
 		margin-bottom: 12px;
 		color: #122556;
@@ -30,7 +31,7 @@
 }
 
 .banner-section {
-	padding: 0;
+	padding: 0 !important;
 	position: relative;
 	overflow: hidden;
 	.banner-text {
