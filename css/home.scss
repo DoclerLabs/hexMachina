@@ -1,7 +1,9 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-
+.home {
+	margin-top: 160px;
+}
 .home section {
 	background: #dde3ec;
 	background: -moz-linear-gradient(top, #ffffff 0%, #dde3ec 0%, #dde3ec 0%, #ffffff 100%);
