@@ -28,17 +28,25 @@ footer {
 			display: none;
 		}
 	}
-
 	.footer-below {
 		padding: 46px 0 64px;
 		background: url(../img/hex-machina-footer-bg.jpg) top center;
 		text-align: left;
+		.row {
+			div:first-child {
+				text-align: center;
+			}
+			.text-left {
+				text-align: left !important;
+			}
+		}
 		img {
 			display: block;
 			margin: 26px auto 0;
-			padding-right: 7px;
 		}
 		.nav {
+			display: inline-block;
+			text-align: left;
 			li {
 				padding: 2px 0 3px;
 				a {
@@ -51,15 +59,6 @@ footer {
 					}
 				}
 			}
-		}
-		.col-roadmap {
-			padding-left: 35%;
-		}
-		.col-docs {
-			padding-left: 38%;
-		}
-		.col-facebook {
-			padding-left: 24%;
 		}
 	}
 }
