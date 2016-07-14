@@ -27,6 +27,14 @@
 		h6 {
 			font-size: 26px !important;
 		}
+		footer {
+			div:first-child {
+				text-align: center;
+			}
+			.footer-below .nav {
+				text-align: center;
+			}
+		}
 	}
 }
 @media all and (max-width: 768px) {
@@ -44,5 +52,12 @@
 @media all and (max-width: 1200px) {
 	.blog-post {
 		margin: 20px 0;
+	}
+}
+@media all and (min-width: 992px) {
+	footer {
+		.text-left {
+			text-align: left !important;
+		}
 	}
 }
