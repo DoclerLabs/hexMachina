@@ -1,3 +1,33 @@
 ---
 layout: default
 ---
+<div class="container">
+	<div class="row">
+		<article class="col-lg-9">
+			<div class="blog-post col-lg-12">
+				{% if page.img %}
+				<img src="/{{ page.img }}"/>
+				{% endif %}
+				<div class="content">
+					<time>{{ page.date | date_to_long_string }}</time>
+					<a href="#" class="category">{{ page.category }}</a>
+					<h2>{{ page.title }}</h2>
+					<hr class="divider"/>
+					{{ page.excerpt }}
+					<ul class="tags">
+						<li><a href="#">wwx</a></li>
+						<li><a href="#">2016</a></li>
+						<li><a href="#">video</a></li>
+						<li><a href="#">Francis</a></li>
+						<li><a href="#">developers</a></li>
+						<li><a href="#">Paris</a></li>
+					</ul>
+					<hr class="divider"/>
+				</div>
+			</div>
+		</article>
+		<div class="col-lg-3">
+			{% include searchfilter.html %}
+		</div>
+	</div>
+</div>

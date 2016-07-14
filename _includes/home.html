@@ -115,52 +115,37 @@
 <section class="news-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-				<h2>Blog</h2>
+			<h2>Blog</h2>
+			<div class="col-lg-12 blog-post-container">
+				{% for post in site.posts limit:4 %}
 				<article class="blog-post col-lg-6">
-					<div class="content">
-						<time>June 06</time>
-						<a href="#" class="category">News</a>
-						<h2>WWX 2016 - slides and video</h2>
-						<hr class="divider"/>
-						<p>
-							Find bellow video and slides for Francis talk “hexMachina - urban framework for hardcore developers” at WWX 2016 in Paris.
-							<a href="#">Read more &raquo;</a>
-						</p>
-						<ul class="tags">
-							<li><a href="#">wwx</a></li>
-							<li><a href="#">2016</a></li>
-							<li><a href="#">video</a></li>
-							<li><a href="#">Francis</a></li>
-							<li><a href="#">developers</a></li>
-							<li><a href="#">Paris</a></li>
-						</ul>
+					<div class="blog-post-list-item col-lg-12">
+						{% if post.img %}
+						<img src="/{{ post.img }}"/>
+						{% endif %}
+						<div class="content">
+							<time>{{ post.date | date_to_long_string }}</time>
+							<a href="#" class="category">{{ post.category }}</a>
+							<h2>{{ post.title }}</h2>
+							<hr class="divider"/>
+							{{ post.excerpt }}
+							<a href="{{ post.url }}" class="read-more">Read more &raquo;</a>
+							<ul class="tags">
+								<li><a href="#">wwx</a></li>
+								<li><a href="#">2016</a></li>
+								<li><a href="#">video</a></li>
+								<li><a href="#">Francis</a></li>
+								<li><a href="#">developers</a></li>
+								<li><a href="#">Paris</a></li>
+							</ul>
+						</div>
 					</div>
 				</article>
-				<article class="blog-post col-lg-6">
-					<div class="content">
-						<time>June 06</time>
-						<a href="#" class="category">News</a>
-						<h2>WWX 2016 - slides and video</h2>
-						<hr class="divider"/>
-						<p>
-							Find bellow video and slides for Francis talk “hexMachina - urban framework for hardcore developers” at WWX 2016 in Paris.
-							<a href="#">Read more &raquo;</a>
-						</p>
-						<ul class="tags">
-							<li><a href="#">wwx</a></li>
-							<li><a href="#">2016</a></li>
-							<li><a href="#">video</a></li>
-							<li><a href="#">Francis</a></li>
-							<li><a href="#">developers</a></li>
-							<li><a href="#">Paris</a></li>
-						</ul>
-					</div>
-				</article>
-				<div class="more">
-					<hr class="divider"/><br>
-					<a href="#">Read more ></a>
-				</div>
+				{% endfor %}
+			</div>
+			<div class="more">
+				<hr class="divider"/><br>
+				<a href="/blog">Read more ></a>
 			</div>
 		</div>
 	</div>

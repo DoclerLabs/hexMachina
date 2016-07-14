@@ -3,6 +3,9 @@
 ---
 @media all and (max-width: 1355px) {
 	body {
+		.container {
+			padding: 0;
+		}
 		.banner-section {
 			.banner-text {
 				padding: 35px 0;
@@ -25,16 +28,6 @@
 			img {
 				display: block;
 			}
-		}
-	}
-	.blog-post {
-		&.col-lg-6:nth-child(odd) {
-			margin-left: 15px;
-			width: calc(50% - 15px);
-		}
-		&.col-lg-6:nth-child(even) {
-			margin-right: 15px;
-			width: calc(50% - 15px);
 		}
 	}
 	footer {

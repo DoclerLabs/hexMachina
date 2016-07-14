@@ -1,0 +1,38 @@
+---
+layout: default
+category: News
+---
+<div class="container">
+	<div class="row">
+		<div class="col-lg-9 blog-post-container">
+			{% for post in site.posts %}
+				<article class="blog-post col-lg-6">
+					<div class="blog-post-list-item col-lg-12">
+						{% if post.img %}
+						<img src="/{{ post.img }}"/>
+						{% endif %}
+						<div class="content">
+							<time>{{ post.date | date_to_long_string }}</time>
+							<a href="#" class="category">{{ post.category }}</a>
+							<h2>{{ post.title }}</h2>
+							<hr class="divider"/>
+							{{ post.excerpt }}
+							<a href="{{ post.url }}" class="read-more">Read more &raquo;</a>
+							<ul class="tags">
+								<li><a href="#">wwx</a></li>
+								<li><a href="#">2016</a></li>
+								<li><a href="#">video</a></li>
+								<li><a href="#">Francis</a></li>
+								<li><a href="#">developers</a></li>
+								<li><a href="#">Paris</a></li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+		<div class="col-lg-3">
+			{% include searchfilter.html %}
+		</div>
+	</div>
+</div>
