@@ -3,6 +3,9 @@
 ---
 @media all and (max-width: 1355px) {
 	body {
+		.container {
+			padding: 0;
+		}
 		.banner-section {
 			.banner-text {
 				padding: 35px 0;
