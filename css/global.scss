@@ -15,6 +15,7 @@
 }
 
 body {
+	margin-top: 220px;
 	a {
 		text-decoration: none;
 		&:hover,
@@ -24,6 +25,9 @@ body {
 	}
 	a, a:hover, a:focus, a:active, a.active {
 		color: #f42233;
+	}
+	.container {
+		padding: 0;
 	}
 	p {
 		margin: 18px 0;
