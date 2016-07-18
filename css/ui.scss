@@ -64,7 +64,6 @@ body {
 			margin-bottom: 30px;
 			padding: 0;
 			box-shadow: 0 20px 15px rgba(26, 70, 127, 0.1);
-
 			.content {
 				padding: 40px 40px 30px;
 			}
@@ -124,13 +123,12 @@ body {
 		}
 	}
 	.tags {
-		margin: 0 0 8px;
 		padding: 0;
 		li {
 			display: inline-block;
-			margin: 0 2px 0;
+			margin: 0 2px 8px;
 			&:first-child {
-				margin: 0 2px 0 0;
+				margin: 0 2px 8px 0;
 			}
 			a {
 				border: 2px solid $c4;
@@ -143,7 +141,7 @@ body {
 		}
 	}
 	hr.divider {
-		display: inline-block;
+		display: block;
 		border: 2px solid $c5;
 		max-width: 36px;
 		width: 100%;
@@ -162,6 +160,105 @@ body {
 			padding: 0;
 		}
 	}
+	.vertical-menu {
+		float: right;
+		list-style-type: none;
+		margin: 0;
+		padding: 18px 0;
+		width: 300px;
+		max-width: 100%;
+		background-color: #ffffff;
+		font-size: 20px;
+		font-weight: 300;
+		box-shadow: 0 20px 15px rgba(26,70,127, .1);
+
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		li {
+			a {
+				display: block;
+				height: 60px;
+				line-height: 60px;
+				padding: 0 0 0 40px;
+				color: #1a467f;
+				text-decoration: none;
+				&.active{
+					background-color: #1a467f;
+					color: #ffffff;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.arrow-down {
+		position: absolute;
+		top: 20px;
+		right: 50px;
+		text-align: right;
+		&:after, &:before {
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+		}
+		&:after {
+			border-top-color: #fff;
+			border-width: 8px;
+		}
+		&:before {
+			border-top-color: #1a467f;
+			border-width: 10px;
+			margin-left: -2px;
+		}
+	}
+	.arrow-up {
+		display: none;
+		position: absolute;
+		top: 28px;
+		right: 50px;
+		text-align: right;
+		&:after, &:before {
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			bottom: 100%;
+		}
+		&:after {
+			border-bottom-color: #fff;
+			border-width: 8px;
+		}
+		&:before {
+			border-bottom-color: #1a467f;
+			border-width: 10px;
+			margin-left: -2px;
+		}
+	}
+	.vertical-menu-button {
+		float: right;
+		position: absolute;
+		width: 100%;
+		height: 50px;
+		margin: 0;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		opacity: 0;
+		cursor: pointer;
+
+		&:checked ~ .container .arrow-up {
+			display: block;
+		}
+		&:checked ~ .container .arrow-down {
+			display: none;
+		}
+		&:checked ~ .vertical-menu {
+			display: block;
+		}
+	}
 	.bubble-pattern {
 		position: absolute;
 		top: 0;
@@ -172,9 +269,10 @@ body {
 		background: url(../img/circle-pattern.png);
 	}
 	.search-filter-block {
+		margin-left: 45px;
 		h3 {
 			font: 300 30px/normal 'Lato';
-			margin: 0 0 18px;
+			margin: 0 0 18px 0;
 			color: #1a467f;
 		}
 		hr.divider {
