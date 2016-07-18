@@ -114,11 +114,11 @@
 
 <section class="news-section">
 	<div class="container">
+		<h2>Blog</h2>
 		<div class="row">
-			<h2>Blog</h2>
 			<div class="col-lg-12 blog-post-container">
 				{% for post in site.posts limit:4 %}
-				<article class="blog-post col-lg-6">
+				<article class="blog-post col-lg-6 col-xs-12">
 					<div class="blog-post-list-item col-lg-12">
 						{% if post.img %}
 						<img src="/{{ post.img }}"/>
@@ -150,3 +150,27 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+
+	(function() {
+
+		var mobileMenu = document.getElementsByClassName('mobile-menu')[0];
+		var mobileMenuClass = 'mobile-menu-on';
+		var body = document.body;
+
+		mobileMenu.addEventListener('click', toggleMobileMenu);
+
+		function toggleMobileMenu() {
+			if (document.body.classList.contains(mobileMenuClass)) {
+				console.info('Closing mobile menu');
+				body.classList.remove(mobileMenuClass);
+			}
+			else {
+				console.info('Opening mobile menu');
+				body.classList.add(mobileMenuClass);
+			}
+ 		}
+
+	}());
+
+</script>

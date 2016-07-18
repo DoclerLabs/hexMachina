@@ -3,9 +3,6 @@
 ---
 @media all and (max-width: 1355px) {
 	body {
-		.container {
-			padding: 0;
-		}
 		.banner-section {
 			.banner-text {
 				padding: 35px 0;
@@ -18,6 +15,9 @@
 	}
 }
 @media all and (min-width: 1200px) {
+	.container {
+		padding: 0;
+	}
 	.home {
 		.carousel-section {
 			img {

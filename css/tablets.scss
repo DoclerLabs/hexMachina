@@ -3,6 +3,55 @@
 ---
 @media all and (max-width: 991px) {
 	body {
+		.navbar .navbar-brand {
+			padding: 0 0 0 20px;
+		}
+		.navbar-nav {
+			display: none;
+		}
+		.mobile-menu {
+			display: block;
+		}
+		&.mobile-menu-on {
+			.navbar {
+				position: fixed;
+				width: 100%;
+				height: 100% !important;
+				z-index: 5;
+				top: 0;
+				margin: 0;
+				color: #fff;
+				display: block;
+			}
+			.mobile-menu {
+				span {
+					-webkit-transform: rotate(45deg);
+				}
+				span:before {
+					-webkit-transform: rotate(90deg);
+					top: 0;
+				}
+				span:after {
+					background: transparent;
+				}
+			}
+			.navbar-nav {
+				text-align: center;
+			}
+			.navbar-nav,
+			.collapse {
+				position: relative;
+				display: block;
+				margin: 0;
+			}
+			.collapse {
+				top: 53px;
+			}
+		}
+	}
+}
+@media all and (max-width: 991px) {
+	body {
 		.banner-section {
 			.banner-text {
 				padding: 35px 0;
