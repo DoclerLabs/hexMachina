@@ -61,7 +61,9 @@ body {
 		text-transform: none;
 	}
 	h3 {
+		margin-top: 10px;
 		font-size: 26px;
+		font-weight: 700;
 		color: #1a467f;
 		text-transform: none;
 	}
@@ -78,35 +80,5 @@ body {
 		font-weight: 300;
 		font-size: 19px;
 		text-transform: none;
-	}
-	.vertical_menu {
-		float: right;
-		list-style-type: none;
-		margin: 0;
-		padding: 20px 0;
-		width: 300px;
-		background-color: #ffffff;
-		font-size: 20px;
-		font-weight: 300;
-		box-shadow: 0 20px 15px rgba(26,70,127, 0.1);
-
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-		li {
-			a {
-				display: block;
-				height: 60px;
-				line-height: 60px;
-				padding: 0 0 0 40px;
-				color: #1a467f;
-				text-decoration: none;
-				&.active{
-					background-color: #1a467f;
-					color: #ffffff;
-					font-weight: 700;
-				}
-			}
-		}
 	}
 }
