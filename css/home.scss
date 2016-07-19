@@ -81,6 +81,10 @@
 	background: -webkit-linear-gradient(top,  #1a467f 0%,#2561ae 50%);
 	background: linear-gradient(to bottom,  #1a467f 0%,#2561ae 50%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a467f', endColorstr='#2561ae',GradientType=0 );
+	.container {
+		position: relative;
+		z-index: 2;
+	}
 	.banner-text {
 		position: relative;
 		width: 70%;
