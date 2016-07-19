@@ -7,17 +7,17 @@
 			<button type="button" class="btn action-btn">Download hexMachina v0.3.0</button>
 		</div>
 	</div>
-	<img class="img-responsive" src="./img/hex-machina-bg.jpg">
+	<img class="img-responsive" src="/img/hex-machina-bg.jpg">
 </section>
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-left">
+			<div class="col-lg-6">
 				<h2>What is it for?</h2>
 				<hr class="divider"/>
 				<p>For building configurable, large scaling modular applications, games, stateful websites and servers, targeting different platforms. hexMachina is an OpenSource project, free to use and collaborate with it.</p>
 			</div>
-			<div class="col-lg-6 col-right">
+			<div class="col-lg-6 learn-more">
 				<h2>Want to learn more?</h2>
 				<hr class="divider"/>
 				<div class="row">
@@ -109,7 +109,7 @@
 		</nav>
 	</div>
 	<div class="bubble-pattern"></div>
-	<img class="img-responsive" src="./img/pattern-cover.jpg">
+	<img class="img-responsive" src="/img/pattern-cover.jpg">
 </section>
 
 <section class="news-section">
@@ -131,12 +131,9 @@
 							{{ post.excerpt }}
 							<a href="{{ post.url }}" class="read-more">Read more &raquo;</a>
 							<ul class="tags">
-								<li><a href="#">wwx</a></li>
-								<li><a href="#">2016</a></li>
-								<li><a href="#">video</a></li>
-								<li><a href="#">Francis</a></li>
-								<li><a href="#">developers</a></li>
-								<li><a href="#">Paris</a></li>
+								{% for tag in post.tags %}
+								<li><a href="#">{{tag }}</a></li>
+								{% endfor %}
 							</ul>
 						</div>
 					</div>

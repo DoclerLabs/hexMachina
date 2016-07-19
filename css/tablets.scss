@@ -26,7 +26,7 @@
 			.navbar {
 				position: fixed;
 				width: 100%;
-				z-index: 5;
+				z-index: 10;
 				top: 0;
 				margin: 0;
 				color: #fff;
@@ -95,26 +95,6 @@
 				top: -125px;
 			}
 		}
-		h2 {
-			font-size: 30px !important;
-			font-weight: 300;
-		}
-		h3 {
-			font-size: 20px;
-		}
-		p {
-			margin: 10px 0;
-			font-size: 18px !important;
-			line-height: 22px;
-		}
-		h6 {
-			font-size: 26px !important;
-		}
-		hr.divider {
-			margin: 0;
-			max-width: 20px;
-			border-width: 1px;
-		}
 		footer {
 			div:first-child {
 				text-align: center;
@@ -139,15 +119,52 @@
 }
 @media all and (max-width: 1200px) {
 	body {
-		margin-top: 160px;
+		margin-top: 80px;
 		.site-wrapper {
 			margin-top: 75px;
 		}
 		.container {
 			position: relative;
 		}
+		h2 {
+			font-size: 30px !important;
+			font-weight: 300;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		p {
+			margin: 10px 0;
+			font-size: 18px !important;
+			line-height: 22px;
+		}
+		h6 {
+			margin-top: 10px !important;
+			font-size: 18px !important;
+		}
+		hr.divider {
+			margin: 0;
+			max-width: 20px;
+			border-width: 1px;
+		}
+		&.home section {
+			padding: 30px 0;
+		}
 		.blog-post {
-			margin: 20px 0;
+			margin: 10px 0;
+
+			h2 {
+				margin-bottom: 12px;
+			}
+
+			hr.divider {
+				margin-bottom: 12px;
+			}
+		}
+		.more a,
+		.learn-more a,
+		.read-more {
+			font-size: 18px !important;
 		}
 		.col-vertical-menu {
 			position: fixed;
