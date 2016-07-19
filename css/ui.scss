@@ -74,9 +74,6 @@ body {
 				margin: 0 0 10px;
 				font-weight: 300;
 				font-size: 20px;
-				a {
-					font-size: 20px;
-				}
 			}
 			h2 {
 				font-weight: 300;
@@ -104,7 +101,7 @@ body {
 			margin: 0 0 25px;
 		}
 		.read-more {
-			display: block;
+			display: inline-block;
 			color: #1a467f;
 			font-size: 20px;
 			font-weight: 700;
@@ -147,6 +144,7 @@ body {
 		width: 100%;
 		margin: 20px 0;
 		padding: 0;
+		text-align: left;
 	}
 	.navbar {
 		height: 160px;
