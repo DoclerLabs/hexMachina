@@ -1,22 +1,11 @@
-<!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header page-scroll">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/"><img src="/img/hex-machina-logo.png" alt="hexMachina" /></a>
+			<button class="mobile-menu"><span>&nbsp;</span></button>
+			<a class="navbar-brand" href="/"><img src="./img/hex-machina-logo.png" alt="hexMachina" /></a>
 		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="hidden">
-					<a href="#"></a>
-				</li>
 				<li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
 				<li><a href="/docs/getstarted" {% if page.url contains "/docs" %}class="active"{% endif %}>Docs</a></li>
 				<li><a href="/downloads" {% if page.url contains "/downloads" %}class="active"{% endif %}>Downloads</a></li>
@@ -30,7 +19,5 @@
 				{% endif %}
 			</ul>
 		</div>
-		<!-- /.navbar-collapse -->
 	</div>
-	<!-- /.container-fluid -->
 </nav>

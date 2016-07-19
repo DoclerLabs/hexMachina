@@ -1,9 +1,36 @@
 <!-- Code Mirror JavaScript-->
-<script src="/lib/codemirror/codemirror.js"></script>
+<script src="./lib/codemirror/codemirror.js"></script>
 <!-- Code Mirror Haxe mode-->
-<script src="/lib/codemirror/mode/haxe/haxe.js"></script>
+<script src="./lib/codemirror/mode/haxe/haxe.js"></script>
 
 <script>
+	(function() {
+
+		var mobileMenu = document.getElementsByClassName('mobile-menu')[0];
+		var mobileMenuClass = 'mobile-menu-on';
+		var body = document.body;
+
+		mobileMenu.addEventListener('click', toggleMobileMenu);
+
+		function toggleMobileMenu() {
+			if (document.body.classList.contains(mobileMenuClass)) {
+				console.info('Closing mobile menu');
+				body.classList.remove(mobileMenuClass);
+				body.removeEventListener('touchmove', onTouchMove);
+			}
+			else {
+				console.info('Opening mobile menu');
+				body.classList.add(mobileMenuClass);
+				body.addEventListener('touchmove', onTouchMove);
+			}
+		}
+
+		function onTouchMove(ev) {
+			ev.preventDefault();
+		}
+
+	}());
+
 	var elements = document.getElementsByClassName("code-haxe");
 	for(var i=0; i<elements.length; i++) {
 		var editor = CodeMirror.fromTextArea(elements[i], {
