@@ -23,12 +23,14 @@
 		font-weight: 300;
 	}
 	h6 {
-		margin: 18px 0 0;
+		margin: 0;
 		color: #1a467f;
 		text-transform: none;
 		font-size: 26px;
 	}
-	a {
+	.learn-more a {
+		display: inline-block;
+		margin-bottom: 18px;
 		color: #f42233;
 		font-size: 26px;
 		font-weight: 300;
@@ -61,7 +63,11 @@
 	.more {
 		text-align: center;
 		hr {
-			margin: 40px 0 20px;
+			display: inline-block;
+		}
+		a {
+			font-size: 26px;
+			font-weight: 300;
 		}
 	}
 }

@@ -15,12 +15,9 @@ layout: default
 					<hr class="divider"/>
 					{{ page.excerpt }}
 					<ul class="tags">
-						<li><a href="#">wwx</a></li>
-						<li><a href="#">2016</a></li>
-						<li><a href="#">video</a></li>
-						<li><a href="#">Francis</a></li>
-						<li><a href="#">developers</a></li>
-						<li><a href="#">Paris</a></li>
+						{% for tag in page.tags %}
+							<li><a href="#">{{tag }}</a></li>
+						{% endfor %}
 					</ul>
 					<hr class="divider"/>
 				</div>
