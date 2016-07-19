@@ -1,6 +1,16 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+
+@media all and (max-width: 991px) {
+	body {
+		.navbar-nav {
+			li  {
+				width: 100%;
+			}
+		}
+	}
+}
 @media all and (max-width: 991px) {
 	body {
 		.navbar .navbar-brand {
@@ -16,7 +26,6 @@
 			.navbar {
 				position: fixed;
 				width: 100%;
-				height: 100% !important;
 				z-index: 5;
 				top: 0;
 				margin: 0;
@@ -36,15 +45,34 @@
 				}
 			}
 			.navbar-nav {
+				display: block;
 				text-align: center;
+				margin: 0 !important;
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				left: 0;
+				top: 80px;
+				background: rgba(28, 28, 28, 0.90);
+				li {
+					width: 100%;
+					height: calc(100% / 8);
+					display: table;
+					a {
+						font-size: 30px;
+					}
+					a.btn {
+						display: inline-block;
+						width: auto;
+						font-size: 20px;
+						margin: 0;
+					}
+				}
 			}
-			.navbar-nav,
 			.collapse {
 				position: relative;
 				display: block;
 				margin: 0;
-			}
-			.collapse {
 				top: 53px;
 			}
 		}
@@ -173,6 +201,18 @@
 	footer {
 		.text-left {
 			text-align: left !important;
+		}
+	}
+}
+@media all and (max-width: 553px) {
+	body {
+		.banner-section {
+			img {
+				top: -125px;
+				max-width: none;
+				width: 321%;
+				right: -259px;
+			}
 		}
 	}
 }

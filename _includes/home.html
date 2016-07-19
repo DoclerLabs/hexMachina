@@ -150,27 +150,3 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript">
-
-	(function() {
-
-		var mobileMenu = document.getElementsByClassName('mobile-menu')[0];
-		var mobileMenuClass = 'mobile-menu-on';
-		var body = document.body;
-
-		mobileMenu.addEventListener('click', toggleMobileMenu);
-
-		function toggleMobileMenu() {
-			if (document.body.classList.contains(mobileMenuClass)) {
-				console.info('Closing mobile menu');
-				body.classList.remove(mobileMenuClass);
-			}
-			else {
-				console.info('Opening mobile menu');
-				body.classList.add(mobileMenuClass);
-			}
- 		}
-
-	}());
-
-</script>

@@ -37,7 +37,7 @@ header {
 	.mobile-menu {
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: -14px;
 		z-index: 1031;
 		padding: 33px 30px;
 		display: none;
@@ -84,6 +84,7 @@ header {
 		padding: 55px 0 0;
 		background: #1c1c1c;
 		border: 0;
+		border-bottom: 1px solid #2e2f30;
 		.navbar-brand {
 			padding: 0;
 			margin-left: 0 !important;
@@ -100,7 +101,6 @@ header {
 				font-size: 20px;
 				font-weight: 300;
 				color: #FFFFFF !important;
-
 				&.active {
 					color: #f42233 !important;
 				}
