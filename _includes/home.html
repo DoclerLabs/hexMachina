@@ -118,12 +118,12 @@
 	<div class="container">
 		<h2>Blog</h2>
 		<div class="row">
-			<div class="col-lg-12 blog-post-container">
+			<div class="col-lg-12 blog-post-container grid" data-packery='{ "itemSelector": ".grid-item"}'>
 				{% for post in site.posts limit:4 %}
-				<article class="blog-post col-lg-6 col-xs-12">
+				<div class="blog-post col-lg-6 grid-item">
 					<div class="blog-post-list-item col-lg-12">
 						{% if post.img %}
-						<img src="/{{ post.img }}"/>
+						<div style="background-image:url({{ post.img }})"></div>
 						{% endif %}
 						<div class="content">
 							<time>{{ post.date | date_to_long_string }}</time>
@@ -139,7 +139,7 @@
 							</ul>
 						</div>
 					</div>
-				</article>
+				</div>
 				{% endfor %}
 			</div>
 			<div class="more">
