@@ -123,7 +123,7 @@
 				<div class="blog-post col-lg-6 grid-item">
 					<div class="blog-post-list-item col-lg-12">
 						{% if post.img %}
-						<div style="background-image:url({{ post.img }})"></div>
+							<div class="post-image" style="background-image:url(/{{ post.img | prepend: site.baseurl }})"></div>
 						{% endif %}
 						<div class="content">
 							<time>{{ post.date | date_to_long_string }}</time>
