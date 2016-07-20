@@ -7,7 +7,7 @@
 			<button type="button" class="btn action-btn">Download hexMachina v0.3.0</button>
 		</div>
 	</div>
-	<img class="img-responsive" src="/img/hex-machina-bg.jpg">
+	<img class="img-responsive" src="{{"/img/hex-machina-bg.jpg" | prepend: site.baseurl }}">
 </section>
 <section>
 	<div class="container">
@@ -111,7 +111,7 @@
 		</div>
 	</div>
 	<div class="bubble-pattern"></div>
-	<img class="img-responsive" src="/img/pattern-cover.jpg">
+	<img class="img-responsive" src="{{"/img/pattern-cover.jpg" | prepend: site.baseurl }}">
 </section>
 
 <section class="news-section">
@@ -131,7 +131,7 @@
 							<h2>{{ post.title }}</h2>
 							<hr class="divider"/>
 							{{ post.excerpt }}
-							<a href="{{ post.url }}" class="read-more">Read more &raquo;</a>
+							<a href="{{post.url | prepend: site.baseurl }}" class="read-more">Read more &raquo;</a>
 							<ul class="tags">
 								{% for tag in post.tags %}
 								<li><a href="#">{{tag }}</a></li>
