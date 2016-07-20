@@ -7,5 +7,6 @@
 # TODO
 
 1. CSS Concat & Compress
-2. Search for duplications, unify both in html & css
-3. Remove unused codes
+2. JS Concat & Compress
+3. Search for duplications, unify both in html & css
+4. Remove unused codes
