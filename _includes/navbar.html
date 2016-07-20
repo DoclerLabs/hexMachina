@@ -6,12 +6,17 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-				<li><a href="/docs/getstarted" {% if page.url contains "/docs" %}class="active"{% endif %}>Docs</a></li>
-				<li><a href="/downloads" {% if page.url contains "/downloads" %}class="active"{% endif %}>Downloads</a></li>
-				<li><a href="/blog" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>
-				<li><a href="/roadmap" {% if page.url contains "/roadmap" %}class="active"{% endif %}>Roadmap</a></li>
-				<li><a href="/help" {% if page.url contains "/help" %}class="active"{% endif %}>Help</a></li>
+				<li><a href="{{"/" | prepend: site.baseurl }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+
+				<li><a href="{{"/docs/getstarted" | prepend: site.baseurl }}" {% if page.url contains "/docs" %}class="active"{% endif %}>Docs</a></li>
+
+				<li><a href="{{"/downloads" | prepend: site.baseurl }}" {% if page.url contains "/downloads" %}class="active"{% endif %}>Downloads</a></li>
+
+				<li><a href="{{"/blog" | prepend: site.baseurl }}" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>
+
+				<li><a href="{{"/roadmap" | prepend: site.baseurl }}" {% if page.url contains "/roadmap" %}class="active"{% endif %}>Roadmap</a></li>
+
+				<li><a href="{{"/help" | prepend: site.baseurl }}" {% if page.url contains "/help" %}class="active"{% endif %}>Help</a></li>
 				{% if site.github_username %}
 				<li>
 					<a href="https://github.com/{{ site.github_username }}" class="btn action-btn">View on GitHub</a>
