@@ -2,7 +2,7 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-.cm-s-hexmachina.CodeMirror { background: transparent; height: auto; font-size: 20px; line-height: 26px; }
+.cm-s-hexmachina.CodeMirror { background: transparent; height: auto; font-size: 20px; line-height: 26px; margin-bottom: 20px; }
 .cm-s-hexmachina .CodeMirror-gutters { background: transparent; border-right: 0px; }
 .cm-s-hexmachina .CodeMirror-linenumber { color: #b4bbc6; text-align: center; }
 .cm-s-hexmachina .CodeMirror-code div:nth-child(odd) { background-color: rgba(180, 187, 198, .15); }
