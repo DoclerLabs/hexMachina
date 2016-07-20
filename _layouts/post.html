@@ -6,7 +6,7 @@ layout: default
 		<article class="col-lg-9">
 			<div class="blog-post col-lg-12">
 				{% if page.img %}
-				<img src="/{{ page.img }}"/>
+				<img src="{{ page.img }}"/>
 				{% endif %}
 				<div class="content">
 					<time>{{ page.date | date_to_long_string }}</time>
@@ -16,7 +16,7 @@ layout: default
 					{{ page.excerpt }}
 					<ul class="tags">
 						{% for tag in page.tags %}
-							<li><a href="#">{{tag }}</a></li>
+							<li><a href="#">{{ tag }}</a></li>
 						{% endfor %}
 					</ul>
 					<hr class="divider"/>
