@@ -7,28 +7,31 @@ layout: default
 		<h2>
 			Docs
 			<strong>
-				{% if page.url contains "/codesamples" %}Code samples
-				{% elsif page.url contains "/examples" %}Example apps
-				{% elsif page.url contains "/tutorials" %}Tutorials
-				{% elsif page.url contains "/tools" %}Tools & Libraries
-				{% else %}Get started
-				{% endif %}
+				{% for docs in site.data.docs %}
+					{% if page.url contains docs.link %}
+						{{ docs.name }}
+					{% endif %}
+				{% endfor %}
 			</strong>
 		</h2>
 		<span class="arrow-down"></span>
 		<span class="arrow-up"></span>
 	</div>
-	{% include docs-menu.html %}
+	<ul class="vertical-menu">
+		{% include docs-menu.html %}
+	</ul>
 </div>
 <div class="container">
-	<div class="site-wrapper">
+	<div class="site-wrapper docs-container">
 		<div class="col-lg-9 col-md-12">
 			<h2>{{ page.title }}</h2>
 			<hr class="divider"/>
 			{{ content }}
 		</div>
 		<div class="col-lg-3">
-			{% include docs-menu.html %}
+			<ul class="vertical-menu">
+				{% include docs-menu.html %}
+			</ul>
 		</div>
 	</div>
 </div>

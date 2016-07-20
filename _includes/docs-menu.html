@@ -1,8 +1,5 @@
-<ul class="vertical-menu">
-	<li><a href="{{"/docs/getstarted" | prepend: site.baseurl }}" {% if page.url contains "/getstarted" %}class="active"{% endif %}>Get started</a></li>
-	<li><a href="{{"/docs/codesamples" | prepend: site.baseurl }}" {% if page.url contains "/codesamples" %}class="active"{% endif %}>Code samples</a></li>
-	<li><a href="{{"/docs/examples" | prepend: site.baseurl }}" {% if page.url contains "/examples" %}class="active"{% endif %}>Example applications</a></li>
-	<li><a href="{{"/docs/tutorials" | prepend: site.baseurl }}" {% if page.url contains "/tutorials" %}class="active"{% endif %}>Tutorials</a></li>
-	<li><a href="http://hexmachina.org/docs/" target="_blank">API documentation</a></li>
-	<li><a href="{{"/docs/tools" | prepend: site.baseurl }}" {% if page.url contains "/tools" %}class="active"{% endif %}>Tools & Libraries</a></li>
-</ul>
+{% for docs in site.data.docs %}
+	<li>
+		<a href="{{ docs.link | prepend: site.baseurl }}" {% if page.url contains docs.link %}class="active"{% endif %} {% if docs.target %} target="{{ docs.target }}" {% endif %}>{{ docs.name }}</a>
+	</li>
+{% endfor %}

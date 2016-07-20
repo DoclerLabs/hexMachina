@@ -1,0 +1,18 @@
+- name: Home
+  link: /
+
+- name: Docs
+  link: /docs
+  redirect: /docs/getstarted
+
+- name: Downloads
+  link: /downloads
+
+- name: Blog
+  link: /blog
+
+- name: Roadmap
+  link: /roadmap
+
+- name: Help
+  link: /help

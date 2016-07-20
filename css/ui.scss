@@ -165,7 +165,7 @@ body {
 		max-width: 100%;
 		background-color: #ffffff;
 		font-size: 20px;
-		font-weight: 300;
+		font-weight: 400;
 		box-shadow: 0 20px 15px rgba(26,70,127, .1);
 
 		-webkit-border-radius: 5px;
@@ -190,7 +190,7 @@ body {
 	.arrow-down {
 		position: absolute;
 		top: 20px;
-		right: 50px;
+		right: 35px;
 		text-align: right;
 		&:after, &:before {
 			border: solid transparent;
@@ -213,7 +213,7 @@ body {
 		display: none;
 		position: absolute;
 		top: 28px;
-		right: 50px;
+		right: 35px;
 		text-align: right;
 		&:after, &:before {
 			border: solid transparent;
