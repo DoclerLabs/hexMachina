@@ -131,7 +131,7 @@
 							<h2>{{ post.title }}</h2>
 							<hr class="divider"/>
 							{{ post.excerpt }}
-							<a href="{{post.url | prepend: site.baseurl }}" class="read-more">Read more &raquo;</a>
+							<a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more &raquo;</a>
 							<ul class="tags">
 								{% for tag in post.tags %}
 								<li><a href="#">{{ tag }}</a></li>
