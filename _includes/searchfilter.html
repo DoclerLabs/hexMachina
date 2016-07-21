@@ -39,7 +39,8 @@
 		<h3>Categories</h3>
 		<ul class="nav filters">
 			{% for category in cats %}
-				{% assign categorylink = '/blog/category/' | append:category %}
+				{% assign categoryname = category | slugify %}
+				{% assign categorylink = '/blog/category/' | append:categoryname %}
 				<li><a href="{{ categorylink | prepend: site.baseurl }}">{{ category }}</a></li>
 			{% endfor %}
 		</ul>
@@ -48,7 +49,8 @@
 	<h3>Tags</h3>
 	<ul class="tags">
 		{% for tag in tags %}
-			{% assign taglink = '/blog/tag/' | append:tag %}
+			{% assign tagname = tag | slugify %}
+			{% assign taglink = '/blog/tag/' | append:tagname %}
 			<li><a href="{{ taglink | prepend: site.baseurl }}">{{ tag }}</a></li>
 		{% endfor %}
 	</ul>

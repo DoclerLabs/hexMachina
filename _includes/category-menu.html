@@ -19,8 +19,9 @@
 
 <ul class="vertical-menu">
 	{% for category in cats %}
-		{% assign categorylink = '/blog/category/' | append:category %}
-		<li><a href="{{ categorylink | prepend: site.baseurl }}" {% if page.url contains pagecategory %}class="active"{% endif %}>{{ category }}</a></li>
+		{% assign categoryname = category | slugify %}
+		{% assign categorylink = '/blog/category/' | append:categoryname %}
+		<li><a href="{{ categorylink | prepend: site.baseurl }}" {% if page.url contains categoryname %}class="active"{% endif %}>{{ category }}</a></li>
 	{% endfor %}
 </ul>
 

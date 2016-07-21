@@ -10,14 +10,16 @@ layout: default
 				{% endif %}
 				<div class="content">
 					<time>{{ page.date | date_to_long_string }}</time>
-					{% assign categorylink = '/blog/category/' | append:page.category %}
+					{% assign categoryname = page.category | slugify %}
+					{% assign categorylink = '/blog/category/' | append:categoryname %}
 					<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ page.category }}</a>
 					<h2>{{ page.title }}</h2>
 					<hr class="divider"/>
 					{{ page.excerpt }}
 					<ul class="tags">
 						{% for tag in page.tags %}
-							{% assign taglink = '/blog/tag/' | append:tag %}
+							{% assign tagname = tag | slugify %}
+							{% assign taglink = '/blog/tag/' | append:tagname %}
 							<li><a href="{{ taglink | prepend: site.baseurl }}">{{ tag }}</a></li>
 						{% endfor %}
 					</ul>
