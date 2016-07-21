@@ -1,11 +1,11 @@
 - name: Get started
   link: /docs/getstarted
 
-- name: Code samples
-  link: /docs/codesamples
+- name: Code Cookbook
+  link: /docs/codecookbook
 
-- name: Example applications
-  link: /docs/examples
+- name: Showcase
+  link: /docs/showcase
 
 - name: Tutorials
   link: /docs/tutorials
