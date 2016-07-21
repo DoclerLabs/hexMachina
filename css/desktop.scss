@@ -16,6 +16,7 @@
 }
 @media all and (min-width: 1200px) {
 	.container {
+		width: calc(100% - 60px);
 		padding: 0;
 	}
 	.home {
@@ -41,5 +42,10 @@
 	}
 	.hide-on-desktop {
 		display: none;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.container {
+		max-width: 1600px;
 	}
 }

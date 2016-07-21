@@ -79,6 +79,9 @@
 			margin-left: 0 !important;
 			margin-right: 0 !important;
 		}
+		.blog-container {
+			margin: 75px 15px 0 !important;
+		}
 		.col-vertical-menu {
 			h2 {
 				margin-left: 15px;
@@ -151,11 +154,13 @@
 	body {
 		margin-top: 80px;
 		.site-wrapper {
-			margin-top: 75px;
+			margin-top: 25px;
 		}
 		.docs-container {
-			margin-left: -15px;
-			margin-right: -15px;
+			margin: 75px -15px 0;
+		}
+		.blog-container {
+			margin: 75px 0 0;
 		}
 		.container {
 			position: relative;
