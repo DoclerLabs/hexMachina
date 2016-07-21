@@ -22,6 +22,7 @@ body {
 	background: $c8;
 	.btn {
 		&.action-btn {
+			margin-top: 25px;
 			color: $c1 !important;
 			background: $actionButtonBottomGradient;
 			background: -moz-linear-gradient(top,  $actionButtonBottomGradient 0%, $actionButtonTopGradient 0%, #de2432 0%, $actionButtonBottomGradient 100%);
