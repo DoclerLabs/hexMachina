@@ -1,5 +1,25 @@
+{% assign rawcats = "" %}
+{% for post in site.posts %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+{% assign rawcats = rawcats | split:'|' | sort %}
+{% assign cats = "" %}
+{% for cat in rawcats %}
+{% if cat != "" %}
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+
 <ul class="vertical-menu">
-	<li><a href="/blog" {% if page.url contains "/" %}class="active"{% endif %}>News</a></li>
-	<li><a href="/blog" {% if page.url contains "/design" %}class="active"{% endif %}>Design</a></li>
-	<li><a href="/blog" {% if page.url contains "/video" %}class="active"{% endif %}>Video</a></li>
+	{% for category in cats %}
+		{% assign pagecategory = category | slugify %}
+		<li><a href="/blog/category/{{ category | slugify | prepend: site.baseurl }}" {% if page.url contains pagecategory %}class="active"{% endif %}>{{ category }}</a></li>
+	{% endfor %}
 </ul>

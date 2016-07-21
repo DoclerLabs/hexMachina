@@ -1,29 +1,58 @@
+{% assign rawcats = "" %}
+{% for post in site.posts %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+{% assign rawcats = rawcats | split:'|' | sort %}
+{% assign cats = "" %}
+{% for cat in rawcats %}
+{% if cat != "" %}
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+{% assign ttags = post.tags | join:'|' | append:'|' %}
+{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+{% assign tags = "" %}
+{% for tag in rawtags %}
+{% if tag != "" %}
+{% if tags == "" %}
+{% assign tags = tag | split:'|' %}
+{% endif %}
+{% unless tags contains tag %}
+{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
 <div class="search-filter-block">
 	<div class="categories">
 		<h3>Categories</h3>
 		<ul class="nav filters">
-			<li><a href="#">News</a></li>
-			<li><a href="#">Design</a></li>
-			<li><a href="#">Video</a></li>
+			{% for category in cats %}
+				<li><a href="/blog/category/{{ category | slugify | prepend: site.baseurl }}">{{ category }}</a></li>
+			{% endfor %}
 		</ul>
 	</div>
 	<hr class="divider"/>
 	<h3>Tags</h3>
 	<ul class="tags">
-		<li><a href="#">wwx</a></li>
-		<li><a href="#">2016</a></li>
-		<li><a href="#">video</a></li>
-		<li><a href="#">Francis</a></li>
-		<li><a href="#">developers</a></li>
-		<li><a href="#">Paris</a></li>
+		{% for tag in tags %}
+			<li><a href="/blog/tag/{{ tag | slugify | prepend: site.baseurl }}">{{ tag }}</a></li>
+		{% endfor %}
 	</ul>
 	<hr class="divider"/>
 	<h3>Archives</h3>
 	<ul class="nav filters">
-		<li><a href="#">April, 2016</a></li>
-		<li><a href="#">March, 2016</a></li>
-		<li><a href="#">Ferbuary, 2016</a></li>
-		<li><a href="#">January, 2016</a></li>
-		<li><a href="#">2015</a></li>
+		<li><a href="/blog/{{ | prepend: site.baseurl }}">Ferbuary, 2016</a></li>
 	</ul>
 </div>
