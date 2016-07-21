@@ -2,19 +2,18 @@
 layout: page
 title: Help
 ---
-<div class="col-sm-6 text-center metro-block">
-	<a href="#" class="panel panel-default">
-		<h3>hexMachina Community Discussion</h3>
-		<p>Get help in any aspect about the framework</p>
-		<hr/>
-		<strong>8 Threads</strong>
-	</a>
-</div>
-<div class="col-sm-6 text-center metro-block">
-	<a href="#" class="panel panel-default">
-		<h3>hexMachina Community Discussion</h3>
-		<p>Get help in any aspect about the framework</p>
-		<hr/>
-		<strong>8 Threads</strong>
-	</a>
-</div>
+
+{% for page in site.pages %}
+
+	{% if page.category == true %}
+		<div class="col-sm-6 text-center metro-block">
+			<a href="{{ page.url }}" class="panel panel-default">
+				<h3>{{ page.title }}</h3>
+				<p>Get help in any aspect about the framework</p>
+				<hr/>
+				<strong>8 Threads</strong>
+			</a>
+		</div>
+	{% endif %}
+
+{% endfor %}

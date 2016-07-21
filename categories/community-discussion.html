@@ -1,0 +1,21 @@
+---
+layout: page
+title: hexMachina Community Discussion
+category: true
+id: 4882628
+group-id: help
+---
+<ul class="threads">
+	{% for page in site.pages %}
+		{% if page.category == true %}
+			<li>
+				<a href="/thread?thread=Modules%20interaction&category={{page.id}}" class="col-sm-12 text-center-xs">
+					<h2 class="col-sm-5 col-xs-12">{{page.title}}</h2>
+					<time class="col-sm-3 col-xs-12">Created on 28th May 2016, 2:31 PM</time>
+					<span class="col-sm-2 col-xs-12">Balazs Zubak</span>
+					<strong class="col-sm-2 col-xs-12">1 Comment</strong>
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>
