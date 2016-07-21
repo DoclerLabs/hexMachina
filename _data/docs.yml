@@ -10,9 +10,9 @@
 - name: Tutorials
   link: /docs/tutorials
 
-- name: Api documentation
+- name: API documentation
   link: http://hexmachina.org/docs/
-  target: _blank
+  external: true
 
 - name: Tools & Libraries
   link: /docs/tools
