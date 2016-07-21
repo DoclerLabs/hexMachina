@@ -82,7 +82,29 @@ body {
 	float: none;
 }
 .page-layout {
+	h2 {
+		float: none;
+	}
 	.divider {
 		margin: 20px 0 20px 20px;
+	}
+}
+.thread-layout {
+	h2 {
+		font-weight: 300;
+	}
+}
+.breadcrumb {
+	background: none;
+	margin: 0;
+	a, li {
+		color: #1a467f;
+	}
+	li:last-child {
+		font-weight: 700;
+	}
+	li+li:before {
+		content: '\BB';
+		color: #1a467f;
 	}
 }

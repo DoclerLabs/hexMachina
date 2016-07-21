@@ -292,6 +292,7 @@ body {
 	}
 }
 .threads {
+	padding: 0 10px;
 	li {
 		list-style: none;
 		background: #fff;
@@ -304,8 +305,10 @@ body {
 			float: none;
 		}
 		h2 {
+			float: left;
 			display: inline-block;
 			font-size: 30px;
+			font-weight: 300;
 			padding: 0;
 			margin: 0;
 			line-height: 100px;

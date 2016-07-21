@@ -3,7 +3,7 @@ _site/
 .jekyll-metadata
 .idea/
 Gemfile.lock
-#_config.yml
+_config.yml
 .DS_Store
 hexMachina.hxproj
 build/.haxelib/
