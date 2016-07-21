@@ -78,13 +78,18 @@ body {
 				font-weight: 300;
 				font-size: 30px;
 			}
+			.post-image {
+				border-radius: 10px 10px 0 0;
+				background-position: center;
+				background-size: cover;
+				width: 100%;
+				height: 400px;
+				margin-bottom: 0;
+			}
 		}
 		.post-image {
-			border-radius: 10px 10px 0 0;
-			background-position: center;
-			background-size: cover;
 			width: 100%;
-			height: 400px;
+			margin-bottom: 30px;
 		}
 		&.fixed {
 			width: 785px;

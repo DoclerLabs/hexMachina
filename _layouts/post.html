@@ -6,7 +6,7 @@ layout: default
 		<article class="col-lg-9">
 			<div class="blog-post col-lg-12">
 				{% if page.img %}
-				<img src="{{ page.img | prepend: site.baseurl }}"/>
+				<img class="post-image" src="{{ page.img | prepend: site.baseurl }}"/>
 				{% endif %}
 				<div class="content">
 					<time>{{ page.date | date_to_long_string }}</time>
