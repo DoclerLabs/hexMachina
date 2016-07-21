@@ -54,7 +54,7 @@ body {
 		padding: 0;
 	}
 	.blog-post {
-		margin: 0 0 30px;
+		margin: 0;
 		.blog-post-list-item {
 			background: $c1;
 			border-radius: 10px;
@@ -269,7 +269,7 @@ body {
 		h3 {
 			font: 300 30px/normal 'Lato';
 			margin: 0 0 18px 0;
-			color: #1a467f;
+			color: #262c35;
 		}
 		hr.divider {
 			margin: 20px 0 16px;
@@ -280,7 +280,7 @@ body {
 				a {
 					display: inline;
 					padding: 0;
-					color: #000;
+					color: #1a467f;
 					font-size: 16px;
 					font-weight: 700;
 					&:hover {
