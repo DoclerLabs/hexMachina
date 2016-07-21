@@ -5,14 +5,16 @@
 		{% endif %}
 		<div class="content">
 			<time>{{ post.date | date_to_long_string }}</time>
-			<a href="/blog/category/{{ post.category | prepend: site.baseurl }}" class="category">{{ post.category }}</a>
+			{% assign categorylink = '/blog/category/' | append:post.category %}
+			<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ post.category }}</a>
 			<h2>{{ post.title }}</h2>
 			<hr class="divider"/>
 			{{ post.excerpt }}
 			<a href="{{post.url | prepend: site.baseurl }}" class="read-more">Read more &raquo;</a>
 			<ul class="tags">
 				{% for tag in post.tags %}
-					<li><a href="/blog/tag/{{ tag | prepend: site.baseurl }}">{{ tag }}</a></li>
+					{% assign taglink = '/blog/tag/' | append:tag %}
+					<li><a href="{{ taglink | prepend: site.baseurl }}">{{ tag }}</a></li>
 				{% endfor %}
 			</ul>
 		</div>

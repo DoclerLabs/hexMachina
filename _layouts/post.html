@@ -10,13 +10,15 @@ layout: default
 				{% endif %}
 				<div class="content">
 					<time>{{ page.date | date_to_long_string }}</time>
-					<a href="/blog/category/{{ page.category | prepend: site.baseurl }}" class="category">{{ page.category }}</a>
+					{% assign categorylink = '/blog/category/' | append:page.category %}
+					<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ page.category }}</a>
 					<h2>{{ page.title }}</h2>
 					<hr class="divider"/>
 					{{ page.excerpt }}
 					<ul class="tags">
 						{% for tag in page.tags %}
-							<li><a href="/blog/tag/{{ tag | prepend: site.baseurl }}">{{ tag }}</a></li>
+							{% assign taglink = '/blog/tag/' | append:tag %}
+							<li><a href="{{ taglink | prepend: site.baseurl }}">{{ tag }}</a></li>
 						{% endfor %}
 					</ul>
 					<hr class="divider"/>
