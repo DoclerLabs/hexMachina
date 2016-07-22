@@ -24,6 +24,9 @@
 	}
 }
 @media all and (max-width: 1200px) {
+	.post-page {
+		margin-top: 100px;
+	}
 		.threads {
 			li {
 				h2, time, span, strong {

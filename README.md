@@ -7,15 +7,13 @@
 # TODO
 
 1. CSS Concat & Compress
-2. JS Concat & Compress
+2. JS Concat & Compress -> Maybe it makes no sense
 3. Search for duplications, unify both in html & css
 4. Remove unused codes
-
 
 # HOME PAGE TODOS
 
 * Download button is not responsive
-* Fix social icons
 
 # BLOG PAGE TODOS
 
@@ -31,7 +29,6 @@
 # FOOTER TODOS
 
 * Footer should be clarified, on mobile the footer is mostly higher than the content itself
-* Social icons
 
 # GLOBAL TODOS
 
@@ -39,3 +36,4 @@
 * Download page is empty
 * Roadmap page is empty
 * Set disqus color from admin
+* Divider fixes
