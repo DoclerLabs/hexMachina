@@ -38,3 +38,4 @@
 * Examples codes are not relevant, almost the same on every subpage
 * Download page is empty
 * Roadmap page is empty
+* Set disqus color from admin

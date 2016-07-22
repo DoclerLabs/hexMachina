@@ -70,20 +70,27 @@ footer {
 		&:hover {
 			opacity: 1;
 		}
+		svg {
+			path {
+				fill: #aacfff !important;
+			}
+		}
 		&.facebook {
-			img {
+			svg {
 				display: inline-block;
 				width: 100px;
 			}
 		}
 		&.github {
-			img {
+			svg {
 				display: inline-block;
 				width: 75px;
 			}
 		}
 		&.twitter {
-			img {
+			position: relative;
+			top: 6px;
+			svg {
 				display: inline-block;
 				width: 25px;
 			}
