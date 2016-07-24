@@ -16,12 +16,9 @@
 	<div class="footer-below">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sx-12 text-left">
+				<div class="col-lg-5 col-md-5 col-sx-12 text-left text-center-xs">
 					<ul class="nav">
 						<li><h5>Copyright &copy; {{ site.time | date: "%Y" }} hexMachina</h5></li>
-						<li><a href="#">Follow on GitHub</a></li>
-						<li><a href="#">Like on Facebook</a></li>
-						<li><a href="#">Subscribe via RSS</a></li>
 					</ul>
 					<ul class="list-inline">
 						{% if site.facebook_username %}
@@ -47,26 +44,10 @@
 						{% endif %}
 					</ul>
 				</div>
-				<div class="col-lg-2 col-md-2 col-sx-12">
-					<div class="col-roadmap">
-						<ul class="nav">
-							<li><h5>Sitemap</h5></li>
-							{% include menu.html %}
-						</ul>
-					</div>
-				</div>
 				<div class="col-lg-2 col-md-3 col-sx-12">
 					<img src="{{"/img/hex-machina-footer-logo.png" | prepend: site.baseurl }}" alt="hexMachina" />
 				</div>
-				<div class="col-lg-2 col-md-2 col-sx-12">
-					<div class="col-docs">
-						<ul class="nav">
-							<li><h5>Docs</h5></li>
-							{% include docs-menu.html %}
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-2 col-sx-12">
+				<div class="col-lg-5 col-md-4 col-sx-12 text-center-xs">
 					<div class="col-facebook">
 						<ul class="nav">
 							<li><h5>Contacts</h5></li>

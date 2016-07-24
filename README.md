@@ -23,16 +23,9 @@
 # HELP PAGE TODOS
 
 * Need a solution for breadcrumbs on mobile/tablet
-* Ajax for comment & thread count
-* Fix disqus loading errors
-
-# FOOTER TODOS
-
-* Footer should be clarified, on mobile the footer is mostly higher than the content itself
 
 # GLOBAL TODOS
 
-* Examples codes are not relevant, almost the same on every subpage
 * Download page is empty
 * Roadmap page is empty
 * Set disqus color from admin

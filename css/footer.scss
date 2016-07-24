@@ -35,7 +35,15 @@ footer {
 		text-align: left;
 		.row {
 			div:first-child {
-				text-align: center;
+				text-align: right;
+				nav {
+					text-align: right;
+				}
+			}
+			.col-facebook {
+				.nav {
+					text-align: right;
+				}
 			}
 		}
 		img {
