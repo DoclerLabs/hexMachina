@@ -20,6 +20,10 @@
 * Posts have strange shadow on mobile on blog page
 * Post stand alone has ugly margin
 
+# DOCS PAGE
+
+* Rename show cases to Projects
+
 # HELP PAGE TODOS
 
 * Need a solution for breadcrumbs on mobile/tablet
@@ -30,3 +34,4 @@
 * Roadmap page is empty
 * Set disqus color from admin
 * Divider fixes
+* Allow domains for api requests in disqus

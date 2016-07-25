@@ -369,3 +369,17 @@ body {
 		}
 	}
 }
+.btn.blue-button {
+	float: right;
+	&:active {
+		outline: none;
+	}
+	outline: none;
+	border-radius: 20px;
+	background: #327db2;
+	background: -moz-linear-gradient(top,  #327db2 0%, #1a467f 100%);
+	background: -webkit-linear-gradient(top,  #327db2 0%,#1a467f 100%);
+	background: linear-gradient(to bottom,  #327db2 0%,#1a467f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#327db2', endColorstr='#1a467f',GradientType=0 );
+	color: #fff;
+}
