@@ -1,18 +1,13 @@
 ---
 layout: default
-category: News
 ---
+
 <div class="col-md-12 col-vertical-menu hide-on-desktop">
 	<input type="checkbox" class="vertical-menu-button"/>
 	<div class="container">
 		<h2>
 			Category
-			<strong>
-				{% if page.url contains "/design" %}Design
-				{% elsif page.url contains "/video" %}Video
-				{% else %}News
-				{% endif %}
-			</strong>
+			<strong>{{ page.category }}	</strong>
 		</h2>
 		<span class="arrow-down"></span>
 		<span class="arrow-up"></span>
@@ -24,26 +19,17 @@ category: News
 		<div class="row">
 			<div class="col-lg-9 blog-post-container grid" data-packery='{ "itemSelector": ".grid-item"}'>
 				{% for post in site.posts %}
-				<div class="blog-post col-lg-6 grid-item">
-					<div class="blog-post-list-item col-lg-12">
-						{% if post.img %}
-							<div class="post-image" style="background-image:url({{ post.img | prepend: site.baseurl }})"></div>
+					{% if page.url contains "/category" %}
+						{% if post.category == page.category %}
+							{% include blog-post.html %}
 						{% endif %}
-						<div class="content">
-							<time>{{ post.date | date_to_long_string }}</time>
-							<a href="#" class="category">{{ post.category }}</a>
-							<h2>{{ post.title }}</h2>
-							<hr class="divider"/>
-							{{ post.excerpt }}
-							<a href="{{post.url | prepend: site.baseurl }}" class="read-more">Read more &raquo;</a>
-							<ul class="tags">
-								{% for tag in post.tags %}
-									<li><a href="#">{{ tag }}</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-					</div>
-				</div>
+					{% elsif page.url contains "/tag" %}
+						{% if post.tags contains page.tag %}
+							{% include blog-post.html %}
+						{% endif %}
+					{% else %}
+						{% include blog-post.html %}
+					{% endif %}
 				{% endfor %}
 			</div>
 			<div class="col-lg-3">
