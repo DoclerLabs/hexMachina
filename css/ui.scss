@@ -384,6 +384,8 @@ body {
 	color: #fff;
 }
 .more {
+	float: left;
+	width: 100%;
 	.divider {
 		margin: 5px auto;
 	}
@@ -392,6 +394,14 @@ body {
 		display: inline-block;
 	}
 	a {
+		font-size: 26px;
+		font-weight: 300;
+	}
+	button {
+		background: none;
+		outline: none;
+		border: 0;
+		color: #f42233;
 		font-size: 26px;
 		font-weight: 300;
 	}

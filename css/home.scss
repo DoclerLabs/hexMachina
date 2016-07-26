@@ -41,11 +41,18 @@
 	padding: 0 !important;
 	position: relative;
 	overflow: hidden;
+	#particles-js {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+	}
 	.banner-text {
 		width: 50%;
 		position: relative;
 		top: calc(50% - 172px);
-		z-index: 1;
+		z-index: 4;
 		padding: 86px 0;
 	}
 	img {
@@ -127,4 +134,13 @@
 			}
 		}
 	}
+}
+.reveal {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }

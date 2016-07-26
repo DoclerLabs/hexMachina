@@ -7,6 +7,7 @@
 			<button type="button" class="btn action-btn">Download hexMachina v0.3.0</button>
 		</div>
 	</div>
+	<div id="particles-js"></div>
 	<img class="img-responsive" src="{{"/img/hex-machina-bg.jpg" | prepend: site.baseurl }}">
 </section>
 <section>
@@ -38,7 +39,7 @@
 		</div>
 	</div>
 </section>
-<section>
+<section class="features">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -90,10 +91,54 @@
 	}
 				</textarea>
 			</div>
-			<div class="more">
-				<hr class="divider"><br>
-				<button class="read-more">Read more &raquo;</button>
+		</div>
+		<div class="row reveal">
+			<div class="col-lg-6 col-left">
+				<h6>hexIoC</h6>
+				<p class="text-small">Inverion of Control system to make multi-modular applications. With this layer you can have an extremely powerful DSL layer (Domain Specific Language), where you can connect togethet any modules, componends of your system and make them working together.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
 			</div>
+			<div class="col-lg-6 col-right">
+				<h6>hexUnit</h6>
+				<p class="text-small">Extendable UnitTest runner with the basic assertions. It works well together with any mocking and assertion system. FlexUnit and JUnit like syntax.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+		</div>
+		<div class="row reveal">
+			<div class="col-lg-6 col-left">
+				<h6>hexIoC</h6>
+				<p class="text-small">Inverion of Control system to make multi-modular applications. With this layer you can have an extremely powerful DSL layer (Domain Specific Language), where you can connect togethet any modules, componends of your system and make them working together.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+			<div class="col-lg-6 col-right">
+				<h6>hexUnit</h6>
+				<p class="text-small">Extendable UnitTest runner with the basic assertions. It works well together with any mocking and assertion system. FlexUnit and JUnit like syntax.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+		</div>
+		<div class="more">
+			<hr class="divider"><br>
+			<button class="read-more">Read more &raquo;</button>
 		</div>
 	</div>
 </section>
@@ -143,6 +188,7 @@
 							</ul>
 						</div>
 					</div>
+					</div>
 				</div>
 				{% endfor %}
 			</div>
@@ -151,5 +197,14 @@
 				<a href="/blog">Read more ></a>
 			</div>
 		</div>
-	</div>
+	</div>N
 </section>
+<script type="text/javascript" src="./lib/app.js"></script>
+<script type="text/javascript" src="./lib/ReadMore.js"></script>
+<script type="text/javascript" src="./lib/particles/particles.min.js"></script>
+<script type="text/javascript">
+
+	new app.ReadMore('.features');
+
+	particlesJS.load('particles-js', 'assets/particles.json', function() {});
+</script>
