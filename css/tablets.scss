@@ -84,6 +84,13 @@
 			margin-top: 10px !important;
 			font-size: 18px !important;
 		}
+		.more {
+			.divider {
+				margin: auto;
+				max-width: 20px;
+				border-width: 1px;
+			}
+		}
 		hr.divider {
 			margin: 0;
 			max-width: 20px;
