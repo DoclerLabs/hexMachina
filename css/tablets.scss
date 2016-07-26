@@ -85,7 +85,7 @@
 			font-size: 18px !important;
 		}
 		hr.divider {
-			margin: 0;
+			margin: 12px 0;
 			max-width: 20px;
 			border-width: 1px;
 		}
@@ -95,14 +95,6 @@
 		.blog-post-container {
 			.blog-post {
 				margin: 10px 0;
-
-				h2 {
-					margin-bottom: 12px;
-				}
-
-				hr.divider {
-					margin-bottom: 12px;
-				}
 			}
 		}
 		.grid-item {
@@ -159,7 +151,8 @@
 			}
 		}
 		.search-filter-block {
-			margin: 30px 15px 0;
+			float: left;
+			margin: 30px 0 0;
 			.filters li {
 				display: inline-block;
 				margin-right: 10px;

@@ -54,6 +54,11 @@ body {
 	.blog-post-container {
 		padding: 0;
 	}
+	.post-page {
+		.blog-post {
+			padding: 0;
+		}
+	}
 	.blog-post {
 		margin: 0;
 		.blog-post-list-item {
@@ -103,8 +108,6 @@ body {
 			color: #1a467f;
 		}
 		p {
-			color: $c6;
-			font: 400 26px 'Lato';
 			margin: 0 0 25px;
 		}
 		.read-more {
