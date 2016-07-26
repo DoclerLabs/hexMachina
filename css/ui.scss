@@ -52,6 +52,8 @@ body {
 	}
 
 	.blog-post-container {
+		display: flex;
+		flex-wrap: wrap;
 		padding: 0;
 	}
 	.post-page {
@@ -60,13 +62,14 @@ body {
 		}
 	}
 	.blog-post {
-		margin: 0;
+		margin: 0 0 30px;
 		.blog-post-list-item {
+			height: 100%;
 			background: $c1;
 			border-radius: 10px;
 			color: $c3;
 			padding: 0;
-			margin: 0 0 30px;
+			margin: 0;
 			box-shadow: 0 20px 15px rgba(26, 70, 127, 0.1);
 			.content {
 				padding: 40px 40px 30px;
@@ -161,9 +164,6 @@ body {
 		.navbar-brand {
 			padding: 0;
 		}
-	}
-	.grid-item {
-		width: 50%;
 	}
 	.vertical-menu {
 		position: fixed;

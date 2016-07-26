@@ -17,7 +17,7 @@ layout: default
 <div class="container">
 	<div class="site-wrapper blog-container">
 		<div class="row">
-			<div class="col-lg-9 blog-post-container grid" data-packery='{ "itemSelector": ".grid-item"}'>
+			<div class="col-lg-9 blog-post-container">
 				{% for post in site.posts %}
 					{% if page.url contains "/category" %}
 						{% if post.category == page.category %}
