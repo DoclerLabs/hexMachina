@@ -12,6 +12,9 @@
 				}
 			}
 		}
+		.vertical-menu {
+			width: 260px;
+		}
 	}
 }
 @media all and (min-width: 1200px) {
@@ -31,7 +34,11 @@
 			}
 		}
 	}
+	.vertical-menu {
+		right: 30px;
+	}
 	.docs-container {
+		min-height: 500px;
 		margin-left: -15px;
 		margin-right: -15px;
 	}
@@ -44,8 +51,11 @@
 		display: none;
 	}
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1680px) {
 	.container {
 		max-width: 1600px;
+	}
+	.vertical-menu {
+		right: calc((100% - 1600px) / 2);
 	}
 }
