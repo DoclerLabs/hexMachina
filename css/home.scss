@@ -6,6 +6,12 @@
 	footer {
 		margin: 0;
 	}
+	.parallax-mirror {
+		z-index: 1 !important;
+		img {
+			margin-top: 155px;
+		}
+	}
 }
 .home section {
 	background: #dde3ec;
@@ -136,11 +142,8 @@
 	}
 }
 .reveal {
-	height: 0;
-	overflow: hidden;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-ms-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
+	&.hide {
+		height: 0;
+		overflow: hidden;
+	}
 }

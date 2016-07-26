@@ -1,4 +1,4 @@
-<section class="banner-section">
+<section class="banner-section parallax-window" data-parallax="scroll" data-image-src="{{site.baseurl}}/img/hex-machina-bg.jpg">
 	<div class="container">
 		<div class="banner-text">
 			<h1>A powerful multi-modular MVC framework written in Haxe.</h1>
@@ -8,7 +8,6 @@
 		</div>
 	</div>
 	<div id="particles-js"></div>
-	<img class="img-responsive" src="{{"/img/hex-machina-bg.jpg" | prepend: site.baseurl }}">
 </section>
 <section>
 	<div class="container">
@@ -143,7 +142,7 @@
 	</div>
 </section>
 <section class="carousel-section">
-	<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+	<div class="flickity">
 		<div class="gallery-cell">
 			<div class="banner-text">
 				<h4>“We love the approachable format, and the fact that they chose ti feature customers that users can really relate to. When you click into any story, you can read the whole case study in a Q&A format„</h4>
@@ -160,7 +159,7 @@
 		</div>
 	</div>
 	<div class="bubble-pattern"></div>
-	<img class="img-responsive" src="{{"/img/pattern-cover.jpg" | prepend: site.baseurl }}">
+	<img class="img-responsive" src="{{site.baseurl}}/img/pattern-cover.jpg">
 </section>
 
 <section class="news-section">
@@ -199,12 +198,18 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="./lib/app.js"></script>
-<script type="text/javascript" src="./lib/ReadMore.js"></script>
-<script type="text/javascript" src="./lib/particles/particles.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/app.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/ReadMore.js"></script>
+<script src="{{site.baseurl}}/lib/jquery/jquery-2.2.4.min.js"></script>
+<script src="{{site.baseurl}}/lib/parallax/parallax.min.js"></script>
+<script src="{{site.baseurl}}/lib/flickity/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/particles/particles.min.js"></script>
 <script type="text/javascript">
-
+	app.$carousel = new Flickity('.flickity', {
+		wrapAround: true,
+		prevNextButtons: false
+	});
+//	$('.carousel-section').parallax({imageSrc: '{{site.baseurl}}/img/pattern-cover.jpg'});
 	new app.ReadMore('.features');
-
 	particlesJS.load('particles-js', 'assets/particles.json', function() {});
 </script>
