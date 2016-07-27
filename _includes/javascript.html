@@ -61,8 +61,8 @@
 
 		function calculateMenuPosition() {
 			var content = document.getElementById('docs-container');
-			var contentHeight = content.clientHeight - contentMargin;
 			document.addEventListener('scroll', function () {
+				var contentHeight = content.clientHeight - contentMargin;
 				var scrollTop = window.pageYOffset;
 				if (scrollTop > (contentHeight - verticalMenuHeight)) {
 					verticalMenu.style.top = contentHeight - verticalMenuHeight + verticalMenuTop - scrollTop + 'px'
