@@ -168,7 +168,7 @@
 		<div class="row">
 			<div class="col-lg-12 blog-post-container">
 				{% for post in site.posts limit:4 %}
-				<div class="blog-post col-lg-6">
+				<div class="blog-post col-lg-6 col-md-12">
 					<div class="blog-post-list-item col-lg-12">
 						{% if post.img %}
 							<div class="post-image" style="background-image:url({{ post.img | prepend: site.baseurl }})"></div>
@@ -186,7 +186,6 @@
 								{% endfor %}
 							</ul>
 						</div>
-					</div>
 					</div>
 				</div>
 				{% endfor %}
