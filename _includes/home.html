@@ -166,9 +166,9 @@
 	<div class="container">
 		<h2>Blog</h2>
 		<div class="row">
-			<div class="col-lg-12 blog-post-container grid" data-packery='{ "itemSelector": ".grid-item"}'>
+			<div class="col-lg-12 blog-post-container">
 				{% for post in site.posts limit:4 %}
-				<div class="blog-post col-lg-6 grid-item">
+				<div class="blog-post col-lg-6">
 					<div class="blog-post-list-item col-lg-12">
 						{% if post.img %}
 							<div class="post-image" style="background-image:url({{ post.img | prepend: site.baseurl }})"></div>
