@@ -1,4 +1,4 @@
-<section class="banner-section">
+<section class="banner-section parallax-window" data-parallax="scroll" data-image-src="{{site.baseurl}}/img/hex-machina-bg.jpg">
 	<div class="container">
 		<div class="banner-text">
 			<h1>A powerful multi-modular MVC framework written in Haxe.</h1>
@@ -7,7 +7,7 @@
 			<button type="button" class="btn action-btn">Download hexMachina v0.3.0</button>
 		</div>
 	</div>
-	<img class="img-responsive" src="{{"/img/hex-machina-bg.jpg" | prepend: site.baseurl }}">
+	<div id="particles-js"></div>
 </section>
 <section>
 	<div class="container">
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 </section>
-<section>
+<section class="features">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -91,10 +91,58 @@
 				</textarea>
 			</div>
 		</div>
+		<div class="row reveal">
+			<div class="col-lg-6 col-left">
+				<h6>hexIoC</h6>
+				<p class="text-small">Inverion of Control system to make multi-modular applications. With this layer you can have an extremely powerful DSL layer (Domain Specific Language), where you can connect togethet any modules, componends of your system and make them working together.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+			<div class="col-lg-6 col-right">
+				<h6>hexUnit</h6>
+				<p class="text-small">Extendable UnitTest runner with the basic assertions. It works well together with any mocking and assertion system. FlexUnit and JUnit like syntax.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+		</div>
+		<div class="row reveal">
+			<div class="col-lg-6 col-left">
+				<h6>hexIoC</h6>
+				<p class="text-small">Inverion of Control system to make multi-modular applications. With this layer you can have an extremely powerful DSL layer (Domain Specific Language), where you can connect togethet any modules, componends of your system and make them working together.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+			<div class="col-lg-6 col-right">
+				<h6>hexUnit</h6>
+				<p class="text-small">Extendable UnitTest runner with the basic assertions. It works well together with any mocking and assertion system. FlexUnit and JUnit like syntax.</p>
+				<textarea class="code-haxe cm-hexmachina">
+	for (name in people.keys()) {
+		var job = people[name];
+		trace('$name does $job for a living!');
+	}
+				</textarea>
+			</div>
+		</div>
+		<div class="more">
+			<hr class="divider"><br>
+			<button class="read-more">Read more &raquo;</button>
+		</div>
 	</div>
 </section>
 <section class="carousel-section">
-	<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+	<div class="flickity">
 		<div class="gallery-cell">
 			<div class="banner-text">
 				<h4>“We love the approachable format, and the fact that they chose ti feature customers that users can really relate to. When you click into any story, you can read the whole case study in a Q&A format„</h4>
@@ -111,7 +159,7 @@
 		</div>
 	</div>
 	<div class="bubble-pattern"></div>
-	<img class="img-responsive" src="{{"/img/pattern-cover.jpg" | prepend: site.baseurl }}">
+	<img class="img-responsive" src="{{site.baseurl}}/img/pattern-cover.jpg">
 </section>
 
 <section class="news-section">
@@ -120,7 +168,7 @@
 		<div class="row">
 			<div class="col-lg-12 blog-post-container">
 				{% for post in site.posts limit:4 %}
-				<div class="blog-post col-lg-6">
+				<div class="blog-post col-lg-6 col-md-12">
 					<div class="blog-post-list-item col-lg-12">
 						{% if post.img %}
 							<div class="post-image" style="background-image:url({{ post.img | prepend: site.baseurl }})"></div>
@@ -149,3 +197,18 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript" src="{{site.baseurl}}/lib/app.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/ReadMore.js"></script>
+<script src="{{site.baseurl}}/lib/jquery/jquery-2.2.4.min.js"></script>
+<script src="{{site.baseurl}}/lib/parallax/parallax.min.js"></script>
+<script src="{{site.baseurl}}/lib/flickity/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/lib/particles/particles.min.js"></script>
+<script type="text/javascript">
+	app.$carousel = new Flickity('.flickity', {
+		wrapAround: true,
+		prevNextButtons: false
+	});
+//	$('.carousel-section').parallax({imageSrc: '{{site.baseurl}}/img/pattern-cover.jpg'});
+	new app.ReadMore('.features');
+	particlesJS.load('particles-js', 'assets/particles.json', function() {});
+</script>

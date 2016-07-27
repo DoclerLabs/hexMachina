@@ -135,15 +135,13 @@ http://flickity.metafizzy.co
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.gallery {
+.flickity {
 	position: relative;
 	z-index: 2;
-}
-.gallery-cell {
-	width: 100%;
-	counter-increment: gallery-cell;
-}
-.gallery {
+	.gallery-cell {
+		width: 100%;
+		counter-increment: gallery-cell;
+	}
 	.flickity-page-dots {
 		bottom: 20px;
 		li {
@@ -155,8 +153,5 @@ http://flickity.metafizzy.co
 				background: #aacfff;
 			}
 		}
-	}
-	button {
-		display: none;
 	}
 }

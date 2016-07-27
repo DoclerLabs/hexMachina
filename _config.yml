@@ -12,7 +12,7 @@ description: A powerful multi-modular MVC+S system written in Haxe
 baseurl: "/hexMachina" # the subpath of your site, e.g. /blog
 #baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hexmachina.org/" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+twitter_username: _hexmachina
 github_username:  DoclerLabs
 facebook_username:  hexframework
 
