@@ -78,33 +78,36 @@ footer {
 		-ms-transition: all 0.2s ease;
 		-o-transition: all 0.2s ease;
 		transition: all 0.2s ease;
+		.rss-icon {
+			fill: #1c1c1c;
+		}
 		&:hover {
 			opacity: 1;
 		}
 		svg {
+			display: inline-block;
+			width: 32px;
 			path {
-				fill: #aacfff !important;
+				fill: #aacfff;
 			}
 		}
 		&.facebook {
 			svg {
-				display: inline-block;
-				width: 100px;
+				path {
+					fill: #1c1c1c;
+				}
 			}
 		}
-		&.github {
-			svg {
-				display: inline-block;
-				width: 75px;
-			}
-		}
-		&.twitter {
+		&.twitter svg {
+			width: 36px;
 			position: relative;
-			top: 6px;
-			svg {
-				display: inline-block;
-				width: 25px;
-			}
+			top: 2px;
+		}
+		.docler-labs {
+			width: 44px;
+			position: relative;
+			top: -1px;
+			left: -2px;
 		}
 	}
 }
