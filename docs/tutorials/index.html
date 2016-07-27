@@ -5,9 +5,11 @@ category: Tutorial
 ---
 
 <div class="row">
-{% for post in site.posts %}
-	{% if post.category == page.category %}
-		{% include blog-post.html %}
-	{% endif %}
-{% endfor %}
+	<div class="blog-post-container">
+		{% for post in site.posts %}
+			{% if post.category == page.category %}
+				{% include blog-post.html %}
+			{% endif %}
+		{% endfor %}
+	</div>
 </div>
