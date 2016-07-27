@@ -399,3 +399,26 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#327db2', endColorstr='#1a467f',GradientType=0 );
 	color: #fff;
 }
+.more {
+	float: left;
+	width: 100%;
+	.divider {
+		margin: 5px auto;
+	}
+	text-align: center;
+	hr {
+		display: inline-block;
+	}
+	a {
+		font-size: 26px;
+		font-weight: 300;
+	}
+	button {
+		background: none;
+		outline: none;
+		border: 0;
+		color: #f42233;
+		font-size: 26px;
+		font-weight: 300;
+	}
+}

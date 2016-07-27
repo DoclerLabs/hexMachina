@@ -6,6 +6,12 @@
 	footer {
 		padding: 0;
 	}
+	.parallax-mirror {
+		z-index: 1 !important;
+		img {
+			margin-top: 155px;
+		}
+	}
 }
 .home section {
 	background: #dde3ec;
@@ -49,11 +55,18 @@
 	padding: 0 !important;
 	position: relative;
 	overflow: hidden;
+	#particles-js {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+	}
 	.banner-text {
 		width: 50%;
 		position: relative;
 		top: calc(50% - 172px);
-		z-index: 1;
+		z-index: 4;
 		padding: 86px 0;
 	}
 	img {
@@ -65,16 +78,6 @@
 
 .news-section {
 	padding: 50px 0;
-	.more {
-		text-align: center;
-		hr {
-			display: inline-block;
-		}
-		a {
-			font-size: 26px;
-			font-weight: 300;
-		}
-	}
 }
 
 .home .carousel-section {
@@ -144,5 +147,11 @@
 				background: #aacfff;
 			}
 		}
+	}
+}
+.reveal {
+	&.hide {
+		height: 0;
+		overflow: hidden;
 	}
 }
