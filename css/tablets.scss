@@ -101,7 +101,7 @@
 		}
 		.blog-post-container {
 			.blog-post {
-				margin: 10px 0;
+				margin: 15px 0;
 			}
 		}
 		.more a,
@@ -133,7 +133,7 @@
 			display: none;
 			position: absolute;
 			top: 50px;
-			width: 100%;
+			width: 100% !important;
 			margin: 0 0 15px;
 			text-align: center;
 			border-top: 1px solid #d1dae5;

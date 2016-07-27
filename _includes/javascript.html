@@ -50,11 +50,18 @@
 
 	(function() {
 		var verticalMenu = document.getElementById('docs-menu');
+
 		if (verticalMenu) {
-			var verticalMenuHeight = verticalMenu.clientHeight;
 			var verticalMenuTop = verticalMenu.offsetTop;
-			var footer = document.getElementsByTagName('footer');
-			var contentHeight = document.body.clientHeight - footer[0].clientHeight;
+			var verticalMenuHeight = verticalMenu.clientHeight;
+			var contentMargin = 30;
+			calculateMenuPosition();
+			window.addEventListener('resize', calculateMenuPosition);
+		}
+
+		function calculateMenuPosition() {
+			var content = document.getElementById('docs-container');
+			var contentHeight = content.clientHeight - contentMargin;
 			document.addEventListener('scroll', function () {
 				var scrollTop = window.pageYOffset;
 				if (scrollTop > (contentHeight - verticalMenuHeight)) {
