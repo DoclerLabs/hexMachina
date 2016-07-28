@@ -71,8 +71,12 @@
 		width: 50%;
 		position: relative;
 		top: calc(50% - 172px);
+		z-index: 1;
+		padding: 86px 0 0;
+	}
+	button {
+		position: relative;
 		z-index: 4;
-		padding: 86px 0;
 	}
 	img {
 		position: absolute;
