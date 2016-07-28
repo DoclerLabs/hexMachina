@@ -45,6 +45,9 @@
 	.vertical-menu {
 		right: 30px;
 	}
+	.category-tag-block {
+		margin-right: 30px;
+	}
 	.docs-container {
 		min-height: 500px;
 		margin-left: -15px;
@@ -65,5 +68,8 @@
 	}
 	.vertical-menu {
 		right: calc((100% - 1600px) / 2);
+	}
+	.category-tag-block {
+		margin-right: calc((100% - 1600px) / 2);
 	}
 }
