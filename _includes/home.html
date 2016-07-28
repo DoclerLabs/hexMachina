@@ -1,4 +1,4 @@
-<section class="banner-section parallax-window" data-parallax="scroll" data-image-src="{{site.baseurl}}/img/hex-machina-bg.jpg">
+<section class="banner-section parallax-window" data-parallax="scroll" data-image-src="{{site.baseurl}}/img/hex-machina-bg.jpg" data-naturalHeight="700" data-positionY="-100">
 	<div class="container">
 		<div class="banner-text">
 			<h1>A powerful multi-modular MVC framework written in Haxe.</h1>
@@ -208,7 +208,7 @@
 		wrapAround: true,
 		prevNextButtons: false
 	});
-//	$('.carousel-section').parallax({imageSrc: '{{site.baseurl}}/img/pattern-cover.jpg'});
+	$('.carousel-section').parallax({imageSrc: '{{site.baseurl}}/img/pattern-cover.jpg'});
 	new app.ReadMore('.features');
 	particlesJS.load('particles-js', 'assets/particles.json', function() {});
 </script>
