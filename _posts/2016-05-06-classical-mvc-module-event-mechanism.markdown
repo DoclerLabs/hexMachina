@@ -2,7 +2,7 @@
 layout: post
 title:  "Classical MVC Module Event mechanism"
 date:   2016-05-06
-img: /img/blog/MVC_Flow_diagram.png
+img: /img/blog/MVC-flow-diagram.png
 category: Design
 tags: [mvc, developers]
 ---
@@ -11,7 +11,7 @@ MVC was always a hype since the years 70’, and hexMachina also have a classica
 In this article my goal is not to to explain the principles of MVC, but more to describe the implementation and typical usage of it in hexMachina.
 
 <h3>MVC flow diagram</h3>
-![MVC Flow diagram]({{ site.baseurl }}/img/blog/MVC_Flow_diagram.png)
+![MVC Flow diagram]({{ site.baseurl }}/img/blog/MVC-flow-diagram.png)
 <h3>Explanation</h3>
 
 Before anyone would get scared of 11 steps of chain let me explain it in details. :)
