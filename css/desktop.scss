@@ -18,6 +18,12 @@
 	}
 }
 @media all and (min-width: 1200px) {
+	.parallax-mirror {
+		z-index: 1 !important;
+		img {
+			margin-top: 155px;
+		}
+	}
 	.container {
 		width: calc(100% - 60px);
 		padding: 0;
