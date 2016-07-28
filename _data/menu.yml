@@ -12,7 +12,8 @@
   link: /blog
 
 - name: Roadmap
-  link: /roadmap
+  link: https://github.com/DoclerLabs/hexMachina/milestones
+  external: true
 
 - name: Help
   link: /help

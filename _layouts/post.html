@@ -6,7 +6,7 @@ layout: default
 		<article class="col-lg-9">
 			<div class="blog-post col-lg-12">
 				{% if page.img %}
-				<img class="post-image" src="{{ page.img | prepend: site.baseurl }}"/>
+				<div class="post-image" style="background-image:url({{ page.img | prepend: site.baseurl }})"></div>
 				{% endif %}
 				<div class="content">
 					<time>{{ page.date | date_to_long_string }}</time>
@@ -15,7 +15,7 @@ layout: default
 					<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ page.category }}</a>
 					<h2>{{ page.title }}</h2>
 					<hr class="divider"/>
-					{{ page.excerpt }}
+					{{ page.content }}
 					<ul class="tags">
 						{% for tag in page.tags %}
 							{% assign tagname = tag | slugify %}
@@ -40,7 +40,7 @@ layout: default
 			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 		</article>
 		<div class="col-lg-3">
-			{% include searchfilter.html %}
+			{% include categories-tags.html %}
 		</div>
 	</div>
 </div>

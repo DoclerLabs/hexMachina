@@ -49,7 +49,7 @@
 	}
 
 	(function() {
-		var verticalMenu = document.getElementById('docs-menu');
+		var verticalMenu = document.getElementById('slide-menu');
 
 		if (verticalMenu) {
 			var verticalMenuTop = verticalMenu.offsetTop;
@@ -60,7 +60,7 @@
 		}
 
 		function calculateMenuPosition() {
-			var content = document.getElementById('docs-container');
+			var content = document.getElementById('slide-container');
 			document.addEventListener('scroll', function () {
 				var contentHeight = content.clientHeight - contentMargin;
 				var scrollTop = window.pageYOffset;

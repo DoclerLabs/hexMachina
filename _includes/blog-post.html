@@ -1,14 +1,16 @@
 <div class="blog-post col-lg-6 col-md-12">
 	<div class="blog-post-list-item col-lg-12">
 		{% if post.img %}
+		<a href="{{post.url | prepend: site.baseurl }}">
 			<div class="post-image" style="background-image:url({{ post.img | prepend: site.baseurl }})"></div>
+		</a>
 		{% endif %}
 		<div class="content">
 			<time>{{ post.date | date_to_long_string }}</time>
 			{% assign categoryname = post.category | slugify %}
 			{% assign categorylink = '/blog/category/' | append:categoryname %}
 			<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ post.category }}</a>
-			<h2>{{ post.title }}</h2>
+			<a href="{{post.url | prepend: site.baseurl }}"><h2>{{ post.title }}</h2></a>
 			<hr class="divider"/>
 			{{ post.excerpt }}
 			<a href="{{post.url | prepend: site.baseurl }}" class="read-more">Read more &raquo;</a>
