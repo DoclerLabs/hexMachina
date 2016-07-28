@@ -8,8 +8,8 @@
 	}
 	.parallax-mirror {
 		z-index: 1 !important;
-		img {
-			margin-top: 155px;
+		&:nth-child(2) {
+			opacity: 0.2;
 		}
 	}
 }
@@ -21,6 +21,11 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dde3ec', endColorstr='#ffffff',GradientType=0 );
 	overflow: hidden;
 	padding: 100px 0;
+	&.features,
+	&.news-section {
+		z-index: 1;
+		position: relative;
+	}
 	h2 {
 		margin-bottom: 12px;
 		color: #122556;
@@ -66,8 +71,13 @@
 		width: 50%;
 		position: relative;
 		top: calc(50% - 172px);
+		z-index: 1;
+		padding: 86px 0 0;
+	}
+	button {
+		position: relative;
 		z-index: 4;
-		padding: 86px 0;
+		margin-bottom: 86px;
 	}
 	img {
 		position: absolute;
@@ -108,6 +118,7 @@
 		left: 0;
 		opacity: 0.3;
 		display: none;
+		z-index: 1;
 	}
 	h4 {
 		font-weight: 100;
