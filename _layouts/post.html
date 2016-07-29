@@ -1,12 +1,35 @@
 ---
 layout: default
 ---
-<div class="container post-page">
+
+<div class="col-md-12 col-vertical-menu hide-on-desktop">
+	<input type="checkbox" class="vertical-menu-button"/>
+	<div class="container">
+		{% if page.category %}
+		<h2>Category <strong>{{ page.category }}</strong></h2>
+		{% elsif page.tag %}
+		<h2>Tag <strong>{{ page.tag }}</strong></h2>
+		{% else %}
+		<h2>Filters</h2>
+		{% endif %}
+		<span class="arrow-down"></span>
+		<span class="arrow-up"></span>
+	</div>
+	<div class="vertical-menu">
+		<ul class="nav">
+			{% include categories-menu.html %}
+		</ul>
+		<ul class="tags">
+			{% include tags-menu.html %}
+		</ul>
+	</div>
+</div>
+<div id="slide-container" class="container post-page">
 	<div class="row">
 		<article class="col-lg-9">
 			<div class="blog-post col-lg-12">
 				{% if page.img %}
-				<img class="post-image" src="{{ page.img | prepend: site.baseurl }}"/>
+				<div class="post-image" style="background-image:url({{ page.img | prepend: site.baseurl }})"></div>
 				{% endif %}
 				<div class="content">
 					<time>{{ page.date | date_to_long_string }}</time>
@@ -15,7 +38,7 @@ layout: default
 					<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ page.category }}</a>
 					<h2>{{ page.title }}</h2>
 					<hr class="divider"/>
-					{{ page.excerpt }}
+					{{ page.content }}
 					<ul class="tags">
 						{% for tag in page.tags %}
 							{% assign tagname = tag | slugify %}
@@ -40,7 +63,7 @@ layout: default
 			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 		</article>
 		<div class="col-lg-3">
-			{% include searchfilter.html %}
+			{% include categories-tags.html %}
 		</div>
 	</div>
 </div>

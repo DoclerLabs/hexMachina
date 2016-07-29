@@ -13,6 +13,9 @@ body {
 	a, a:hover, a:focus, a:active, a.active {
 		color: #f42233;
 	}
+	img {
+		width: 100%;
+	}
 	p {
 		margin: 18px 0;
 		color: #262c35;
@@ -44,6 +47,7 @@ body {
 		text-transform: none;
 	}
 	h3 {
+		position: relative;
 		margin-top: 10px;
 		font-size: 26px;
 		font-weight: 700;
@@ -69,6 +73,7 @@ body {
 	float: left;
 	width: 100%;
 	background: #fff;
+	margin-top: -50px;
 	padding: 23px 40px;
 	border-radius: 10px;
 }

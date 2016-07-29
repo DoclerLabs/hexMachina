@@ -49,20 +49,20 @@
 	}
 
 	(function() {
-		var verticalMenu = document.getElementById('docs-menu');
+		var verticalMenu = document.getElementById('slide-menu');
 
 		if (verticalMenu) {
-			var verticalMenuTop = verticalMenu.offsetTop;
-			var verticalMenuHeight = verticalMenu.clientHeight;
 			var contentMargin = 30;
 			calculateMenuPosition();
 			window.addEventListener('resize', calculateMenuPosition);
 		}
 
 		function calculateMenuPosition() {
-			var content = document.getElementById('docs-container');
-			var contentHeight = content.clientHeight - contentMargin;
+			var verticalMenuTop = verticalMenu.offsetTop;
+			var verticalMenuHeight = verticalMenu.clientHeight;
+			var content = document.getElementById('slide-container');
 			document.addEventListener('scroll', function () {
+				var contentHeight = content.clientHeight - contentMargin;
 				var scrollTop = window.pageYOffset;
 				if (scrollTop > (contentHeight - verticalMenuHeight)) {
 					verticalMenu.style.top = contentHeight - verticalMenuHeight + verticalMenuTop - scrollTop + 'px'

@@ -23,11 +23,11 @@ github: [metadata]
 kramdown:
   input: GFM
   hard_wrap: false
-gems:
-  - jekyll-assets
+gems: [jekyll-paginate]
+paginate: 2
+paginate_path: /blog/page:num/
 
 lsi: false
-safe: true
 source: "./"
 incremental: false
 highlighter: rouge
