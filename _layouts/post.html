@@ -1,7 +1,30 @@
 ---
 layout: default
 ---
-<div class="container post-page">
+
+<div class="col-md-12 col-vertical-menu hide-on-desktop">
+	<input type="checkbox" class="vertical-menu-button"/>
+	<div class="container">
+		{% if page.category %}
+		<h2>Category <strong>{{ page.category }}</strong></h2>
+		{% elsif page.tag %}
+		<h2>Tag <strong>{{ page.tag }}</strong></h2>
+		{% else %}
+		<h2>Filters</h2>
+		{% endif %}
+		<span class="arrow-down"></span>
+		<span class="arrow-up"></span>
+	</div>
+	<div class="vertical-menu">
+		<ul class="nav">
+			{% include categories-menu.html %}
+		</ul>
+		<ul class="tags">
+			{% include tags-menu.html %}
+		</ul>
+	</div>
+</div>
+<div id="slide-container" class="container post-page">
 	<div class="row">
 		<article class="col-lg-9">
 			<div class="blog-post col-lg-12">

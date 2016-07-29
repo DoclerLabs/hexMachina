@@ -52,14 +52,14 @@
 		var verticalMenu = document.getElementById('slide-menu');
 
 		if (verticalMenu) {
-			var verticalMenuTop = verticalMenu.offsetTop;
-			var verticalMenuHeight = verticalMenu.clientHeight;
 			var contentMargin = 30;
 			calculateMenuPosition();
 			window.addEventListener('resize', calculateMenuPosition);
 		}
 
 		function calculateMenuPosition() {
+			var verticalMenuTop = verticalMenu.offsetTop;
+			var verticalMenuHeight = verticalMenu.clientHeight;
 			var content = document.getElementById('slide-container');
 			document.addEventListener('scroll', function () {
 				var contentHeight = content.clientHeight - contentMargin;
