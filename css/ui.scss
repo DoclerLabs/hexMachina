@@ -206,10 +206,10 @@ body {
 		}
 	}
 	.install-row {
+		position: relative;
 		height: 30px;
 		margin-bottom: 20px;
-		padding-left: 30%;
-		text-align: left;
+		text-align: center;
 		background: #f4f5f7;
 		p {
 			color: $c5;
@@ -247,10 +247,8 @@ body {
 		background: url(../img/archive-icon.png);
 	}
 	.help-icon,
-	.download-icon,
-	.copy-icon {
-		float: right;
-		margin: 2px 3px 0;
+	.copy-icon,
+	.download-icon {
 		cursor: pointer;
 		svg path {
 			-webkit-transition: all .5s ease;
@@ -267,10 +265,18 @@ body {
 		}
 	}
 	.download-icon {
-		margin-left: 10px;
+		float: right;
+		margin: 3px 0 0 10px;
+	}
+	.help-icon {
+		position: absolute;
+		top: 4px;
+		right: 32px;
 	}
 	.copy-icon {
-		position: relative;
+		position: absolute;
+		top: 2px;
+		right: 5px;
 		.copied-text {
 			position: absolute;
 			top: -25px;

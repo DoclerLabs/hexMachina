@@ -219,9 +219,6 @@
 				text-align: center !important;
 			}
 		}
-		.navbar .navbar-brand {
-			padding: 0 0 0 15px;
-		}
 		.navbar-nav {
 			display: none;
 			li  {
@@ -230,6 +227,7 @@
 		}
 		.mobile-menu {
 			display: block;
+			padding: 33px 15px;
 		}
 		&.mobile-menu-on {
 			.navbar {
@@ -301,31 +299,9 @@
 				}
 				.box-content {
 					.text-content {
-						padding: 20px 20px 0;
+						padding: 20px;
 					}
 				}
-			}
-		}
-		.arrow-down,
-		.arrow-up {
-			right: 50px;
-		}
-		.docs-container {
-			margin-left: 0 !important;
-			margin-right: 0 !important;
-		}
-		.blog-container {
-			margin: 75px 15px 0 !important;
-		}
-		.col-vertical-menu {
-			h2 {
-				margin-left: 15px;
-			}
-		}
-		.post-page {
-			.box {
-				padding-left: 15px;
-				padding-right: 15px;
 			}
 		}
 	}
@@ -337,11 +313,8 @@
 		}
 	}
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
 	body {
-		.navbar .navbar-brand {
-			padding: 0 0 0 30px;
-		}
 		.banner-section {
 			img {
 				top: -125px;
@@ -349,6 +322,9 @@
 				width: 136%;
 				right: 0;
 			}
+		}
+		.navbar .navbar-brand {
+			padding: 0 0 0 15px;
 		}
 	}
 }
@@ -360,6 +336,27 @@
 				max-width: none;
 				width: 321%;
 				right: -259px;
+			}
+		}
+		.install-text {
+			font-size: 14px !important;
+		}
+		.box-container {
+			.box {
+				.box-content {
+					.text-content {
+						padding: 15px;
+					}
+				}
+			}
+			&.downloads-container {
+				.install-row {
+					padding-left: 5px;
+					text-align: left;
+				}
+				.download {
+					font-size: 17px;
+				}
 			}
 		}
 	}

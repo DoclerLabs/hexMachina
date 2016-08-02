@@ -1,0 +1,8 @@
+- name: haxelib install hexmachina
+  id: hexmachina
+- name: haxelib install hexInject
+  id: hexInject
+- name: haxelib install hexMVC
+  id: hexMVC
+- name: haxelib install hexIoC
+  id: hexIoC

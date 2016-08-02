@@ -13,14 +13,16 @@ title: Downloads
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<h5>Install the latest version from command line</h5>
 				<div class="install-row">
-					<p><span class="install-text">haxelib install hexmachina</span>
-						<span class="copy-icon" data-clipboard-target=".install-text">
-							<svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 17 20" width="17" height="20">
-								<path transform="translate(-15023 -666)" d="M 15025 666 a 2.006 2.006 0 0 0 -2 2 v 13 h 2 V 668 h 10 v -2 h -10 Z m 4 4 a 2.006 2.006 0 0 0 -2 2 v 12 a 2.006 2.006 0 0 0 2 2 h 9 a 2.006 2.006 0 0 0 2 -2 V 672 a 2.006 2.006 0 0 0 -2 -2 h -9 Z m 0 2 h 9 v 12 h -9 V 672 Z" />
-							</svg>
-							<span class="copied-text">Copied this command!</span>
-						</span>
-					</p>
+					{% for packages in site.data.packages limit: 1 %}
+						<p><span id="install-{{packages.id}}" class="install-text">{{ packages.name }}</span>
+							<span class="copy-icon" data-clipboard-target="#install-{{packages.id}}">
+								<svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 17 20" width="17" height="20">
+									<path transform="translate(-15023 -666)" d="M 15025 666 a 2.006 2.006 0 0 0 -2 2 v 13 h 2 V 668 h 10 v -2 h -10 Z m 4 4 a 2.006 2.006 0 0 0 -2 2 v 12 a 2.006 2.006 0 0 0 2 2 h 9 a 2.006 2.006 0 0 0 2 -2 V 672 a 2.006 2.006 0 0 0 -2 -2 h -9 Z m 0 2 h 9 v 12 h -9 V 672 Z" />
+								</svg>
+								<span class="copied-text">Copied this command!</span>
+							</span>
+						</p>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
@@ -32,13 +34,15 @@ title: Downloads
 				<h2>Get bundle <strong>zip</strong></h2>
 				<hr class="divider"/>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-				<a href="" class="download">Download hexMachina v0.5
-					<span class="download-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-							<path transform="translate(-15626 -976)" d="M 15626 976 v 20 h 20 V 976 h -8 a 2 2 0 0 1 -4 0 h -8 Z m 2 2 h 4.6 a 3.89 3.89 0 0 0 6.8 0 h 4.6 v 16 h -16 V 978 Z m 7 4 v 6.25 l -2.3 -2.281 l -1.4 1.406 l 4 4 l 0.7 0.719 l 0.7 -0.719 l 4 -4 l -1.4 -1.406 l -2.3 2.281 V 982 h -2 Z" />
-						</svg>
-					</span>
-				</a>
+				{% for downloads in site.data.downloads limit: 1 %}
+					<a href="{{ downloads.link }}" class="download">{{ downloads.name }}
+							<span class="download-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+									<path transform="translate(-15626 -976)" d="M 15626 976 v 20 h 20 V 976 h -8 a 2 2 0 0 1 -4 0 h -8 Z m 2 2 h 4.6 a 3.89 3.89 0 0 0 6.8 0 h 4.6 v 16 h -16 V 978 Z m 7 4 v 6.25 l -2.3 -2.281 l -1.4 1.406 l 4 4 l 0.7 0.719 l 0.7 -0.719 l 4 -4 l -1.4 -1.406 l -2.3 2.281 V 982 h -2 Z" />
+								</svg>
+							</span>
+					</a>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -48,51 +52,23 @@ title: Downloads
 				<h3>Other packages</h3>
 				<hr class="divider"/>
 				<p>You can get them from <a href="lib.haxe.org" class="secondary-link">lib.haxe.org</a></p>
-				<div class="install-row">
-					<p><span class="install-text">haxelib install hexInject</span>
-					<span class="copy-icon" data-clipboard-target=".install-text">
-						<svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 17 20" width="17" height="20">
-							<path transform="translate(-15023 -666)" d="M 15025 666 a 2.006 2.006 0 0 0 -2 2 v 13 h 2 V 668 h 10 v -2 h -10 Z m 4 4 a 2.006 2.006 0 0 0 -2 2 v 12 a 2.006 2.006 0 0 0 2 2 h 9 a 2.006 2.006 0 0 0 2 -2 V 672 a 2.006 2.006 0 0 0 -2 -2 h -9 Z m 0 2 h 9 v 12 h -9 V 672 Z" />
-						</svg>
-						<span class="copied-text">Copied this command!</span>
-					</span>
-					<a href="" class="help-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-							<path transform="translate(-14993 -946)" d="M 15003 946 a 10 10 0 1 0 10 10 A 10.029 10.029 0 0 0 15003 946 Z m 0 2 a 8 8 0 1 1 -8 8 A 8.024 8.024 0 0 1 15003 948 Z m -0.1 3 a 2.62 2.62 0 0 0 -2.9 3 h 2 c 0 -1.4 0.7 -1.5 1 -1.5 a 1.193 1.193 0 0 1 1 1.312 c 0 2.1 -2 1.588 -2 4.188 h 2 c 0 -1.7 2 -1.787 2 -4.188 A 2.781 2.781 0 0 0 15002.9 951 Z m -0.9 8 v 2 h 2 v -2 h -2 Z" />
-						</svg>
-					</a>
-					</p>
-				</div>
-				<div class="install-row">
-					<p><span class="install-text">haxelib install hexMVC</span>
-						<span class="copy-icon" data-clipboard-target=".install-text">
-							<svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 17 20" width="17" height="20">
-								<path transform="translate(-15023 -666)" d="M 15025 666 a 2.006 2.006 0 0 0 -2 2 v 13 h 2 V 668 h 10 v -2 h -10 Z m 4 4 a 2.006 2.006 0 0 0 -2 2 v 12 a 2.006 2.006 0 0 0 2 2 h 9 a 2.006 2.006 0 0 0 2 -2 V 672 a 2.006 2.006 0 0 0 -2 -2 h -9 Z m 0 2 h 9 v 12 h -9 V 672 Z" />
-							</svg>
-							<span class="copied-text">Copied this command!</span>
-						</span>
-						<a href="" class="help-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-								<path transform="translate(-14993 -946)" d="M 15003 946 a 10 10 0 1 0 10 10 A 10.029 10.029 0 0 0 15003 946 Z m 0 2 a 8 8 0 1 1 -8 8 A 8.024 8.024 0 0 1 15003 948 Z m -0.1 3 a 2.62 2.62 0 0 0 -2.9 3 h 2 c 0 -1.4 0.7 -1.5 1 -1.5 a 1.193 1.193 0 0 1 1 1.312 c 0 2.1 -2 1.588 -2 4.188 h 2 c 0 -1.7 2 -1.787 2 -4.188 A 2.781 2.781 0 0 0 15002.9 951 Z m -0.9 8 v 2 h 2 v -2 h -2 Z" />
-							</svg>
-						</a>
-					</p>
-				</div>
-				<div class="install-row">
-					<p><span class="install-text">haxelib install hexIoC</span>
-						<span class="copy-icon" data-clipboard-target=".install-text">
-							<svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 17 20" width="17" height="20">
-								<path transform="translate(-15023 -666)" d="M 15025 666 a 2.006 2.006 0 0 0 -2 2 v 13 h 2 V 668 h 10 v -2 h -10 Z m 4 4 a 2.006 2.006 0 0 0 -2 2 v 12 a 2.006 2.006 0 0 0 2 2 h 9 a 2.006 2.006 0 0 0 2 -2 V 672 a 2.006 2.006 0 0 0 -2 -2 h -9 Z m 0 2 h 9 v 12 h -9 V 672 Z" />
-							</svg>
-							<span class="copied-text">Copied this command!</span>
-						</span>
-						<a href="" class="help-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-								<path transform="translate(-14993 -946)" d="M 15003 946 a 10 10 0 1 0 10 10 A 10.029 10.029 0 0 0 15003 946 Z m 0 2 a 8 8 0 1 1 -8 8 A 8.024 8.024 0 0 1 15003 948 Z m -0.1 3 a 2.62 2.62 0 0 0 -2.9 3 h 2 c 0 -1.4 0.7 -1.5 1 -1.5 a 1.193 1.193 0 0 1 1 1.312 c 0 2.1 -2 1.588 -2 4.188 h 2 c 0 -1.7 2 -1.787 2 -4.188 A 2.781 2.781 0 0 0 15002.9 951 Z m -0.9 8 v 2 h 2 v -2 h -2 Z" />
-							</svg>
-						</a>
-					</p>
-				</div>
+				{% for packages in site.data.packages offset: 1 %}
+					<div class="install-row">
+						<p><span id="install-{{packages.id}}" class="install-text">{{ packages.name }}</span>
+							<span class="copy-icon" data-clipboard-target="#install-{{packages.id}}">
+								<svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 17 20" width="17" height="20">
+									<path transform="translate(-15023 -666)" d="M 15025 666 a 2.006 2.006 0 0 0 -2 2 v 13 h 2 V 668 h 10 v -2 h -10 Z m 4 4 a 2.006 2.006 0 0 0 -2 2 v 12 a 2.006 2.006 0 0 0 2 2 h 9 a 2.006 2.006 0 0 0 2 -2 V 672 a 2.006 2.006 0 0 0 -2 -2 h -9 Z m 0 2 h 9 v 12 h -9 V 672 Z" />
+								</svg>
+								<span class="copied-text">Copied this command!</span>
+							</span>
+							<a href="#" class="help-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+									<path transform="translate(-14993 -946)" d="M 15003 946 a 10 10 0 1 0 10 10 A 10.029 10.029 0 0 0 15003 946 Z m 0 2 a 8 8 0 1 1 -8 8 A 8.024 8.024 0 0 1 15003 948 Z m -0.1 3 a 2.62 2.62 0 0 0 -2.9 3 h 2 c 0 -1.4 0.7 -1.5 1 -1.5 a 1.193 1.193 0 0 1 1 1.312 c 0 2.1 -2 1.588 -2 4.188 h 2 c 0 -1.7 2 -1.787 2 -4.188 A 2.781 2.781 0 0 0 15002.9 951 Z m -0.9 8 v 2 h 2 v -2 h -2 Z" />
+								</svg>
+							</a>
+						</p>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -102,27 +78,15 @@ title: Downloads
 				<h3>Older versions</h3>
 				<hr class="divider"/>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-				<a href="" class="download">Download hexMachina v0.5
-					<span class="download-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-							<path transform="translate(-15626 -976)" d="M 15626 976 v 20 h 20 V 976 h -8 a 2 2 0 0 1 -4 0 h -8 Z m 2 2 h 4.6 a 3.89 3.89 0 0 0 6.8 0 h 4.6 v 16 h -16 V 978 Z m 7 4 v 6.25 l -2.3 -2.281 l -1.4 1.406 l 4 4 l 0.7 0.719 l 0.7 -0.719 l 4 -4 l -1.4 -1.406 l -2.3 2.281 V 982 h -2 Z" />
-						</svg>
-					</span>
-				</a>
-				<a href="" class="download">Download hexMachina v0.4
-					<span class="download-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-							<path transform="translate(-15626 -976)" d="M 15626 976 v 20 h 20 V 976 h -8 a 2 2 0 0 1 -4 0 h -8 Z m 2 2 h 4.6 a 3.89 3.89 0 0 0 6.8 0 h 4.6 v 16 h -16 V 978 Z m 7 4 v 6.25 l -2.3 -2.281 l -1.4 1.406 l 4 4 l 0.7 0.719 l 0.7 -0.719 l 4 -4 l -1.4 -1.406 l -2.3 2.281 V 982 h -2 Z" />
-						</svg>
-					</span>
-				</a>
-				<a href="" class="download">Download hexMachina v0.3
-					<span class="download-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
-							<path transform="translate(-15626 -976)" d="M 15626 976 v 20 h 20 V 976 h -8 a 2 2 0 0 1 -4 0 h -8 Z m 2 2 h 4.6 a 3.89 3.89 0 0 0 6.8 0 h 4.6 v 16 h -16 V 978 Z m 7 4 v 6.25 l -2.3 -2.281 l -1.4 1.406 l 4 4 l 0.7 0.719 l 0.7 -0.719 l 4 -4 l -1.4 -1.406 l -2.3 2.281 V 982 h -2 Z" />
-						</svg>
-					</span>
-				</a>
+				{% for downloads in site.data.downloads offset: 1 %}
+					<a href="{{ downloads.link }}" class="download">{{ downloads.name }}
+						<span class="download-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+								<path transform="translate(-15626 -976)" d="M 15626 976 v 20 h 20 V 976 h -8 a 2 2 0 0 1 -4 0 h -8 Z m 2 2 h 4.6 a 3.89 3.89 0 0 0 6.8 0 h 4.6 v 16 h -16 V 978 Z m 7 4 v 6.25 l -2.3 -2.281 l -1.4 1.406 l 4 4 l 0.7 0.719 l 0.7 -0.719 l 4 -4 l -1.4 -1.406 l -2.3 2.281 V 982 h -2 Z" />
+							</svg>
+						</span>
+					</a>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
