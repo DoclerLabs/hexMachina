@@ -4,15 +4,17 @@ layout: default
 
 <div class="col-md-12 col-vertical-menu hide-on-desktop">
 	<input type="checkbox" class="vertical-menu-button"/>
-	{% if page.category %}
-	<h2>Category <strong>{{ page.category }}</strong></h2>
-	{% elsif page.tag %}
-	<h2>Tag <strong>{{ page.tag }}</strong></h2>
-	{% else %}
-	<h2>Filters</h2>
-	{% endif %}
-	<span class="arrow-down"></span>
-	<span class="arrow-up"></span>
+	<div class="container">
+		{% if page.category %}
+		<h2>Category <strong>{{ page.category }}</strong></h2>
+		{% elsif page.tag %}
+		<h2>Tag <strong>{{ page.tag }}</strong></h2>
+		{% else %}
+		<h2>Filters</h2>
+		{% endif %}
+		<span class="arrow-down"></span>
+		<span class="arrow-up"></span>
+	</div>
 	<div class="vertical-menu">
 		<ul class="nav">
 			{% include categories-menu.html %}
@@ -46,8 +48,8 @@ layout: default
 					</ul>
 					<hr class="divider"/>
 				</div>
+				<div id="disqus_thread"></div>
 			</div>
-			<div id="disqus_thread"></div>
 			<script>
 				(function() {
 					var d = document, s = d.createElement('script');

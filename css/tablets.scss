@@ -1,54 +1,9 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-@media all and (max-width: 768px) {
-	body {
-		.navbar .navbar-brand {
-			padding: 0 0 0 30px !important;
-		}
-		.banner-section {
-			img {
-				top: -125px;
-				max-width: none;
-				width: 136%;
-				right: 0;
-			}
-		}
-	}
-}
 @media all and (max-width: 1200px) {
 	.hide-on-mobile {
 		display: none;
-	}
-	.post-page {
-		padding-top: 100px;
-	}
-		.threads {
-			li {
-				h2, time, span, strong {
-					 line-height: normal;
-					 margin: 10px 0;
-				 }
-				a {
-					font-size: 18px;
-				}
-				h2, strong {
-					margin: 20px 0;
-				}
-				span, strong {
-					border-left: 0;
-				}
-			}
-		}
-		.metro-block {
-				h3 {
-					font-size: 24px;
-				}
-		}
-	.page-layout {
-		.site-wrapper {
-			margin-top: 30px;
-		}
 	}
 	body {
 		margin-top: 80px;
@@ -106,6 +61,31 @@
 						padding-bottom: 0;
 					}
 				}
+			}
+		}
+		.post-page {
+			padding-top: 100px;
+		}
+		.threads {
+			li {
+				h2, time, span, strong {
+					line-height: normal;
+					margin: 10px 0;
+				}
+				a {
+					font-size: 18px;
+				}
+				h2, strong {
+					margin: 20px 0;
+				}
+				span, strong {
+					border-left: 0;
+				}
+			}
+		}
+		.metro-block {
+			h3 {
+				font-size: 24px;
 			}
 		}
 		.more a,
@@ -303,12 +283,33 @@
 				margin-left: 15px;
 			}
 		}
+		.post-page {
+			.box {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
 	}
 }
 @media all and (min-width: 992px) {
 	footer {
 		.text-left {
 			text-align: left !important;
+		}
+	}
+}
+@media all and (max-width: 768px) {
+	body {
+		.navbar .navbar-brand {
+			padding: 0 0 0 30px;
+		}
+		.banner-section {
+			img {
+				top: -125px;
+				max-width: none;
+				width: 136%;
+				right: 0;
+			}
 		}
 	}
 }
