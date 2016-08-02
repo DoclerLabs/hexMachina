@@ -13,6 +13,10 @@ body {
 	a, a:hover, a:focus, a:active, a.active {
 		color: #f42233;
 	}
+	.secondary-link {
+		color: #1a467f;
+		font-weight: 700;
+	}
 	img {
 		width: 100%;
 	}
@@ -73,7 +77,7 @@ body {
 	float: left;
 	width: 100%;
 	background: #fff;
-	margin-top: -50px;
+	margin-top: 10px;
 	padding: 23px 40px;
 	border-radius: 10px;
 }

@@ -98,9 +98,14 @@
 		&.home section {
 			padding: 30px 0;
 		}
-		.blog-post-container {
-			.blog-post {
-				margin: 15px 0;
+		.box-container {
+			.box {
+				.box-content {
+					margin: 15px 0;
+					.text-content {
+						padding-bottom: 0;
+					}
+				}
 			}
 		}
 		.more a,

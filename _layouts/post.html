@@ -4,17 +4,15 @@ layout: default
 
 <div class="col-md-12 col-vertical-menu hide-on-desktop">
 	<input type="checkbox" class="vertical-menu-button"/>
-	<div class="container">
-		{% if page.category %}
-		<h2>Category <strong>{{ page.category }}</strong></h2>
-		{% elsif page.tag %}
-		<h2>Tag <strong>{{ page.tag }}</strong></h2>
-		{% else %}
-		<h2>Filters</h2>
-		{% endif %}
-		<span class="arrow-down"></span>
-		<span class="arrow-up"></span>
-	</div>
+	{% if page.category %}
+	<h2>Category <strong>{{ page.category }}</strong></h2>
+	{% elsif page.tag %}
+	<h2>Tag <strong>{{ page.tag }}</strong></h2>
+	{% else %}
+	<h2>Filters</h2>
+	{% endif %}
+	<span class="arrow-down"></span>
+	<span class="arrow-up"></span>
 	<div class="vertical-menu">
 		<ul class="nav">
 			{% include categories-menu.html %}
@@ -27,7 +25,7 @@ layout: default
 <div id="slide-container" class="container post-page">
 	<div class="row">
 		<article class="col-lg-9">
-			<div class="blog-post col-lg-12">
+			<div class="box col-lg-12">
 				{% if page.img %}
 				<div class="post-image" style="background-image:url({{ page.img | prepend: site.baseurl }})"></div>
 				{% endif %}
