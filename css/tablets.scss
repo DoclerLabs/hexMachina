@@ -23,7 +23,7 @@
 			top: -150px;
 		}
 		h2 {
-			font-size: 30px !important;
+			font-size: 30px;
 			font-weight: 300;
 		}
 		h3 {
@@ -52,9 +52,15 @@
 		}
 		&.home section {
 			padding: 30px 0;
+			h2 {
+				font-size: 30px;
+			}
 		}
 		.box-container {
 			.box {
+				h2 {
+					font-size: 30px;
+				}
 				.box-content {
 					margin: 15px 0;
 					.text-content {
@@ -62,6 +68,27 @@
 					}
 				}
 			}
+		}
+		.pagination {
+			.previous,
+			.next {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				margin: 2px;
+				text-align: center;
+				line-height: 26px;
+				border: 2px solid rgba(26,70,127, .2);
+				border-radius: 100%;
+			}
+		}
+		.arrow-left {
+			height: 20px;
+			margin-left: 0;
+		}
+		.arrow-right {
+			height: 16px;
+			margin-left: 4px;
 		}
 		.post-page {
 			padding-top: 100px;
@@ -184,6 +211,7 @@
 			}
 		}
 		footer {
+			padding-top: 40px;
 			div:first-child {
 				text-align: center !important;
 			}
@@ -266,7 +294,18 @@
 				border: 0;
 			}
 		}
-
+		.box-container {
+			.box {
+				h2 {
+					font-size: 26px;
+				}
+				.box-content {
+					.text-content {
+						padding: 20px 20px 0;
+					}
+				}
+			}
+		}
 		.arrow-down,
 		.arrow-up {
 			right: 50px;

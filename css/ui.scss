@@ -378,8 +378,8 @@ body {
 	.arrow-left {
 		display: inline-block;
 		width: 10px;
-		height: 20px;
-		margin-left: -9px;
+		height: 18px;
+		margin-left: -8px;
 		margin-right: 21px;
 		text-align: left;
 		&:after, &:before {
@@ -391,18 +391,18 @@ body {
 		}
 		&:after {
 			border-right-color: $c8;
-			border-width: 11px;
+			border-width: 10px;
 		}
 		&:before {
 			border-right-color: $c3;
-			border-width: 9px;
+			border-width: 8px;
 			margin-top: 2px;
 		}
 	}
 	.arrow-right {
 		display: inline-block;
-		width: 10px;
-		height: 16px;
+		width: 8px;
+		height: 14px;
 		margin-left: 14px;
 		text-align: left;
 		&:after, &:before {
@@ -414,11 +414,11 @@ body {
 		}
 		&:after {
 			border-left-color: $c8;
-			border-width: 7px;
+			border-width: 6px;
 		}
 		&:before {
 			border-left-color: $c3;
-			border-width: 9px;
+			border-width: 8px;
 			margin-top: -2px;
 		}
 	}

@@ -62,12 +62,12 @@ layout: default
 						{% include blog-post.html %}
 					{% endfor %}
 					<div class="pagination col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
 							{% if paginator.previous_page %}
-								<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><span class="arrow-left"></span> Previous</a>
+								<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><span class="arrow-left"></span><span class="hide-on-mobile">Previous</span></a>
 							{% endif %}
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 page-numbers">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 page-numbers">
 							{% for page in (1..paginator.total_pages) %}
 								{% if page == paginator.page %}
 									<span class="page-num active">{{ page }}</span>
@@ -78,9 +78,9 @@ layout: default
 								{% endif %}
 							{% endfor %}
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 next-page">
+						<div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 next-page">
 							{% if paginator.next_page %}
-								<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next <span class="arrow-right"></span></a>
+								<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next"><span class="hide-on-mobile">Next</span><span class="arrow-right"></span></a>
 							{% endif %}
 						</div>
 					</div>
