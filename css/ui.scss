@@ -223,6 +223,11 @@ body {
 		color: $c3;
 		font-size: 20px;
 		font-weight: 700;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		transition: all .5s ease;
 		&:hover {
 			svg path {
 				fill: $c5;
@@ -245,8 +250,14 @@ body {
 	.download-icon,
 	.copy-icon {
 		float: right;
-		margin: 2px 5px 0;
+		margin: 2px 3px 0;
+		cursor: pointer;
 		svg path {
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
 			fill: $c3;
 		}
 		&:hover {
@@ -257,6 +268,27 @@ body {
 	}
 	.download-icon {
 		margin-left: 10px;
+	}
+	.copy-icon {
+		position: relative;
+		.copied-text {
+			position: absolute;
+			top: -25px;
+			right: 0;
+			font-size: 10px;
+			color: $c3;
+			white-space: nowrap;
+			opacity: 0;
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
+			pointer-events: none;
+		}
+		&.copied .copied-text {
+			opacity: 1;
+		}
 	}
 	.tags {
 		padding: 0;
