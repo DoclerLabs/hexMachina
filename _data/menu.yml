@@ -1,0 +1,19 @@
+- name: Home
+  link: /
+
+- name: Docs
+  link: /docs
+  redirect: /docs/getstarted
+
+- name: Downloads
+  link: /downloads
+
+- name: Blog
+  link: /blog
+
+- name: Roadmap
+  link: https://github.com/DoclerLabs/hexMachina/milestones
+  external: true
+
+- name: Help
+  link: /help

@@ -1,7 +1,10 @@
 ---
 published: true
 layout: post
+date; 2016-05-06
 title: Classical MVC Module Event mechanism
+category: Design
+tags: [feature, oop]
 ---
 MVC was always a hype since the years 70', and hexMachina also have a classical implementation for this actitectural pattern. Let's see how it looks like in practice.
 

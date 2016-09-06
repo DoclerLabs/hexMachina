@@ -1,0 +1,5 @@
+{% for docs in site.data.docs %}
+	<li>
+		<a href="{% if docs.external == true %}{{ docs.link}}{% else %}{{ docs.link | prepend: site.baseurl }}{% endif %}" {% if page.url contains docs.link %}class="active"{% endif %} {% if docs.external == true %} target="_blank" {% endif %}>{{ docs.name }}</a>
+	</li>
+{% endfor %}

@@ -1,0 +1,74 @@
+//
+// Icon Font: hexMachina
+//
+
+$fontChaosFilePath: "./hexMachina" !default;
+@font-face {
+  font-family: "hexMachina";
+  src: url("#{$fontChaosFilePath}.eot");
+  src: url("#{$fontChaosFilePath}.eot?#iefix") format("embedded-opentype"),
+       url("#{$fontChaosFilePath}.woff") format("woff"),
+       url("#{$fontChaosFilePath}.ttf") format("truetype"),
+       url("#{$fontChaosFilePath}.svg#hexMachina") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$_fontChaosIcons: map-merge((),()) !global;
+@function _icon($icon){
+    @return map-get($_fontChaosIcons, $icon);
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.hm-doclerlabs:before,
+.hm-facebook:before,
+.hm-github:before,
+.hm-gitter:before,
+.hm-google-groups:before,
+.hm-haxe:before,
+.hm-rss:before,
+.hm-stack-overflow:before,
+.hm-twitter:before {
+  display: inline-block;
+  font-family: "hexMachina";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('doclerlabs': '\f100'));
+.hm-doclerlabs:before { content: "\f100"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('facebook': '\f101'));
+.hm-facebook:before { content: "\f101"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('github': '\f102'));
+.hm-github:before { content: "\f102"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('gitter': '\f103'));
+.hm-gitter:before { content: "\f103"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('google-groups': '\f104'));
+.hm-google-groups:before { content: "\f104"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('haxe': '\f105'));
+.hm-haxe:before { content: "\f105"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('rss': '\f106'));
+.hm-rss:before { content: "\f106"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('stack-overflow': '\f107'));
+.hm-stack-overflow:before { content: "\f107"; }
+
+$_fontChaosIcons: map-merge($_fontChaosIcons, ('twitter': '\f108'));
+.hm-twitter:before { content: "\f108"; }
+

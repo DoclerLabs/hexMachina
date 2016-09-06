@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
-<section>
-
-  <header class="post-header">
-    <h1 class="post-title"></h1>
-  </header>
-  <div id="title">
-    <h1>{{ page.title }}</h1>
-    <h5>{{ page.secondary-title }}</h5>
-    <hr>
-    <span class="credits left">Project maintained by <a href="https://github.com/mattgraham">mattgraham</a></span>
-    <span class="credits right">This project is released under the terms of the MIT license.</span>
-  </div>
-
-  {{ content }}
-
-</section>
+<div class="container page-layout">
+	<div class="site-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+					<h2 class="col-lg-12">{{ page.title }}</h2>
+					<hr class="divider"/>
+					{{ content }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

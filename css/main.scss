@@ -1,20 +1,8 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Front matter comment to ensure Jekyll properly reads file.
 ---
-@charset "utf-8";
 
-// variables
-$color-yellow: #68A9CE;
-$color-green: #D06800;
-$border-radius: 2px;
-
-// mixin
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-    "fonts",
-    "css3-mixins",
-    "normalize",
-    "styles",
-    "pygment_trac";
+@import 'font-awesome.min.css', 'flickity.css', 'bootstrap-extend.css', 'bootstrap.min.css', 'ui.css', 'global.css', 'header.css', 'footer.css', 'home.css', 'tablets.css', 'desktop.css';
+@import '../assets/fonts/hexMachina.css';
+@import 'codemirror.css';
+@import 'codemirror-theme.css';

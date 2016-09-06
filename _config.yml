@@ -9,10 +9,12 @@
 title: HEXMACHINA - a powerful multi-modular MVC framework written in Haxe
 email: info@hexmachina.org
 description: A powerful multi-modular MVC+S system written in Haxe
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/hexMachina" # the subpath of your site, e.g. /blog
+#baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hexmachina.org/" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+twitter_username: _hexmachina
 github_username:  DoclerLabs
+facebook_username:  hexframework
 
 # Build settings
 markdown: kramdown
@@ -21,14 +23,12 @@ github: [metadata]
 kramdown:
   input: GFM
   hard_wrap: false
-gems:
-  - jekyll-coffeescript
-  - jekyll-paginate
-  - jekyll-seo-tag
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: /blog/page:num/
 
 lsi: false
-safe: true
-source: ./
+source: "./"
 incremental: false
 highlighter: rouge
 gist:
@@ -37,3 +37,38 @@ exclude: [".git", "hex*", "build.bat", "build"]
 
 disqus_shortname: hexmachina
 disqus_publickey: nB9WCx4oEOsvmKPvKtoGtIxp2xre054EU7c7kqHyn09BoP1skkTDw109FXJSAOVJ
+
+sass:
+  style: compressed
+
+assets:
+  compress:
+    sass: true,
+    css: true
+
+  #
+
+  base_path: ./bundles/
+
+  autowrite: true
+  prefix: "/assets"
+  digest: true
+
+  #
+
+  assets:
+    - "*.png"
+    - "bundle.css"
+
+  #
+
+  sources:
+    - /css
+
+  #
+
+  features:
+    liquid: true
+    integrity: true
+    automatic_img_size: true
+    automatic_img_alt : true
