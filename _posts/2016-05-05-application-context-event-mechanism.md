@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "ApplicationContext Event mechanism"
-date:   2016-05-05
-img: /img/blog/ApplicationContext-Flow-Diagram.png
+img: /img/blog/ApplicationContext-Flow-Diagram.jpg
 category: Design
 tags: [feature, dsl]
 ---
@@ -10,7 +9,7 @@ We have a strong DSL layer to manage multi-modular applications. You can see now
 
 <h3>ApplicationContext flow diagram</h3>
 
-![Application Context Flow Diagram]({{ site.baseurl }}/img/blog/ApplicationContext-Flow-Diagram.png)
+![Application Context Flow Diagram]({{ site.baseurl }}/img/blog/ApplicationContext-Flow-Diagram-full.png)
 
 <h3>Explanation</h3>
 
