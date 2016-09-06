@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date; 2016-05-06
+date: 2016-05-06
 title: Classical MVC Module Event mechanism
 category: Design
 tags: [feature, oop]
