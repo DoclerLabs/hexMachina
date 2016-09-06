@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flickr Gallery Example"
+title:  "Flickr Gallery - MVC"
 date:   2016-09-06
 img: /img/blog/gallery-screenshot.png
 category: Showcase
