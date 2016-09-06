@@ -4,7 +4,7 @@ title:  "WWX 2016 - slides and video"
 date:   2016-06-06
 img: /img/blog/wwx2016.jpg
 category: News
-tags: [Francis, developers, wwx]
+tags: [event,index]
 ---
 Find bellow video and slides for Francis talk “hexMachina - urban framework for hardcore developers” at WWX 2016 in Paris.
 

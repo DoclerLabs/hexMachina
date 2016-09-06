@@ -63,9 +63,6 @@
 				}
 				.box-content {
 					margin: 15px 0;
-					.text-content {
-						padding-bottom: 0;
-					}
 				}
 			}
 		}
@@ -221,6 +218,9 @@
 		}
 		.navbar-nav {
 			display: none;
+
+			//NEW
+			float: none !important;
 			li  {
 				width: 100%;
 			}
@@ -230,6 +230,7 @@
 			padding: 33px 15px;
 		}
 		&.mobile-menu-on {
+			overflow: hidden;
 			.navbar {
 				position: fixed;
 				width: 100%;
@@ -259,22 +260,46 @@
 					background: transparent;
 				}
 			}
+			.table-cell {
+				display: table-cell;
+				vertical-align: middle;
+			}
 			.navbar-nav {
-				display: block;
+				//display: block;
+				//text-align: center;
+				//margin: 0 !important;
+				//width: 100%;
+				//height: 100%;
+				//position: fixed;
+				//left: 0;
+				//top: 80px;
+				//background: rgba(28, 28, 28, 0.90);
+
+				// NEW
+				display: table-cell;
 				text-align: center;
 				margin: 0 !important;
 				width: 100%;
-				height: 100%;
-				position: fixed;
 				left: 0;
-				top: 80px;
-				background: rgba(28, 28, 28, 0.90);
+				vertical-align: middle;
+
 				li {
+					//width: 100%;
+					//height: calc(100% / 8);
+					//display: table;
+
+					// NEW
 					width: 100%;
-					height: calc(100% / 8);
+					height: calc(100% / 9);
 					display: table;
+					vertical-align: middle;
 					a {
 						font-size: 30px;
+
+						// NEW
+						vertical-align: middle;
+						display: table-cell;
+						float: none !important;
 					}
 					a.btn {
 						display: inline-block;
@@ -284,12 +309,32 @@
 					}
 				}
 			}
-			.collapse {
-				position: relative;
-				display: block;
-				margin: 0;
-				top: 53px;
-				border: 0;
+			header {
+				.navbar {
+					.collapse {
+						display: table !important;
+						margin: 0;
+						border: 0;
+						width: 100%;
+						height: calc(100% - 80px) !important;
+						position: fixed;
+						left: 0;
+						padding: 0;
+						top: 80px;
+						background: rgba(28,28,28,0.9);
+						box-shadow: none;
+					}
+					@media all and (max-height: 430px) {
+						.collapse {
+							display: block !important;
+							overflow-y: scroll;
+							.navbar-nav {
+								display: inline-block;
+								text-align: center;
+							}
+						}
+					}
+				}
 			}
 		}
 		.box-container {

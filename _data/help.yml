@@ -1,15 +1,19 @@
 - name: Stack overflow
   lead: ask for solutions, problems, etc
   link: http://stackoverflow.com/questions/tagged/hexmachina
+  icon: 'hm-stack-overflow'
 
 - name: Github issues
   lead: report errors or feature request
   link: https://github.com/DoclerLabs/hexMachina/issues
+  icon: 'hm-github'
 
 - name: Gitter
   lead: quick live conversations and speed dating
   link: https://gitter.im/DoclerLabs/hexMachina
+  icon: 'hm-gitter'
 
-- name: Google Group
+- name: Google Groups
   lead: framework discussions
   link: https://groups.google.com/forum/#!forum/hexmachina
+  icon: 'hm-google-groups'

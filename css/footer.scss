@@ -71,43 +71,17 @@ footer {
 			}
 		}
 	}
-	.btn-social {
+	i {
 		opacity: 0.6;
 		-webkit-transition: all 0.2s ease;
 		-moz-transition: all 0.2s ease;
 		-ms-transition: all 0.2s ease;
 		-o-transition: all 0.2s ease;
 		transition: all 0.2s ease;
-		.rss-icon {
-			fill: #1c1c1c;
-		}
+		font-size: 30px;
+		color: #aacfff;
 		&:hover {
 			opacity: 1;
-		}
-		svg {
-			display: inline-block;
-			width: 32px;
-			path {
-				fill: #aacfff;
-			}
-		}
-		&.facebook {
-			svg {
-				path {
-					fill: #1c1c1c;
-				}
-			}
-		}
-		&.twitter svg {
-			width: 36px;
-			position: relative;
-			top: 2px;
-		}
-		.docler-labs {
-			width: 44px;
-			position: relative;
-			top: -1px;
-			left: -2px;
 		}
 	}
 }

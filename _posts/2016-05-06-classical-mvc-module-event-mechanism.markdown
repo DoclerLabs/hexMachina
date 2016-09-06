@@ -4,7 +4,7 @@ title:  "Classical MVC Module Event mechanism"
 date:   2016-05-06
 img: /img/blog/MVC-flow-diagram.png
 category: Design
-tags: [mvc, developers]
+tags: [mvc, oop, feature]
 ---
 MVC was always a hype since the years 70’, and hexMachina also have a classical implementation for this actitectural pattern. Let’s see how it looks like in practice.
 

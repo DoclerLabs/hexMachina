@@ -6,12 +6,16 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
+				<li></li>
 				{% include menu.html %}
 
 				{% if site.github_username %}
-				<li>
-					<a href="https://github.com/{{ site.github_username }}" class="btn action-btn">View on GitHub</a>
-				</li>
+					<li class="button-container">
+						<div class="table-cell">
+							<a href="https://github.com/{{ site.github_username }}" class="btn action-btn">View on GitHub</a>
+						</div>
+					</li>
+				<li></li>
 				{% endif %}
 			</ul>
 		</div>

@@ -4,7 +4,7 @@ title:  "Structural presentation"
 date:   2016-05-30
 img: /img/blog/structure-prezi.jpg
 category: Tutorial
-tags: [video, developers]
+tags: [video, feature]
 ---
 Here is an online presentation of the structure of the framework.
 

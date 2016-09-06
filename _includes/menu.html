@@ -1,5 +1,16 @@
 {% for menu in site.data.menu %}
 	<li>
-		<a href="{% if menu.redirect %}{{ menu.redirect | prepend: site.baseurl }} {% else %} {{ menu.link | prepend: site.baseurl }}{% endif %}" {% if page.url contains menu.link and menu.name != "Home" %}class="active"{% elsif page.url == "/" and menu.name == "Home" %}class="active"{% endif %} {% if menu.external == true %} target="_blank" {% endif %}>{{ menu.name }}</a>
+		<a href="
+
+		{% if menu.redirect %}
+			{{ menu.redirect | prepend: site.baseurl }}
+		{% elsif menu.external %}
+			{{menu.link}}
+		{% else %}
+			{{ menu.link | prepend: site.baseurl }}
+		{% endif %}
+
+
+		" {% if page.url contains menu.link and menu.name != "Home" %}class="active"{% elsif page.url == "/" and menu.name == "Home" %}class="active"{% endif %} {% if menu.external == true %} target="_blank" {% endif %}>{{ menu.name }}</a>
 	</li>
 {% endfor %}

@@ -85,6 +85,9 @@ header {
 		background: #1c1c1c;
 		border: 0;
 		border-bottom: 1px solid #2e2f30;
+		.navbar-collapse {
+			max-height: none;
+		}
 		.navbar-brand {
 			padding: 0;
 			margin-left: 0 !important;
@@ -103,10 +106,13 @@ header {
 				color: #FFFFFF !important;
 				&.active {
 					color: #f42233 !important;
+					font-weight: 600;
 				}
 			}
-			&:last-child a {
-				margin: 5px 0 0 13px;
+			&.button-container {
+				a {
+					margin: 5px 0 0 13px;
+				}
 			}
 		}
 		.action-btn {

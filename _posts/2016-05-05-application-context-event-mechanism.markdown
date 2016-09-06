@@ -4,7 +4,7 @@ title:  "ApplicationContext Event mechanism"
 date:   2016-05-05
 img: /img/blog/ApplicationContext-Flow-Diagram.png
 category: Design
-tags: [developers]
+tags: [feature, dsl]
 ---
 We have a strong DSL layer to manage multi-modular applications. You can see now some typical cases of event flows between modules, and the possible ways of communications.
 
