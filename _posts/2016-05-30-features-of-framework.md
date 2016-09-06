@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Features of the framework"
-date:   2016-05-30
-img: /img/blog/hexmachina-welcome.jpg
+img: /img/blog/features-of-the-framework.jpg
 category: Design
 tags: [feature]
 ---

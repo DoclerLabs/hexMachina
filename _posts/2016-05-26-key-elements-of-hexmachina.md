@@ -1,9 +1,9 @@
 ---
 published: true
 layout: post
-date: 2016-05-26
 title: Key elements of the framework
 category: Design
+img: /img/blog/keys.jpg
 tags: [feature]
 ---
 Without the detailed descriptions, here are the key featured elements of hexMachina, that gives you great flexibility to fulfill your needs according to different problems.
