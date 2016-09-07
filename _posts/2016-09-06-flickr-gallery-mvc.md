@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Flickr Gallery - MVC"
-date:   2016-09-06
+date:   2016-06-25
 img: /img/blog/gallery-screenshot.png
 category: Showcase
 tags: []
