@@ -44,7 +44,7 @@
 			<div class="col-lg-12">
 				<h2>Features of the framework</h2>
 				<hr class="divider"/>
-				<p>Including but not limited to, here are the main cornerstone features of the framework. If you are interested in more details check the documentations.</p>
+				<p>hexMachina relies on a smart mix beetween declarative and imperative programming. The main concept is to split your application codebase in two distinct parts. The first one is made from resusable micro-applications called components developed with haxe language. The second one is driven by DSL for describing your components assembling and your application behaviors.</p>
 			</div>
 		</div>
 		<div class="row">
@@ -52,7 +52,7 @@
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexMVC"><h6>hexMVC</h6></a>
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern.</p>
 				<textarea class="code-haxe cm-hexmachina">
-class MyModule extends Module implements IMyModule {
+class MyModule extends Module {
 	public function new( view:IMyView ) {
 		this._addStatelessConfigClasses([MyModuleCommandConfig]);
         this.buildViewHelper(MyViewHelper, view);
@@ -62,7 +62,7 @@ class MyModule extends Module implements IMyModule {
 private class MyModuleCommandConfig extends StatelessCommandConfig {
     override public function configure() {
 		this.map(MyModuleMessage.MODULE_READY, InitModuleMacro).once();
-        this.map(MyModuleMessage.GET_NEWS, GetNewsCommand);s
+        this.map(MyModuleMessage.GET_NEWS, GetNewsCommand);
 	}
 }</textarea>
 			</div>
@@ -124,7 +124,7 @@ class MyTest {
 				<p class="text-small">Service layer extension for <b>hexMVC</b> to separate service communications. It has all typical predefined service behaviors like: configuration, success, fail, cancel, timeout, etc.</p>
 				<textarea class="code-haxe cm-hexmachina">
 var service = new MyService ();
-service.addHandler (StatelessServiceMessage.COMPLETE, this, function () {
+service.addHandler (StatelessServiceMessage.COMPLETE, function () {
 	trace ("complete");
 });</textarea>
 			</div>
@@ -172,9 +172,9 @@ Logger.getInstance().addListener( new TraceLayout() );
 Logger.DEBUG( "test" );
 
 var onTest = new MessageType( "onTest" );
-var dispatcher = new Dispatcher<ITestListener>();
-dispatcher.addHandler( onTest, this, function () {
-	trace( "onTest" )
+var dispatcher = new ClosureDispatcher();
+dispatcher.addHandler( onTest, function () {
+	trace( "onTest" );
 } );
 dispatcher.dispatch( onTest, [] );</textarea>
 			</div>
