@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Flickr Gallery - MDVC"
-date:   2016-09-06
+title:  "Flickr Gallery - MDVC (Experimental)"
+date:   2016-06-25
 img: /img/blog/gallery-mdvc-screenshot.png
 category: Showcase
 tags: []
