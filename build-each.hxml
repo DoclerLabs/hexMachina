@@ -16,3 +16,4 @@
 -cp /home/travis/hexstate/test
 -cp /home/travis/hexunit/src
 -cp /home/travis/hexunit/test
+-D debug=true
