@@ -8,13 +8,13 @@ haxe:
 
 matrix:
   include:
-	  - os: linux
-	  sudo: required
-      dist: trusty
-	  language: haxe
-      haxe: development
+  - os: linux
+    sudo: required
+    dist: trusty
+    language: haxe
+    haxe: development
   allow_failures:
-	  - haxe: development
+  - haxe: development
     
 addons:
   apt:
