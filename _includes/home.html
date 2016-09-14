@@ -5,7 +5,11 @@
 			<h4><span>Try it!</span> Install from command line</h4>
 			<p class="code">haxelib install hexmachina</p>
 		</div>
-		<button type="button" class="btn action-btn">Download hexMachina v0.3.0</button>
+		{% for downloads in site.data.downloads limit: 1 %}
+		<a href="{{ downloads.link }}">
+			<button type="button" class="btn action-btn">{{ downloads.name }}</button>
+		</a>
+		{% endfor %}
 	</div>
 	<div id="particles-js"></div>
 </section>
