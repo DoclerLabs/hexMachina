@@ -10,8 +10,11 @@
 - name: Tutorials
   link: /docs/tutorials
 
-- name: API documentation
-  link: /docs/api
-
 - name: Tools & Libraries
   link: /docs/tools
+
+- name: _separator_
+  
+- name: API documentation
+  link: /docs/api
+  highlight: true
