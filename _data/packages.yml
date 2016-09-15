@@ -1,6 +1,5 @@
-- name: haxelib inxstall hexmachina
+- name: haxelib install hexmachina
   id: hexmachina
-
   
 - name: haxelib install hexmvc
   id: hexMVC
