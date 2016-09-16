@@ -6,6 +6,15 @@
 	footer {
 		padding: 0;
 	}
+	@media all and (min-width: 1201px) {
+		.parallax-mirror {
+			&:nth-child(1) {
+				img {
+					margin-top: 155px;
+				}
+			}
+		}
+	}
 	.parallax-mirror {
 		z-index: 1 !important;
 		&:nth-child(2) {

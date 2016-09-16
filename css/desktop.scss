@@ -25,11 +25,6 @@
 	.home {
 		.parallax-mirror {
 			z-index: 1 !important;
-			&.first-child {
-				img {
-					margin-top: 155px;
-				}
-			}
 		}
 		.carousel-section {
 			img {
