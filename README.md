@@ -1,8 +1,10 @@
 # Install
 
-1. Checkout the repository with gh-pages brach
-2. Install Jekyll: https://jekyllrb.com/docs/installation/
-3. Run `jekyll serve` in the directory of 
+1. Checkout the repository with gh-pages branch
+2. Install Ruby ( v2.x.x )
+3. Install Jekyll: https://jekyllrb.com/docs/installation/
+3. Install Jekyll pagination 
+4. Run `jekyll serve` in the directory of the previously checked out repository.
 
 # Usage
 
