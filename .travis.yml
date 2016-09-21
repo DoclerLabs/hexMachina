@@ -24,6 +24,7 @@ matrix:
         - "export DISPLAY=:99.0"
         - "sh -e /etc/init.d/xvfb start"
         - "export AUDIODEV=null"
+        - sleep 3 # give xvfb some time to start
   - os: linux
     sudo: required
     dist: trusty
@@ -41,6 +42,9 @@ matrix:
         - libxcursor1:i386
         - libnss3:i386
         - libgtk2.0-0:i386
+    before_install:
+        - "export DISPLAY=:99.0"
+        - "export AUDIODEV=null"
   - os: linux
     sudo: required
     dist: trusty
@@ -58,6 +62,9 @@ matrix:
         - libxcursor1:i386
         - libnss3:i386
         - libgtk2.0-0:i386
+    before_install:
+        - "export DISPLAY=:99.0"
+        - "export AUDIODEV=null"
   allow_failures:
   - haxe: development
     
@@ -72,8 +79,6 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexState.git ~/hexstate
 - git clone --recursive https://github.com/DoclerLabs/hexIoC.git ~/hexioc
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
-- export DISPLAY=:99.0;
-- export AUDIODEV=null;
 - haxe flash/install.hxml
 
 script:
