@@ -4,7 +4,7 @@ title:  "Flickr Gallery - MDVC (Experimental)"
 date:   2016-06-25
 img: /img/blog/gallery-mdvc-screenshot.jpg
 category: Showcase
-tags: []
+tags: [mvc, oop]
 ---
 This is a simple example using hexMachina to load images from Flickr and display them. It uses a hexMachina's ICompletable API and is based on a MDVC architecture.
 

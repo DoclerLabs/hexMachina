@@ -4,7 +4,7 @@ title:  "TicTacToe"
 date:   2016-06-25
 img: /img/blog/tictactoe.jpg
 category: Showcase
-tags: []
+tags: [mvc, oop]
 ---
 Modular TicTacToe example written in Haxe using hexMachina.
 
