@@ -1,6 +1,9 @@
 language: haxe
 
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
+env:
+  global:
+  - secure: krFpnucBeyRMYRjTCGK9My3M9IqXSZLyWHHiST67FEzH47dLGOmBm4Wac+ArPHsN2L5XCQdQzNkE5n8ZGV4nnsmKb0pWlzhu+wZL9L4m2S8bYSEKJrUFb24Rxv2F0wSvrihWpbKYVMdqogZzlch7o1s+h0MmIYqVymi4rwIHn64yLaPK96nPKCq7e3JixvEEc4dNSdoVwqq+J6u4jAxgylpLFXpqz+LQjsXaeU0MLGdNShCK1NytzSppgOKWmZ4LvjTI8sO17VxCBSq6R9d80NWAQ1IWIw3B5lzufoANkQQqgw1ExxNA7IeJ4+eKZ4qIKL/DPOeSEuL9uyDELNEn/2x3g+taV5F3Z++KibIOuj08qeKGr8oUyoa73UvCrHnImi7ldOnOdHLHyRMS07mOGq7VIbk9DVDeQhUmu3fKEuao+02KVnNYB8pojvnPs8auUz+GAZwYbTG4sBBnJ+Esj57/uD57FJ+v1JyaREfZ65N2HIHZSH+QDM8g6HCYC3xbVWRZ+D+MdbliL6rpmGpPvFjHmgbZ25zvt18oXJQQv+62kSdiRQcYOqr/SdAEmdEp6OdBbsBQJdc3FapBmSg5IKxIu13qiEHYnGN9JelR45lMe625ri7L8WBLSTsP9OVQ9P2kR3KmoW2r7d2PWcyZ/DRDnOiCKBsebLT92g3vOKE=
 
 install:
 - git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
