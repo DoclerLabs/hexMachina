@@ -15,7 +15,7 @@ install:
 script:
 - echo 0
 
-before_deploy: "./.travis/post-deploy.sh"
+before_deploy: "./.travis/pre-deploy.sh"
 
 deploy:
   provider: releases
