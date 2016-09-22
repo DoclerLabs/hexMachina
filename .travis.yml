@@ -43,7 +43,7 @@ script:
 - haxe build-js.hxml           && node bin/TravisMachinaTest.js
 - haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/TravisMachinaTest.swf
 
-before_deploy: "./release-hexMachina-bundle.sh"
+before_deploy: "./.travis/post-deploy.sh"
 
 deploy:
   provider: releases
@@ -56,6 +56,8 @@ deploy:
   on:
     repo: aliokan/hexMachina
     tags: true
+
+after_deploy: "./.travis/post-deploy.sh"
 
 notifications:
   email:
