@@ -17,7 +17,6 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexIoC.git ~/hexioc
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
-- npm install
 
 before_script:
   - git config --global user.email "laurent@geturl.net"
