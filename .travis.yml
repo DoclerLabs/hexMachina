@@ -3,7 +3,9 @@ language: haxe
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
 env:
   global:
+  # travis encrypt GH_TOKEN=<token> -r user/repo
   - secure: Tj1ELTCsUBDb02W/WJaJOd3U6BLYf0trZZ9ox/TiMxwgQzPFsxtmkwN13dw/AK1xl5C/C5ndaTNYEr8528i9nku9qhb2t3h5z1M5YQry0T/pY3rmBp5IUlqCNjBJrTdbSz6O3lK45l/KrdtTq/JeA91E1a60ueE3p5sO/3HbZqxmRzZlEsz1Ky8ZOpRJpJ3Wce3IXW7s592+xHkizj0sm5fN2bTMCrA42wL/NcO/fc+X6LFr8YcSH+WUqjJ85IkpikMt2qjzEu3KuI+IhdVT1Rilv4uc3WyHlb9em1TeI0tsnCLqkttSLDRWx4OqdIYkmVz0jLVXxw8rNBQSah1MgDlgeeWn+xavYKrThmpKmHL5E3Q75oaYf5wMtKMNdZPh3c0hyjX86Za5cD9/120AUgCLPbsjvA7nYMA++kowAdULZyqaSN8+5t45lP3ep108jm/tFUNdztK/twiAY/eOXtRr712MVrdSBx+hZtey5O/wb4HwNK84tpIUZTpBfW57v/Uh//nNKHuwdJJp0xjVRFKzq2RPAdv7lnLVO2Ewzajs1zMgLPbKeStGMc6CIUfzBC6d6Ounh2wHqQft0akJPQmE5qNdaYKxRkn4JIvqiXIPrEPlhgyJuH9qUwbz7RqYxypuXMW3jVrAySthqyx7yoFT4a6sKN9MF+tquy4cAM0=
+  - TRAVIS_NODE_VERSION="6.6.0"
 
 install:
 - git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
@@ -14,12 +16,15 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexState.git ~/hexstate
 - git clone --recursive https://github.com/DoclerLabs/hexIoC.git ~/hexioc
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
+- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+- npm install
 
 before_script:
   - git config --global user.email "laurent@geturl.net"
   - git config --global user.name "Travis-CI"
   
 script:
+- node -v
 - echo 0
   
 before_deploy: "./.travis/pre-deploy.sh"
@@ -28,6 +33,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
+    # travis encrypt <key> -r aliokan/hexMachina
     secure: M+0UTHHNr0AeG3r1y3pNN2lCrOGe6FmoTUKz5YTAlB30xmkv/Zqv6TsJ2V8antDa11R8Um8r0mkSWcTh875/A/iSNcVb6dctx66OQuVbXLRWQF3CZlNKGzfovqZd7STawhkEx4HI5RhlrBLS5auvvQU8zE31DbUUCEJpmh97ZZK/vzjjnEMfKQEoEeOQG95K0o3IQg7AB2p4YJN0x3sOxPPEzqUefkJ4jJ2PR6w25sukm0+sLZC37vXZR4WwIc6oYSmPgThjNQaeNH5V0CLBJMhpzY0/0eY5RZDyCc6k40m7Za9w8DIRAa7fNxr/7KaU+lT4irkfzG7E/AFJ+yiQUGgNohrf0MnZY7CR3H1+zraeeQwUDmMW3kgNURIaO3k0dv6rt+Mt8yhAZ7lKrhe9ugGfKBwuwbr36AAKpkYL/4t4RvAsvD4k5dwhnuGyf9FTnGqvpGLiXt54sVTwNj4inWs12+PknvJt1ownPF4+lit1iaguUaAZiC8O5iEFckbDlU6Cg9jyleHIhKjyjS+ZGwN+kTmfL982Tw23WHi00bB6+hDryYd9ATy6u8r079mdJzm2l+9egS2uIqCEBHRlIlHoizhQ9LI2sOkmJ6SyTlnV4dv/9ArCV5iFZ+fnsoh2eP/9cIynsB2BrhthRJ69XNWZv9rAoOsWMVIWHu6XBoA=
   file_glob: true
   file: "*.zip"
