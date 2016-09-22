@@ -12,7 +12,7 @@ If you need, you can go for really module oriented implementation, but if you ju
 The choice always yours! :)
 
 ### Multi Module TicTacToe example written in Haxe using hexMachina:
-https://github.com/grosmar/hexMachina-TicTacToe-MultiModule
+<https://github.com/grosmar/hexMachina-TicTacToe-MultiModule>
 
 ### Single Module TictacToe example written in haxe using hexMachina:
-https://github.com/grosmar/hexMachina-TicTacToe-SingleModule
+<https://github.com/grosmar/hexMachina-TicTacToe-SingleModule>
