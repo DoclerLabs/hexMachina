@@ -1,12 +1,13 @@
 #!/bin/bash
-echo "change branch master to gh-pages."
-cd $TRAVIS_BUILD_DIR
+echo "checkout gh-pages branch"
+git clone https://github.com/aliokan/hexMachina.git ~/hexMachina
+cd ~/hexMachina
 git checkout gh-pages
 echo "updpate downloads.yml content."
 cd $HOME
-node .travis/update-download-list.js $TRAVIS_BUILD_DIR
+node .travis/update-download-list.js ~/hexMachina
 echo "commit change."
-cd $TRAVIS_BUILD_DIR
+cd ~/hexMachina
 git status
 git commit -m "update downloads.yml"
 git push
