@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "checkout gh-pages branch"
-git clone https://github.com/aliokan/hexMachina.git ~/hexMachina
+git clone https://github.com/DoclerLabs/hexMachina.git ~/hexMachina
 cd ~/hexMachina
 git checkout gh-pages
 echo "update downloads.yml content."
