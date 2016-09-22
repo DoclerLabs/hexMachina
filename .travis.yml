@@ -1,27 +1,7 @@
 language: haxe
 
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
-haxe:
-  - "3.3.0-rc.1"
-  - development
 
-matrix:
-  allow_failures:
-  - haxe: development
-    
-addons:
-  apt:
-    packages:
-    - php5-cli
-    - libcurl3:i386
-    - libglib2.0-0:i386
-    - libx11-6:i386
-    - libxext6:i386
-    - libxt6:i386
-    - libxcursor1:i386
-    - libnss3:i386
-    - libgtk2.0-0:i386
-    
 install:
 - git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
 - git clone --recursive https://github.com/DoclerLabs/hexCore.git ~/hexcore
@@ -31,9 +11,6 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexState.git ~/hexstate
 - git clone --recursive https://github.com/DoclerLabs/hexIoC.git ~/hexioc
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
-- export DISPLAY=:99.0;
-- export AUDIODEV=null;
-- haxe flash/install.hxml
 
 script:
 
@@ -60,9 +37,3 @@ notifications:
     - francis_bourre@me.com
     - peterphonix@gmail.com
     - laurent@geturl.net
-  webhooks:
-    urls:
-    - https://webhooks.gitter.im/e/09a17f76453cb9d1c34d
-    on_success: change
-    on_failure: always
-    on_start: never
