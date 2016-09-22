@@ -12,9 +12,13 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexIoC.git ~/hexioc
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
 
+before_script:
+  - git config --global user.email "laurent@geturl.net"
+  - git config --global user.name "Travis-CI"
+  
 script:
 - echo 0
-
+  
 before_deploy: "./.travis/pre-deploy.sh"
 
 deploy:
