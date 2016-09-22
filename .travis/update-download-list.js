@@ -67,7 +67,8 @@ function buildDownloadList(json)
 function saveContent(path, text)
 {
   console.log(path, text);
-  var err = fs.accessSync(path, fs.constants.R_OK | fs.constants.W_OK);
+  var err = fs.existsSync(path);
+  //var err = fs.accessSync(path, fs.constants.R_OK | fs.constants.W_OK);
   if(!err)
   {
     fs.writeFileSync(path, text);
