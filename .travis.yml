@@ -9,7 +9,7 @@ haxe:
 matrix:
   allow_failures:
   - haxe: development
-  
+    
 env:
   global:
   # travis encrypt GH_TOKEN=<token> -r user/repo
@@ -28,7 +28,7 @@ addons:
     - libxcursor1:i386
     - libnss3:i386
     - libgtk2.0-0:i386
-
+    
 install:
 - git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
 - git clone --recursive https://github.com/DoclerLabs/hexCore.git ~/hexcore
@@ -55,7 +55,7 @@ script:
   fi
 - haxe build-js.hxml           && node bin/TravisMachinaTest.js
 - haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/TravisMachinaTest.swf
-  
+
 before_deploy: "./.travis/pre-deploy.sh"
 
 deploy:
