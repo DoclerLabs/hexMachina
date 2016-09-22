@@ -13,7 +13,7 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
 
 script:
-
+- echo 0
 
 before_deploy: "./.travis/post-deploy.sh"
 
