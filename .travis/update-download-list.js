@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 
 var gitPath = "";
-process.argv.forEach((val, index) => {
+process.argv.forEach( function(val, index){
   //console.log(`${index}: ${val}`);
   if(index == 2) gitPath = val;
 });
@@ -17,20 +17,20 @@ var options = {
   headers: {'user-agent': 'node.js'}
 };
 
-return https.get(options, (res) => {
+return https.get(options, function(res) {
 
   var body = '';
-  res.on('data', (chunk) => {
+  res.on('data', function(chunk) {
     //console.log(`BODY: ${chunk}`);
     body += chunk;
   });
-  res.on('end', () => {
+  res.on('end', function() {
     console.log('No more data in response.');
     var downloads = buildDownloadList( body );
     console.log('No more data in response.');
     saveContent(downloadsFilePath, downloads);
   });
-}).on('error', (err) => {
+}).on('error', function(err) {
   console.error(`Got error: ${err.message}`);
 });
 
