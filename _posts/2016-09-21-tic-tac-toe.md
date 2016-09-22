@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "TicTacToe"
-date:   2016-06-25
 img: /img/blog/tictactoe.jpg
 category: Showcase
 tags: [mvc, oop, dsl]
