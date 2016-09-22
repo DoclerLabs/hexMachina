@@ -67,13 +67,13 @@ function buildDownloadList(json)
 function saveContent(path, text)
 {
   console.log(path, text);
-  var err = fs.existsSync(path);
+  var exist = fs.existsSync(path);
   //var err = fs.accessSync(path, fs.constants.R_OK | fs.constants.W_OK);
-  if(!err)
+  if(exist)
   {
     fs.writeFileSync(path, text);
   } else
   {
-    throw new Error("cannot acces on file : " + err)
+    throw new Error("cannot acces on file.")
   }
 }
