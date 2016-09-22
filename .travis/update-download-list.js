@@ -12,7 +12,7 @@ var downloadsFilePath = gitPath + "/_data/downloads.yml";
 
 var options = {
   host: 'api.github.com',
-  path: '/repos/aliokan/hexMachina/releases',
+  path: '/repos/DoclerLabs/hexMachina/releases',
   method: 'GET',
   headers: {'user-agent': 'node.js'}
 };
