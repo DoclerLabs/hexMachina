@@ -4,7 +4,7 @@ title:  "TicTacToe"
 date:   2016-06-25
 img: /img/blog/tictactoe.jpg
 category: Showcase
-tags: [mvc, oop]
+tags: [mvc, oop, dsl]
 ---
 Find below two examples of the popular tic-tac-toe game. I've made a single and a multi-module version to showcase you have the free choice to make your aplication as much scaled as you want.
 If you need, you can go for really module oriented implementation, but if you just want a simple game, without DSL, modules and all the crazy structures, you can just make a simple MVC implementation in one module.
