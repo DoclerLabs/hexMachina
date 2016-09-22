@@ -9,6 +9,6 @@ echo "commit change."
 git status
 git config credential.helper "store --file=.git/credentials"
 echo "https://$GH_TOKEN:@github.com" > .git/credentials
-git commit -m "update downloads.yml"
+git commit -a -m "update downloads.yml"
 git push
 echo "is pushed."
