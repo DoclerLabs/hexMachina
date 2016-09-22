@@ -36,12 +36,7 @@ install:
 - haxe flash/install.hxml
 
 script:
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxe build-php.hxml && php bin/index.php;
-  fi
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxe build-neko.hxml && neko bin/TravisMachinaTest.n;
-  fi
-- haxe build-js.hxml           && node bin/TravisMachinaTest.js
-- haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/TravisMachinaTest.swf
+
 
 before_deploy: "./.travis/post-deploy.sh"
 
