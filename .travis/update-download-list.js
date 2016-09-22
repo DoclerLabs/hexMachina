@@ -31,7 +31,7 @@ return https.get(options, function(res) {
     saveContent(downloadsFilePath, downloads);
   });
 }).on('error', function(err) {
-  console.error(`Got error: ${err.message}`);
+  console.error("Got error: " + err.message);
 });
 
 function buildDownloadList(json)
@@ -50,8 +50,8 @@ function buildDownloadList(json)
         asset = release.assets[j];
         if(asset.name.lastIndexOf('hexMachina-bundle') != -1)
         {
-          downloads += `- name: Download hexMachina v${release.tag_name}\n`;
-          downloads += `  link: ${asset.browser_download_url}\n`;
+          downloads += "- name: Download hexMachina v" + release.tag_name + "\n";
+          downloads += "  link: " + asset.browser_download_url + "\n";
           //log.push(release.tag_name);
           //log.push(asset.name);
           //log.push(asset.browser_download_url);
@@ -60,7 +60,7 @@ function buildDownloadList(json)
     }
     return downloads;
   } catch (err) {
-    console.error(`Unable to parse response as JSON ${err.message}`);
+    console.error("Unable to parse response as JSON " + err.message);
   }
 }
 
@@ -73,6 +73,6 @@ function saveContent(path, text)
     fs.writeFileSync(path, text);
   } else
   {
-    throw new Error(`cannot acces on file : ${err}`)
+    throw new Error("cannot acces on file : " + err)
   }
 }
