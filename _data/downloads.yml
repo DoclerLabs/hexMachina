@@ -1,5 +1,3 @@
-- name: Download hexMachina v0.6.1-test2
-  link: https://github.com/DoclerLabs/hexMachina/releases/download/0.6.1-test2/hexMachina-bundle-0.6.1-test2.zip
 - name: Download hexMachina v0.3.0
   link: https://github.com/DoclerLabs/hexMachina/releases/download/0.3.0/hexMachina-bundle-0.3.0.zip
 - name: Download hexMachina v0.6.1
