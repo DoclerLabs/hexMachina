@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Flickr Gallery - MVC"
-img: /img/blog/gallery-screenshot.jpg
+image: /img/blog/gallery-screenshot.jpg
 category: Showcase
 tags: [mvc, oop]
 ---

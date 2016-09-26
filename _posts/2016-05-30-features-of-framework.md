@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Features of the framework"
-img: /img/blog/features-of-the-framework.jpg
+image: /img/blog/features-of-the-framework.jpg
 category: Design
 tags: [feature]
 ---

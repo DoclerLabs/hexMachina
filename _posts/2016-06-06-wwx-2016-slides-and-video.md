@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "WWX 2016 - slides and video"
-img: /img/blog/wwx2016.jpg
+image: /img/blog/wwx2016.jpg
 category: News
 tags: [event,index]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Flickr Gallery - MDVC (Experimental)"
-img: /img/blog/gallery-mdvc-screenshot.jpg
+image: /img/blog/gallery-mdvc-screenshot.jpg
 category: Showcase
 tags: [mvc, oop]
 ---
