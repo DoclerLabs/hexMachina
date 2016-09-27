@@ -55,7 +55,7 @@
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexMVC"><h6>hexMVC</h6></a>
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern.</p>
-{% highlight haxe %}
+{% highlight actionscript %}
 class MyModule extends Module {
 	public function new( view:IMyView ) {
 		this._addStatelessConfigClasses([MyModuleCommandConfig]);
@@ -91,7 +91,7 @@ private class MyModuleCommandConfig extends StatelessCommandConfig {
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexInject"><h6>hexInject</h6></a>
 				<p class="text-small">Powerful and easy-to-use Dependency Injection system based on @annotations. It supports property, method and constructor injections predefined in injector mappings.</p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight actionscript %}
 class MyClass {
 	@Inject
 	public var myProperty:IConcreteDependecy;
@@ -103,7 +103,8 @@ class MyClass {
 	public function myFunction( dep : Clazz, dep2 : ISomeInterface ) {
 		// function body
 	}
-}</textarea>
+}
+{% endhighlight %}
 			</div>
 			<div class="col-lg-6 col-right">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexUnit"><h6>hexUnit</h6></a>
