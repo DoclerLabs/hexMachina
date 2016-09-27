@@ -57,17 +57,17 @@
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern.</p>
 {% highlight java %}
 class MyModule extends Module {
-	public function new( view:IMyView ) {
-		this._addStatelessConfigClasses([MyModuleCommandConfig]);
+    public function new( view:IMyView ) {
+        this._addStatelessConfigClasses([MyModuleCommandConfig]);
         this.buildViewHelper(MyViewHelper, view);
-	}
+    }
 }
 
 private class MyModuleCommandConfig extends StatelessCommandConfig {
     override public function configure() {
-		this.map(MyModuleMessage.MODULE_READY, InitModuleMacro).once();
+        this.map(MyModuleMessage.MODULE_READY, InitModuleMacro).once();
         this.map(MyModuleMessage.GET_NEWS, GetNewsCommand);
-	}
+    }
 }
 {% endhighlight %}
 			</div>
@@ -76,13 +76,13 @@ private class MyModuleCommandConfig extends StatelessCommandConfig {
 				<p class="text-small">Inversion of Control system to make multi-modular applications. You can have an extremely powerful DSL layer (Domain Specific Language), where you can connect together any modules, components and describe any dependency, behavior between them.</p>
 {% highlight xml %}
 <module id="myModule" type="myproject.module.mymodule.MyModule">
-	<listen ref="myService" />
-	<event static-ref="myproject.module.myservice.MyServiceMessage.FIRE" method="setFire"/>
-	</listen/>
+    <listen ref="myService" />
+        <event static-ref="myproject.myservice.MyServiceMessage.FIRE" method="setFire"/>
+    </listen/>
 </module>
 
 <service id="myService" type="myproject.service.myservice.MyService">
-	<property name="myprop" value="15" />
+    <property name="myprop" value="15" />
 </service>
 {% endhighlight %}
 			</div>
@@ -93,16 +93,16 @@ private class MyModuleCommandConfig extends StatelessCommandConfig {
 				<p class="text-small">Powerful and easy-to-use Dependency Injection system based on @annotations. It supports property, method and constructor injections predefined in injector mappings.</p>
 {% highlight java %}
 class MyClass {
-	@Inject
-	public var myProperty:IConcreteDependecy;
-	
-	@Inject( "myName1" )
-	public var property1 : String;
-	
-	@Inject
-	public function myFunction( dep : Clazz, dep2 : ISomeInterface ) {
-		// function body
-	}
+    @Inject
+    public var myProperty:IConcreteDependecy;
+
+    @Inject( "myName1" )
+    public var property1 : String;
+
+    @Inject
+    public function myFunction( dep : Clazz, dep2 : ISomeInterface ) {
+        // function body
+    }
 }
 {% endhighlight %}
 			</div>
@@ -111,17 +111,17 @@ class MyClass {
 				<p class="text-small">Extendable UnitTest runner with a basic set of assertions. It works well together with any mocking and assertion system. JUnit and FlexUnit like syntax.</p>
 {% highlight java %}
 class MyTest {
-	var service:IMyService;
+    var service:IMyService;
 
-	@Before
+    @Before
     public function setUp() {
         this.service = new MyServiceMock();
     }
-	
-	@Test("Test sum method")
-	public function testAdd() {
-		Assert.equals( 8, service.add( 3, 5 ), "Sum of 3+5 should be 8" );
-	}
+
+    @Test("Test sum method")
+    public function testAdd() {
+        Assert.equals( 8, service.add( 3, 5 ), "Sum of 3+5 should be 8" );
+    }
 }
 {% endhighlight %}
 			</div>
@@ -133,7 +133,7 @@ class MyTest {
 {% highlight java %}
 var service = new MyService ();
 service.addHandler (StatelessServiceMessage.COMPLETE, function () {
-	trace ("complete");
+    trace ("complete");
 });
 {% endhighlight %}
 			</div>
@@ -142,12 +142,12 @@ service.addHandler (StatelessServiceMessage.COMPLETE, function () {
 				<p class="text-small">Easy-to-use utilities for reading and writing @annotation data.</p>
 {% highlight java %}
 class MyAnnotations implements IMyAnnotation {
-	@MyAnnotation( "yes" )
-	var annotated : String;
-	
-	@Language( "en" )
-	function doTest( i : Int ) : Void {
-	}
+    @MyAnnotation( "yes" )
+    var annotated : String;
+
+    @Language( "en" )
+    function doTest( i : Int ) : Void {
+    }
 }
 {% endhighlight %}
 			</div>
@@ -185,7 +185,7 @@ Logger.DEBUG( "test" );
 var onTest = new MessageType( "onTest" );
 var dispatcher = new ClosureDispatcher();
 dispatcher.addHandler( onTest, function () {
-	trace( "onTest" );
+    trace( "onTest" );
 } );
 dispatcher.dispatch( onTest, [] );
 {% endhighlight %}
