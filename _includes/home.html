@@ -55,7 +55,7 @@
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexMVC"><h6>hexMVC</h6></a>
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern.</p>
-```haxe
+{% highlight haxe %}
 class MyModule extends Module {
 	public function new( view:IMyView ) {
 		this._addStatelessConfigClasses([MyModuleCommandConfig]);
@@ -69,7 +69,7 @@ private class MyModuleCommandConfig extends StatelessCommandConfig {
         this.map(MyModuleMessage.GET_NEWS, GetNewsCommand);
 	}
 }
-```
+{% endhighlight %}
 			</div>
 			<div class="col-lg-6 col-right">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexIoC"><h6>hexIoC</h6></a>
