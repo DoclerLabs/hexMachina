@@ -76,9 +76,9 @@ private class MyModuleCommandConfig extends StatelessCommandConfig {
 				<p class="text-small">Inversion of Control system to make multi-modular applications. You can have an extremely powerful DSL layer (Domain Specific Language), where you can connect together any modules, components and describe any dependency, behavior between them.</p>
 {% highlight xml %}
 <module id="myModule" type="myproject.module.mymodule.MyModule">
-    <listen ref="myService" />
+    <listen ref="myService">
         <event static-ref="myproject.myservice.MyServiceMessage.FIRE" method="setFire"/>
-    </listen/>
+    </listen>
 </module>
 
 <service id="myService" type="myproject.service.myservice.MyService">
