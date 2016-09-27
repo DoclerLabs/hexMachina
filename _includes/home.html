@@ -55,7 +55,7 @@
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexMVC"><h6>hexMVC</h6></a>
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern.</p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight haxe %}
 class MyModule extends Module {
 	public function new( view:IMyView ) {
 		this._addStatelessConfigClasses([MyModuleCommandConfig]);
@@ -68,21 +68,23 @@ private class MyModuleCommandConfig extends StatelessCommandConfig {
 		this.map(MyModuleMessage.MODULE_READY, InitModuleMacro).once();
         this.map(MyModuleMessage.GET_NEWS, GetNewsCommand);
 	}
-}</textarea>
+}
+{% endhighlight %}
 			</div>
 			<div class="col-lg-6 col-right">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexIoC"><h6>hexIoC</h6></a>
 				<p class="text-small">Inversion of Control system to make multi-modular applications. You can have an extremely powerful DSL layer (Domain Specific Language), where you can connect together any modules, components and describe any dependency, behavior between them.</p>
-				<textarea class="code-xml cm-hexmachina">
-&lt;module id="myModule" type="myproject.module.mymodule.MyModule"&gt;
-	&lt;listen ref="myService" /&gt;
-	&lt;event static-ref="myproject.module.myservice.MyServiceMessage.FIRE" method="setFire"/&gt;
-	&lt;/listen/&gt;
-&lt;/module&gt;
+{% highlight xml %}
+<module id="myModule" type="myproject.module.mymodule.MyModule">
+	<listen ref="myService" />
+	<event static-ref="myproject.module.myservice.MyServiceMessage.FIRE" method="setFire"/>
+	</listen/>
+</module>
 
-&lt;service id="myService" type="myproject.service.myservice.MyService"&gt;
-	&lt;property name="myprop" value="15" /&gt;
-&lt;/service&gt;</textarea>
+<service id="myService" type="myproject.service.myservice.MyService">
+	<property name="myprop" value="15" />
+</service>
+{% endhighlight %}
 			</div>
 		</div>
 		<div class="row">
