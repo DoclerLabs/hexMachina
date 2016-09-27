@@ -55,7 +55,7 @@
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexMVC"><h6>hexMVC</h6></a>
 				<p class="text-small">MVC implementation for writing individual modules with the classical Model-View-Controller structural pattern.</p>
-{% highlight actionscript %}
+{% highlight java %}
 class MyModule extends Module {
 	public function new( view:IMyView ) {
 		this._addStatelessConfigClasses([MyModuleCommandConfig]);
@@ -109,7 +109,7 @@ class MyClass {
 			<div class="col-lg-6 col-right">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexUnit"><h6>hexUnit</h6></a>
 				<p class="text-small">Extendable UnitTest runner with a basic set of assertions. It works well together with any mocking and assertion system. JUnit and FlexUnit like syntax.</p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight java %}
 class MyTest {
 	var service:IMyService;
 
@@ -122,23 +122,25 @@ class MyTest {
 	public function testAdd() {
 		Assert.equals( 8, service.add( 3, 5 ), "Sum of 3+5 should be 8" );
 	}
-}</textarea>
+}
+{% endhighlight %}
 			</div>
 		</div>
 		<div class="row reveal hide">
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexService"><h6>hexService</h6></a>
 				<p class="text-small">Service layer extension for <b>hexMVC</b> to separate service communications. It has all typical predefined service behaviors like: configuration, success, fail, cancel, timeout, etc.</p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight java %}
 var service = new MyService ();
 service.addHandler (StatelessServiceMessage.COMPLETE, function () {
 	trace ("complete");
-});</textarea>
+});
+{% endhighlight %}
 			</div>
 			<div class="col-lg-6 col-right">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexAnnotation"><h6>hexAnnotation</h6></a>
 				<p class="text-small">Easy-to-use utilities for reading and writing @annotation data.</p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight java %}
 class MyAnnotations implements IMyAnnotation {
 	@MyAnnotation( "yes" )
 	var annotated : String;
@@ -146,14 +148,15 @@ class MyAnnotations implements IMyAnnotation {
 	@Language( "en" )
 	function doTest( i : Int ) : Void {
 	}
-}</textarea>
+}
+{% endhighlight %}
 			</div>
 		</div>
 		<div class="row reveal hide">
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexState"><h6>hexState</h6></a>
 				<p class="text-small">Powerful easy-to-use StateMachina system based on Martin Dowler’s implementation. It saves you from a lot of issue with invalid states of your application.</p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight java %}
 var logAsUser = new MessageType( "onLogin" );
 
 var anonymous = new State( "anonymous" );
@@ -166,14 +169,15 @@ anonymous.addTransition( logAsUser, user);
 
 user.addEnterCommand( DisplayWelcomeCommand );
 
-controller.handleMessage( logAsUser );</textarea>
+controller.handleMessage( logAsUser );
+{% endhighlight %}
 			</div>
 			<div class="col-lg-6 col-right">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexCore"><h6>hexCore</h6></a>
 				<p class="text-small">Common core libraries that everyone needs in everyday developments like: exceptions, dispatcher, logging system, utils, etc.
 
 </p>
-				<textarea class="code-haxe cm-hexmachina">
+{% highlight java %}
 Logger.getInstance().setLevel( LogLevel.DEBUG );
 Logger.getInstance().addListener( new TraceLayout() );
 Logger.DEBUG( "test" );
@@ -183,7 +187,8 @@ var dispatcher = new ClosureDispatcher();
 dispatcher.addHandler( onTest, function () {
 	trace( "onTest" );
 } );
-dispatcher.dispatch( onTest, [] );</textarea>
+dispatcher.dispatch( onTest, [] );
+{% endhighlight %}
 			</div>
 		</div>
 		<div class="more">
