@@ -31,7 +31,7 @@ paginate_path: /blog/page:num/
 lsi: false
 source: "./"
 incremental: false
-highlighter: rouge
+highlighter: pygments
 gist:
   noscript: false
 exclude: [".git", "hex*", "build.bat", "build"]
