@@ -38,6 +38,10 @@ title: "Tools & Libraries"
 <p>Open DSL file from another DSL</p>
 <p><img style="width: auto;" src="{{site.baseurl}}/img/docs/tools/GotoFile.gif"></img></p>
 <br>
+<h3>Yeoman plugin</h3>
+<p>The Yeoman plugin allows to run Yeoman generators from within FlashDevelop. To use it, just right click any folder and select "Add" -> "New Yeoman File".</p>
+<p>After that, you should be asked to select a generator.</p>
+<br>
 <div class="info-box">
 	<h3>Info</h3>
 	<p>The FlashDevelop Package is currently not publicly available. It will be publicized on the <a href="https://github.com/DoclerLabs" target="_blank">DoclerLabs Github</a>.</p>
@@ -53,9 +57,27 @@ title: "Tools & Libraries"
 <p>First of all, you need Node.js and npm (automatically installed with Node.js). After that, you just install "yo":</p>
 <pre><code>npm install -g yo</code></pre>
 <p>The last thing you have to install is the generator itself, so just run:</p>
-<pre><code>npm install -g git://github.com/coldcue/generator-hex.git</code></pre>
+<pre><code>npm install -g https://github.com/DoclerLabs/generator-hex.git</code></pre>
 <br>
 
-<h3>Generating your project</h3>
-<p>Generating your project is as simple as running:</p>
-<pre><code>yo hex</code></pre>
+<h3>Usage</h3>
+<p>Just run one of the following commands in a terminal / console window (or even better, from within FlashDevelop using the Yeoman plugin) and follow the instructions.</p>
+
+<p><strong>Generating a project</strong></p>
+<p>If you want to generate a project, you have two options:</p>
+<div class="container">
+	<p class="text-small">1. HaxeDevelop project: <pre><code>yo hex:haxedevelop</code></pre></p>
+	<p class="text-small">2. Generic Haxe project: <pre><code>yo hex:project</code></pre></p>
+</div>
+
+<p><strong>Generating files</strong></p>
+<p>You can generate the following files within an existing project:</p>
+<div class="container">
+	<p class="text-small">Module: <pre><code>yo hex:module</code></pre></p>
+	<p class="text-small">Model: <pre><code>yo hex:model</code></pre></p>
+	<p class="text-small">ViewHelper: <pre><code>yo hex:viewhelper</code></pre></p>
+</div>
+<div class="info-box">
+	<h3>FlashDevelop Package</h3>
+	<p>The Yeoman templates are configured to work best, when run from the FlashDevelop package.</p>
+</div>
