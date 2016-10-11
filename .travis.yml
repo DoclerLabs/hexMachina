@@ -4,9 +4,9 @@ dist: trusty
 language: haxe
 
 haxe:
-  - "3.2.1"
+  #- "3.2.1"
   - development
-  - "3.3.0-rc.1"
+  #- "3.3.0-rc.1"
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
 
 matrix:
@@ -25,6 +25,7 @@ install:
 - haxe flash/install.hxml
 - haxelib install travix
 - haxelib dev hexmachina .
+- haxelib path hexmachina
 
 script:
 - if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix php build-php.hxml;
