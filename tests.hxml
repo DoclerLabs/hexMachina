@@ -1,0 +1,13 @@
+-cp test
+-cp .haxelib/hexcore/git/test
+-cp .haxelib/hexinject/git/test
+-cp .haxelib/hexmvc/git/test
+-cp .haxelib/hexioc/git/test
+-cp .haxelib/hexservice/git/test
+-cp .haxelib/hexannotation/git/test
+-cp .haxelib/hexstate/git/test
+-cp .haxelib/hexunit/git/test
+
+-main MainMachinaTest
+
+-D debug=true
