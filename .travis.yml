@@ -24,14 +24,14 @@ install:
 - haxelib install travix
 - haxelib newrepo
 - haxelib install travix
-- haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git
-- haxelib git hexcore https://github.com/DoclerLabs/hexCore.git
-- haxelib git hexinject https://github.com/DoclerLabs/hexInject.git
-- haxelib git hexmvc https://github.com/DoclerLabs/hexMVC.git
-- haxelib git hexservice https://github.com/DoclerLabs/hexService.git
-- haxelib git hexstate https://github.com/DoclerLabs/hexState.git
-- haxelib git hexioc https://github.com/DoclerLabs/hexIoC.git
-- haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git
+- haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git --always
+- haxelib git hexcore https://github.com/DoclerLabs/hexCore.git --always
+- haxelib git hexinject https://github.com/DoclerLabs/hexInject.git --always
+- haxelib git hexmvc https://github.com/DoclerLabs/hexMVC.git --always
+- haxelib git hexservice https://github.com/DoclerLabs/hexService.git --always
+- haxelib git hexstate https://github.com/DoclerLabs/hexState.git --always
+- haxelib git hexioc https://github.com/DoclerLabs/hexIoC.git --always
+- haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git --always
 - haxelib dev hexmachina .
 - haxelib path hexmachina
 - haxelib install dox
