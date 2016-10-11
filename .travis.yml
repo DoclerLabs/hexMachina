@@ -24,6 +24,7 @@ install:
 - git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
 - haxe flash/install.hxml
 - haxelib install travix
+- haxelib dev hexMachina .
 
 script:
 - if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix php build-php.hxml;
