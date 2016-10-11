@@ -49,8 +49,8 @@ script:
   fi
 - if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix neko;
   fi
-- haxelib run travix js
 - haxelib run travix flash
+- haxelib run travix js
 
 before_deploy: "./.travis/pre-deploy.sh"
 
