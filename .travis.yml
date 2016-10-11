@@ -3,11 +3,12 @@ dist: trusty
 
 language: haxe
 
-haxe:
-  #- "3.2.1"
-  - development
-  #- "3.3.0-rc.1"
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
+
+haxe:
+  - "3.2.1"
+  - "3.3.0-rc.1"
+  - development
 
 matrix:
   allow_failures:
@@ -25,7 +26,6 @@ install:
 - haxelib git hexstate https://github.com/DoclerLabs/hexState.git
 - haxelib git hexioc https://github.com/DoclerLabs/hexIoC.git
 - haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git
-#- haxe flash/install.hxml
 - haxelib dev hexmachina .
 - haxelib path hexmachina
 
