@@ -14,6 +14,12 @@ matrix:
   allow_failures:
   - haxe: development
     
+env:
+  global:
+  # travis encrypt GH_TOKEN=<access-token> -r DoclerLabs/hexMachina
+  - secure: Y7k64lsVnGXXFyEttqcYONkQog9pynxGIXnJAa/sdbehdknjQooDQbqWbd2CDzHs1lp7I5kppD3oM8jjkd+7ZH0EjnhzPr2f1OzdcLN3djml2hrKaDr4EMrQW9K3pDCAKP2CtaQtbxjm2l5QHEUcjLe82d/dS5TgEemUPA7/JYM4afCoXpGnCVZcknf5PbR2W3hyFk1R9+8B++5MuH3pNMwZvYEWwzUQLV4GZppe22N7ZlFjLNKnZ9tOd4QcRT9528ujvIKR0K9antuJDBQKTCQqxCTcQmndDp0lEuBhfC9ZDlrMVTLbKUD4B/0g0wHlMKsiJIWo1L03Ec5aASRV4uKRC/4RSLqmY1EXDEuDb1xG4Pg4/NH2Qpqju0qHE/vT5jYNMr2rmnQpcXZEotyoJ70wtIKRR0iIwsSAvTI5SKyNBXg8Wpkqu83/03IfgFqCXPAvOmuv7Pp8zPtLNcz7XnjTiwRFSGvwOzX8jz/+JwCCagLCo6AEcCDT4HCj6hUtHfWdrcyBBHUD40rFJjEDyYyl5MX9yJonznwiWo8Nu3Gx5f4C5WmdEQpxuwUK5wz4uZdH3gpCu7LZyvjUxdPwJNRp5P0uAdptH/vLyVMSyxBG4yC+KFMjWmj65pk0hW0YdS0JcuzgLrtb4r0TvtyElcv04vN7i0sKhY3ai+63IJ8=
+  - TRAVIS_NODE_VERSION="6.6.0"
+
 install:
 - haxelib install travix
 - haxelib newrepo
@@ -28,7 +34,15 @@ install:
 - haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git
 - haxelib dev hexmachina .
 - haxelib path hexmachina
+- haxelib install dox
+- git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
+# update node for deploy scripts
+- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
 
+before_script:
+  - git config --global user.email "laurent@geturl.net"
+  - git config --global user.name "Travis-CI"
+  
 script:
 - if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix php;
   fi
@@ -37,19 +51,22 @@ script:
 - haxelib run travix js
 - haxelib run travix flash
 
-before_deploy: "./release-hexMachina-bundle.sh"
+before_deploy: "./.travis/pre-deploy.sh"
 
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: ebMXJ+/Go7G2j/Ultg183WBvAElOKymePuGxBZe0lUSIlVECvXZF7wikI+jek4PGy914/FagdDyUGeTWGvrfA/fOjhBNFXBqVwWulXFzYG+Fk2iPfHco6efyUh+ysliKrCrXuzYjaqz1xqON0ORnRkHQ0sex0swsYGSHa9zpG2rpJGIjoErHdUL369iYkEPN3eq0Rkl2+YgygiI+YUmnsrAYfh00GqptyGwNJpmRePK/xXqhZPSsE71nCvYOxbBqyn//x4jt7DlyxbuMa0vbBHnTbUr717bKdzkZjf0JJF8Rh/QoPG5NiipzLpMuG6UwdeFMUQw5We5vIydC5qEMI+jhNU0NsAW6jujKYl/L8QsSxpWnRzEC7NJeZ6ykZoZU9RUZgxFDVALMZg2veNb51GIb8iQ+CiXZrPvObNMwrk7ni3qu1BsNIbVcJHa6Ev59z9uc4oJ/DROk1GO3f2ByIXiQYe+RITy0Urb8CG83Xu8tHmsHg/H5A9/6Nvk2qoRlIUtcf6RXmy6+zEzT25XgfounHVuGm58obMCZNzOOGf9XHZYH55drIYuj2uUeQomFiHOhGKz4TRWFcInCchM4Wz3VN1ObCLUI+zhT+Q4sri1geIhD5hdY2tgl5rUX6gNR3UVbXkQWu1DnvoSn/J/QoHVWZ8k/GiP1fgAglB2jFjU=
+    # travis encrypt <access-token> -r DoclerLabs/hexMachina
+    secure: YmXdsL9wqp0jZ/m4VfWAb6sjwm8+3xWAGR3zUQDwr8tPz+pAjNNWxPywgf6iOYJ4rdppfnax/2ay2wrmOobFz159Np2XXmNsgC4xTicEDrFUfzkfUQIMteu/EGqbRbNPaFKRdWFIJcFAqyOuewU1q1w95SaSPSWPvX3UXRR5aaCW+cSErsOTkufxecN5FZawW4VpiOUDQkv69zlKrKddXbrpoKUTPHOob4frAkP3eDypUuwFrWi+3SkpzatjOW54fHyT4e4Lwpg5mJmny/Zh6l5FqbODmAaGf1OUvfNdgHKNn86intqsBv40oc2FQnOmDPkwDjS3MPC37L8jO0foyvLfWOc46xI7jsSm+05lJPyV5mZUHI6elyJ7gcWoSuFBmuDC3WRNcEjTgDAOM3E/15HGbJvVVAJ4Uy0whzoz2ONhQfZ/KC3GEJCbkmoj41MbV36uPm1hchdfDuhcmPucqurs6Hbe1TlknL+2sPkI/UR7FEDmdcCB3B4kFmVSTuO/abp0Xb/PAZMxiI+hdtfvhDAd1RdKfC5wKA7mDxj+jlHa/E1ErUSJqObxNGqxLZcmqRgWS8TSmYaotwo21PKoDsgJXfBOPFO/a0OtZGqhSdRuWBQAm3UQkzMYCwsxetQUjUuL0nRELz41MiL82N964il9WcmCD/H4svXU8Q46pIQ=
   file_glob: true
   file: "*.zip"
   overwrite: true
   on:
     repo: DoclerLabs/hexMachina
     tags: true
+
+after_deploy: "./.travis/post-deploy.sh"
 
 notifications:
   email:
