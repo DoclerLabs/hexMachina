@@ -35,7 +35,8 @@ install:
 - haxelib dev hexmachina .
 - haxelib path hexmachina
 - haxelib install dox
-- git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
+- git clone https://github.com/chipshort/hexDoc-Theme.git $TRAVIS_BUILD_DIR/hexdoctheme
+- ls -all
 # update node for deploy scripts
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
 
