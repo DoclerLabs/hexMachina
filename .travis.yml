@@ -16,6 +16,7 @@ matrix:
 install:
 - haxelib install travix
 - haxelib newrepo
+- haxelib install travix
 - haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git
 - haxelib git hexcore https://github.com/DoclerLabs/hexCore.git
 - haxelib git hexinject https://github.com/DoclerLabs/hexInject.git
