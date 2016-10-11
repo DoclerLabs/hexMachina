@@ -14,6 +14,8 @@ matrix:
   - haxe: development
     
 install:
+- haxelib install travix
+- haxelib newrepo
 - haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git
 - haxelib git hexcore https://github.com/DoclerLabs/hexCore.git
 - haxelib git hexinject https://github.com/DoclerLabs/hexInject.git
@@ -22,8 +24,7 @@ install:
 - haxelib git hexstate https://github.com/DoclerLabs/hexState.git
 - haxelib git hexioc https://github.com/DoclerLabs/hexIoC.git
 - haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git
-- haxe flash/install.hxml
-- haxelib install travix
+#- haxe flash/install.hxml
 - haxelib dev hexmachina .
 - haxelib path hexmachina
 
