@@ -14,17 +14,17 @@ matrix:
   - haxe: development
     
 install:
-- git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
-- git clone --recursive https://github.com/DoclerLabs/hexCore.git ~/hexcore
-- git clone --recursive https://github.com/DoclerLabs/hexInject.git ~/hexinject
-- git clone --recursive https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
-- git clone --recursive https://github.com/DoclerLabs/hexService.git ~/hexservice
-- git clone --recursive https://github.com/DoclerLabs/hexState.git ~/hexstate
-- git clone --recursive https://github.com/DoclerLabs/hexIoC.git ~/hexioc
-- git clone --recursive https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
+- haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git
+- haxelib git hexcore https://github.com/DoclerLabs/hexCore.git
+- haxelib git hexinject https://github.com/DoclerLabs/hexInject.git
+- haxelib git hexmvc https://github.com/DoclerLabs/hexMVC.git
+- haxelib git hexservice https://github.com/DoclerLabs/hexService.git
+- haxelib git hexstate https://github.com/DoclerLabs/hexState.git
+- haxelib git hexioc https://github.com/DoclerLabs/hexIoC.git
+- haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git
 - haxe flash/install.hxml
 - haxelib install travix
-- haxelib dev hexMachina .
+- haxelib dev hexmachina .
 
 script:
 - if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix php build-php.hxml;
