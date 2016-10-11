@@ -21,7 +21,7 @@ env:
   - TRAVIS_NODE_VERSION="6.6.0"
 
 install:
-- haxelib install travix
+- haxelib git travix https://github.com/aliokan/travix.git
 - haxelib newrepo
 - haxelib install travix
 - haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git --never
