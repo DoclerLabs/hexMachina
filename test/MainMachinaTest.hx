@@ -23,6 +23,7 @@ class MainMachinaTest
 		var emu = new ExMachinaUnitCore();
         
 		#if flash
+		flash.system.System.exit( 1 );
 		//TestRunner.RENDER_DELAY = 0;
 		emu.addListener( new TraceNotifier( Lib.current.loaderInfo ) );
 		#elseif js
