@@ -20,6 +20,7 @@ class MainMachinaTest
 {
 	static public function main() : Void
 	{
+		trace("MainMachinaTest::main()");
 		var emu = new ExMachinaUnitCore();
         
 		#if flash
