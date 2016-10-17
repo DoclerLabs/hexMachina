@@ -1,11 +1,11 @@
 app.page.all = function() {
+	console.info('#Runningalll');
+	new app.view.CodeMirror();
 	new app.view.MobileMenu();
 	new app.view.GoogleSearch();
 };
 
 app.page.home = function() {
-	new app.view.CodeMirror();
-
 	app.$carousel = new Flickity('.flickity', {
 		wrapAround: true,
 		prevNextButtons: false
@@ -22,7 +22,6 @@ app.page.home = function() {
 };
 
 app.page.docs = function() {
-	new app.view.CodeMirror();
 	new app.view.VerticalMenu();
 
 	$(".box p").ellipsis({
@@ -41,4 +40,8 @@ app.page.blog = function() {
 
 app.page.downloads = function() {
 	new app.view.Clipboard();
+};
+
+app.page.post = function() {
+	new app.view.VerticalMenu();
 };
