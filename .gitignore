@@ -1,5 +1,12 @@
-node_modules/
-hexMachina.hxproj
-bin/
-hexMachina.zip
+/node_modules
 _site/
+.sass-cache
+.jekyll-metadata
+.idea/
+Gemfile.lock
+_config.yml
+.DS_Store
+hexMachina.hxproj
+build/.haxelib/
+build/bin/docs/js.xml
+bin/

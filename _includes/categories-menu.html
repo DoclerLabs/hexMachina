@@ -1,0 +1,23 @@
+{% assign rawcats = "" %}
+{% for post in site.posts %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+{% assign rawcats = rawcats | split:'|' | sort %}
+{% assign cats = "" %}
+{% for cat in rawcats %}
+{% if cat != "" %}
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+{% for category in cats %}
+	{% assign categoryname = category | slugify %}
+	{% assign categorylink = '/blog/category/' | append:categoryname %}
+	<li><a href="{{ categorylink | prepend: site.baseurl }}" {% if page.url contains categoryname %}class="active"{% endif %}>{{ category }}</a></li>
+{% endfor %}

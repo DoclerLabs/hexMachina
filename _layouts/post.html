@@ -1,0 +1,70 @@
+---
+layout: default
+class: posts
+---
+
+<div class="col-md-12 col-vertical-menu hide-on-desktop">
+	<input type="checkbox" class="vertical-menu-button"/>
+	<div class="container">
+		{% if page.category %}
+		<h2>Category <strong>{{ page.category }}</strong></h2>
+		{% elsif page.tag %}
+		<h2>Tag <strong>{{ page.tag }}</strong></h2>
+		{% else %}
+		<h2>Filters</h2>
+		{% endif %}
+		<span class="arrow-down"></span>
+		<span class="arrow-up"></span>
+	</div>
+	<div class="vertical-menu">
+		<ul class="nav">
+			{% include categories-menu.html %}
+		</ul>
+		<ul class="tags">
+			{% include tags-menu.html %}
+		</ul>
+	</div>
+</div>
+<div id="slide-container" class="container post-page">
+	<div class="row">
+		<article class="col-lg-9">
+			<div class="box col-lg-12">
+				{% if page.img %}
+				<div class="post-image" style="background-image:url({{ page.img | prepend: site.baseurl }})"></div>
+				{% endif %}
+				<div class="content">
+					<time>{{ page.date | date_to_long_string }}</time>
+					{% assign categoryname = page.category | slugify %}
+					{% assign categorylink = '/blog/category/' | append:categoryname %}
+					<a href="{{ categorylink | prepend: site.baseurl }}" class="category">{{ page.category }}</a>
+					<h2>{{ page.title }}</h2>
+					<hr class="divider"/>
+					{{ page.content }}
+					<ul class="tags">
+						{% for tag in page.tags %}
+							{% assign tagname = tag | slugify %}
+							{% assign taglink = '/blog/tag/' | append:tagname %}
+							<li><a href="{{ taglink | prepend: site.baseurl }}">{{ tag }}</a></li>
+						{% endfor %}
+					</ul>
+					<hr class="divider"/>
+				</div>
+				<div id="disqus_thread"></div>
+			</div>
+			<script>
+				(function() {
+					var d = document, s = d.createElement('script');
+
+					s.src = '//davidklausz.disqus.com/embed.js';
+
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+		</article>
+		<div class="col-lg-3">
+			{% include categories-tags.html %}
+		</div>
+	</div>
+</div>

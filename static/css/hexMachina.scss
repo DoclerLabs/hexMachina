@@ -1,0 +1,47 @@
+/*
+  Icon Font: hexMachina
+*/
+
+@font-face {
+  font-family: "hexMachina";
+  src: url("./hexMachina.eot");
+  src: url("./hexMachina.eot?#iefix") format("embedded-opentype"),
+       url("./hexMachina.woff") format("woff"),
+       url("./hexMachina.ttf") format("truetype"),
+       url("./hexMachina.svg#hexMachina") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hm-doclerlabs:before,
+.hm-facebook:before,
+.hm-github:before,
+.hm-gitter:before,
+.hm-google-groups:before,
+.hm-haxe:before,
+.hm-rss:before,
+.hm-stack-overflow:before,
+.hm-twitter:before {
+  display: inline-block;
+  font-family: "hexMachina";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.hm-doclerlabs:before { content: "\f100"; }
+.hm-facebook:before { content: "\f101"; }
+.hm-github:before { content: "\f102"; }
+.hm-gitter:before { content: "\f103"; }
+.hm-google-groups:before { content: "\f104"; }
+.hm-haxe:before { content: "\f105"; }
+.hm-rss:before { content: "\f106"; }
+.hm-stack-overflow:before { content: "\f107"; }
+.hm-twitter:before { content: "\f108"; }

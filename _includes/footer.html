@@ -1,0 +1,102 @@
+<!-- Footer -->
+<footer class="text-center">
+	{% unless page.url contains "/docs/getstarted" %}
+	<div class="footer-above">
+		<div class="container">
+			<div class="banner-text">
+				<h1>Let’s get started!</h1>
+				<h4>Fusce iaculis ultrices ipsum, sit amet elementum nisi scelerisque id.<br>Nulla ullamcorper quis sapien ac tristique.</h4>
+				<a href="{{ "/docs/getstarted" | prepend: site.baseurl }}">
+					<button type="button" class="btn action-btn">Get started hexMachina</button>
+				</a>
+			</div>
+		</div>
+		<div class="bubble-pattern"></div>
+		<img class="img-responsive" src="{{"/img/pattern-cover.jpg" | prepend: site.baseurl }}"/>
+	</div>
+	{% endunless %}
+	<div class="footer-below">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-5 col-sx-12 text-left text-center-xs">
+					<ul class="nav">
+						<li><h5>Copyright &copy; {{ site.time | date: "%Y" }} hexMachina</h5></li>
+					</ul>
+					<ul class="list-inline">
+						{% if site.facebook_username %}
+						<li>
+							<a href="https://www.facebook.com/{{ site.facebook_username }}" class="btn-social facebook btn-outline" target="_blank">
+								<i class="hm-facebook"></i>
+							</a>
+						</li>
+						{% endif %}
+						{% if site.github_username %}
+						<li>
+							<a href="https://github.com/{{ site.github_username }}" class="btn-social  github btn-outline" target="_blank">
+								<i class="hm-github"></i>
+							</a>
+						</li>
+						{% endif %}
+						{% if site.twitter_username %}
+						<li>
+							<a href="https://twitter.com/{{ site.twitter_username }}" class="btn-social twitter btn-outline" target="_blank">
+								<i class="hm-twitter"></i>
+							</a>
+						</li>
+						{% endif %}
+						<li>
+							<a href="{{site.baseurl}}/feed.xml" class="btn-social" target="_blank">
+								<i class="hm-rss"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/DoclerLabs" class="btn-social" target="_blank">
+								<i class="hm-doclerlabs"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://haxe.org/" class="btn-social" target="_blank">
+								<i class="hm-haxe"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://gitter.im/DoclerLabs/hexMachina" class="btn-social" target="_blank">
+								<i class="hm-gitter"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-2 hidden-md hidden-sm hidden-xs col-sx-12">
+					<div class="col-roadmap">
+						<ul class="nav">
+							<li><h5>Sitemap</h5></li>
+							{% include menu.html %}
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sx-12">
+					<img src="{{"/img/hex-machina-footer-logo.png" | prepend: site.baseurl }}" alt="hexMachina" />
+				</div>
+				<div class="col-lg-2 col-md-2 hidden-md hidden-sm hidden-xs col-sx-12">
+					<div class="col-docs">
+						<ul class="nav">
+							<li><h5>Docs</h5></li>
+							{% include docs-menu.html %}
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sx-12 text-center-xs">
+					<div class="col-facebook">
+						<ul class="nav">
+							<li><h5>Contacts</h5></li>
+							<li><a href="https://www.facebook.com/francis.bourre" target="_blank">Francis Bourre</a></li>
+							<li><a href="https://www.facebook.com/balazs.zubak" target="_blank">Balazs Zubak</a></li>
+							<li><a href="https://www.facebook.com/ldeketelaere" target="_blank">Laurent Deketelaere</a></li>
+							<li><a href=" https://www.doclerholding.com/en/careers/development/10117/" target="_blank">Join us - We are hiring!</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

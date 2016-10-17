@@ -1,0 +1,15 @@
+---
+layout: docs
+title: Tutorials
+category: Tutorial
+---
+
+<div class="row">
+	<div class="box-container">
+		{% for post in site.posts %}
+			{% if post.category == page.category %}
+				{% include blog-post.html %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

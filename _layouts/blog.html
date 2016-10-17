@@ -1,0 +1,93 @@
+---
+layout: default
+class: blog
+---
+
+<div class="col-md-12 col-vertical-menu hide-on-desktop">
+	<input type="checkbox" class="vertical-menu-button"/>
+	<div class="container">
+		{% if page.category %}
+			<h2>Category <strong>{{ page.category }}</strong></h2>
+		{% elsif page.tag %}
+			<h2>Tag <strong>{{ page.tag }}</strong></h2>
+		{% else %}
+		<h2>Filters</h2>
+		{% endif %}
+		<span class="arrow-down"></span>
+		<span class="arrow-up"></span>
+	</div>
+	<div class="vertical-menu">
+		<ul class="nav">
+			{% include categories-menu.html %}
+		</ul>
+		<ul class="tags">
+			{% include tags-menu.html %}
+		</ul>
+	</div>
+</div>
+<div id="slide-container" class="container">
+	<div class="site-wrapper blog-container">
+		<div class="row">
+			<div class="box-container col-lg-9 col-md-12">
+				{% if page.category %}
+				<div class="col-lg-12 hide-on-mobile">
+					<h2>
+						Category
+						<strong>{{ page.category }}</strong>
+					</h2>
+					<hr class="divider"/>
+				</div>
+				{% elsif page.tag %}
+				<div class="col-lg-12 hide-on-mobile">
+					<h2>
+						Tag
+						<strong>{{ page.tag }}</strong>
+					</h2>
+					<hr class="divider"/>
+				</div>
+				{% endif %}
+				{% if page.url contains "/category" %}
+					{% for post in site.posts %}
+						{% if post.category == page.category %}
+							{% include blog-post.html %}
+						{% endif %}
+					{% endfor %}
+				{% elsif page.url contains "/tag" %}
+					{% for post in site.posts %}
+						{% if post.tags contains page.tag %}
+							{% include blog-post.html %}
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					{% for post in paginator.posts %}
+						{% include blog-post.html %}
+					{% endfor %}
+					<div class="pagination col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
+							{% if paginator.previous_page %}
+								<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><span class="arrow-left"></span><span class="hide-on-mobile">Previous</span></a>
+							{% endif %}
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 page-numbers">
+							{% for page in (1..paginator.total_pages) %}
+								{% if page == paginator.page %}
+									<span class="page-num active">{{ page }}</span>
+								{% elsif page == 1 %}
+									<a class="page-num xxx" href="{{ site.baseurl }}/blog">{{ page }}</a>
+								{% else %}
+									<a class="page-num" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+								{% endif %}
+							{% endfor %}
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 next-page">
+							{% if paginator.next_page %}
+								<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next"><span class="hide-on-mobile">Next</span><span class="arrow-right"></span></a>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			{% include categories-tags.html %}
+		</div>
+	</div>
+</div>

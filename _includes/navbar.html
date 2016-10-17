@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header page-scroll">
+			<i class="fa fa-search search-button toggle-search">&nbsp;</i>
+			<button class="mobile-menu"><span>&nbsp;</span></button>
+			<a class="navbar-brand" href="{{"/" | prepend: site.baseurl }}"><img src="{{"/img/hex-machina-logo.png" | prepend: site.baseurl }}" alt="hexMachina" /></a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li></li>
+				{% include menu.html %}
+				<li class="search-item">
+					<i class="fa fa-search search-button toggle-search">&nbsp;</i>
+				</li>
+				{% if site.github_username %}
+					<li class="button-container">
+						<div class="table-cell">
+							<a href="https://github.com/{{ site.github_username }}" class="btn action-btn">View on GitHub</a>
+						</div>
+					</li>
+				<li></li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+</nav>

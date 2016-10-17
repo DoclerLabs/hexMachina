@@ -1,0 +1,11 @@
+- name: haxelib install hexmachina
+  id: hexmachina
+- name: haxelib install hexInject
+  id: hexInject
+  url: docs/codecookbook/#hexInject
+- name: haxelib install hexMVC
+  id: hexMVC
+  url: docs/codecookbook/#hexMVC
+- name: haxelib install hexIoC
+  id: hexIoC
+  url: docs/codecookbook/#hexIoC
