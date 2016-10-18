@@ -16,10 +16,16 @@ app.ReadMore.prototype = {
 		this.showMoreBtn = this.el.find('.read-more');
 		this.hiddenItems = this.el.find('.reveal');
 
+		console.info('#showMoreBtn');
+
 		setTimeout(this.toggleVisibility.bind(this), 0);
 	},
 
-	toggleVisibility: function() {
+	toggleVisibility: function(ev) {
+		if (ev) {
+			ev.preventDefault();
+		}
+		console.info('Toggling visibility');
 		if (this.hiddenItems.hasClass(this.hideCls)) {
 			this.hiddenItems.removeClass(this.hideCls);
 		}

@@ -9,7 +9,7 @@ title: "Code Cookbook"
 		{% for snippet in site.data.cookbook.hexMVC %}
 		<br>
 		{% if snippet.title != null %}<p class="text-small">{{ snippet.title }}</p>{% endif %}
-		<textarea class="{{ snippet.type }} cm-s-hexmachina">
+		<textarea class="{{ snippet.type }} cm-s-hexmachina code-haxe">
 {{ snippet.code | xml_escape | rstrip }}</textarea>
 		{% endfor %}
 	</section>
@@ -113,10 +113,7 @@ title: "Code Cookbook"
 	</section>
 	<a class="read-more">Show more &raquo;</a><br><br><br>
 </section>
-
-<script src="{{site.baseurl}}/lib/jquery/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/app.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/ReadMore.js"></script>
+<script type="text/javascript" src="/lib/simple.js"></script>
 <script type="text/javascript">
 	$(function () {
 		var snippets = $('.code-snippets');
