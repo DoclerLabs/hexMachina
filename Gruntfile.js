@@ -80,7 +80,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-rsync');
 
 	grunt.registerTask('default', ['clean','concat', 'sass', 'watch']);
 	grunt.registerTask('js', ['clean:js', 'concat:js', 'watch']);
