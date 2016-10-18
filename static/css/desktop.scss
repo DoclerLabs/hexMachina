@@ -22,7 +22,7 @@
 	.home {
 		.parallax-mirror {
 			z-index: 1 !important;
-			&.first-child {
+			&:nth-child(1) {
 				img {
 					margin-top: 155px;
 				}
