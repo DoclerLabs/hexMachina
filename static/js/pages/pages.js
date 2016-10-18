@@ -16,13 +16,17 @@ app.page.home = function() {
 		responsive: true
 	});
 	$('.carousel-section').parallax({imageSrc:  siteConfig.baseUrl  + '/img/pattern-cover.jpg'});
-	new app.ReadMore('.features');
+	new app.ReadMore('.features', true);
 	particlesJS.load('particles-js', 'assets/particles.json', function() {});
 
 };
 
 app.page.docs = function() {
 	new app.view.VerticalMenu();
+
+	$('.code-snippets').each(function(number, snippet) {
+		new app.ReadMore(snippet, "Show more »", "« Show less");
+	});
 
 	$(".box p").ellipsis({
 		lines: 3,

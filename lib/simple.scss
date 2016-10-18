@@ -471,6 +471,14 @@ span.CodeMirror-selectedtext { background: none; }
 		margin-right: calc((100% - 1600px) / 2);
 	}
 }
+.read-more {
+	display: inline-block;
+	color: #1a467f;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
 /*! Flickity v2.0.2
 http://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -883,6 +891,12 @@ body {
 		color: #1a467f;
 	}
 }
+.reveal {
+	&.hide {
+		height: 0;
+		overflow: hidden;
+	}
+}
 @media all and (max-width: 990px) {
 	body {
 		&.home {
@@ -1227,13 +1241,6 @@ header {
 		}
 	}
 }
-.reveal {
-	&.hide {
-		height: 0;
-		overflow: hidden;
-	}
-}
-
 .search-overlay {
 	position: fixed;
 	display: none;
@@ -1860,10 +1867,11 @@ body {
 		}
 		.read-more {
 			display: inline-block;
-			color: $c3;
+			color: #1a467f;
 			font-size: 20px;
 			font-weight: 700;
 			margin-bottom: 20px;
+			cursor: pointer;
 		}
 		time {
 			font: 700 16px 'Lato';
