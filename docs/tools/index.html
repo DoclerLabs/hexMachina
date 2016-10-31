@@ -3,20 +3,31 @@ layout: docs
 title: "Tools & Libraries"
 ---
 
-<h2>FlashDevelop Package</h2>
-<p>The FlashDevelop package contains some code templates, plugins and a project template for hexMachina:</p>
+<h2>HaxeDevelop</h2>
+<p>HaxeDevelop / FlashDevelop is the recommended IDE for Haxe development. You can download the latest version from <a href="http://haxedevelop.org/" target="_blank">haxedevelop.org</a>
+	or you can take a look at our <a href="https://github.com/Neverbirth/flashdevelop" target="_blank">development branch</a> with many bug fixes and improvements.</p>
+<br>
+<br>
+
+<h2>hexDevelop Package</h2>
+<div class="info-box">
+	<h3>Download</h3>
+	<p>You can download the latest version directly from <a href="https://github.com/DoclerLabs/hexDevelop/releases" target="_blank">DoclerLabs Github</a></p>
+</div>
+
+<p>The hexDevelop package contains some code templates, plugins and a project template for hexMachina:</p>
 <br>
 
 <h3>Project template</h3>
-<p>The project template allows you to create a new hexMachina project within seconds in FlashDevelop.</p>
+<p>The project template allows you to create a new hexMachina project within seconds in HaxeDevelop / FlashDevelop.</p>
 <br>
 
 <h3>Code templates</h3>
-<p>The code templates help to reduce boilerplate code and allow to automatically generate Modules, Models, IViews and much more directly in FlashDevelop.</p>
+<p>The code templates help to reduce boilerplate code and allow to automatically generate Modules, Models, IViews and much more directly in HaxeDevelop / FlashDevelop.</p>
 <br>
 
 <h3>hexUnit plugin</h3>
-<p>The hexUnit plugin adds unit testing within FlashDevelop. This way, you can run your unit tests within your favourite IDE and look at the nicely formatted results.</p>
+<p>The hexUnit plugin adds unit testing within HaxeDevelop / FlashDevelop. This way, you can run your unit tests within your favourite IDE and look at the nicely formatted results.</p>
 <p><img style="width: auto;" src="{{site.baseurl}}/img/docs/tools/hexunit-screenshot.png"></img></p>
 <br>
 
@@ -39,13 +50,8 @@ title: "Tools & Libraries"
 <p><img style="width: auto;" src="{{site.baseurl}}/img/docs/tools/GotoFile.gif"></img></p>
 <br>
 <h3>Yeoman plugin</h3>
-<p>The Yeoman plugin allows to run Yeoman generators from within FlashDevelop. To use it, just right click any folder and select "Add" -> "New Yeoman File".</p>
+<p>The Yeoman plugin allows to run Yeoman generators from within HaxeDevelop / FlashDevelop. To use it, just right click any folder and select "Add" -> "New Yeoman File".</p>
 <p>After that, you should be asked to select a generator.</p>
-<br>
-<div class="info-box">
-	<h3>Info</h3>
-	<p>The FlashDevelop Package is currently not publicly available. It will be publicized on the <a href="https://github.com/DoclerLabs" target="_blank">DoclerLabs Github</a>.</p>
-</div>
 <br>
 <br>
 
@@ -61,23 +67,23 @@ title: "Tools & Libraries"
 <br>
 
 <h3>Usage</h3>
-<p>Just run one of the following commands in a terminal / console window (or even better, from within FlashDevelop using the Yeoman plugin) and follow the instructions.</p>
+<p>Just run one of the following commands in a terminal / console window (or even better, from within HaxeDevelop / FlashDevelop using the Yeoman plugin) and follow the instructions.</p>
 
 <p><strong>Generating a project</strong></p>
-<p>If you want to generate a project, you have two options:</p>
-<div class="container">
-	<p class="text-small">1. HaxeDevelop project: <pre><code>yo hex:haxedevelop</code></pre></p>
-	<p class="text-small">2. Generic Haxe project: <pre><code>yo hex:project</code></pre></p>
-</div>
+<p>If you want to generate a project, you just run:</p>
+<pre><code>yo hex:project</code></pre>
 
 <p><strong>Generating files</strong></p>
-<p>You can generate the following files within an existing project:</p>
+<p>You can generate the following files within an existing project.<br>
+Make sure to run them from within the directory you want to create them in (usually a subfolder of your source folder).</p>
 <div class="container">
 	<p class="text-small">Module: <pre><code>yo hex:module</code></pre></p>
 	<p class="text-small">Model: <pre><code>yo hex:model</code></pre></p>
 	<p class="text-small">ViewHelper: <pre><code>yo hex:viewhelper</code></pre></p>
+	<p class="text-small"></p>
 </div>
+
 <div class="info-box">
-	<h3>FlashDevelop Package</h3>
-	<p>The Yeoman templates are configured to work best, when run from the FlashDevelop package.</p>
+	<h3>hexDevelop Package</h3>
+	<p>The Yeoman templates are configured to work best, when run from the hexDevelop package.</p>
 </div>
