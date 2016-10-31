@@ -1,6 +1,6 @@
 - name: haxelib install hexmachina
   id: hexmachina
-  
+
 - name: haxelib install hexmvc
   id: hexMVC
   url: docs/codecookbook/#hexMVC
@@ -16,7 +16,7 @@
 - name: haxelib install hexunit
   id: hexUnit
   url: docs/codecookbook/#hexUnit
-  
+
 - name: haxelib install hexservice
   id: hexService
   url: docs/codecookbook/#hexService
@@ -28,7 +28,7 @@
 - name: haxelib install hexstate
   id: hexState
   url: docs/codecookbook/#hexState
-  
+
 - name: haxelib install hexcore
   id: hexCore
   url: docs/codecookbook/#hexCore

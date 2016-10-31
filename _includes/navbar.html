@@ -1,6 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header page-scroll">
+			<i class="fa fa-search search-button toggle-search">&nbsp;</i>
 			<button class="mobile-menu"><span>&nbsp;</span></button>
 			<a class="navbar-brand" href="{{"/" | prepend: site.baseurl }}"><img src="{{"/img/hex-machina-logo.png" | prepend: site.baseurl }}" alt="hexMachina" /></a>
 		</div>
@@ -8,7 +9,9 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li></li>
 				{% include menu.html %}
-
+				<li class="search-item">
+					<i class="fa fa-search search-button toggle-search">&nbsp;</i>
+				</li>
 				{% if site.github_username %}
 					<li class="button-container">
 						<div class="table-cell">

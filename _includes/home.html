@@ -126,7 +126,7 @@ class MyTest {
 {% endhighlight %}
 			</div>
 		</div>
-		<div class="row reveal hide">
+		<div class="row reveal">
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexService"><h6>hexService</h6></a>
 				<p class="text-small">Service layer extension for <b>hexMVC</b> to separate service communications. It has all typical predefined service behaviors like: configuration, success, fail, cancel, timeout, etc.</p>
@@ -152,7 +152,7 @@ class MyAnnotations implements IMyAnnotation {
 {% endhighlight %}
 			</div>
 		</div>
-		<div class="row reveal hide">
+		<div class="row reveal">
 			<div class="col-lg-6 col-left">
 				<a href="{{site.baseurl}}/docs/codecookbook/#hexState"><h6>hexState</h6></a>
 				<p class="text-small">Powerful easy-to-use StateMachina system based on Martin Dowler’s implementation. It saves you from a lot of issue with invalid states of your application.</p>
@@ -234,25 +234,3 @@ dispatcher.dispatch( onTest, [] );
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="{{site.baseurl}}/lib/app.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/ReadMore.js"></script>
-<script src="{{site.baseurl}}/lib/jquery/jquery-2.2.4.min.js"></script>
-<script src="{{site.baseurl}}/lib/parallax/parallax.min.js"></script>
-<script src="{{site.baseurl}}/lib/flickity/flickity.pkgd.min.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/particles/particles.min.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/lib/jquery-ellipsis/jquery.ellipsis.min.js"></script>
-<script type="text/javascript">
-	app.$carousel = new Flickity('.flickity', {
-		wrapAround: true,
-		prevNextButtons: false
-	});
-	$(".box p").ellipsis({
-		lines: 3,
-		responsive: true
-	});
-	$('.carousel-section').parallax({imageSrc: '{{site.baseurl}}/img/pattern-cover.jpg'});
-	$(function () {
-		new app.ReadMore('.features', "See all Features »", "« See less Features");
-	});
-	particlesJS.load('particles-js', 'assets/particles.json', function() {});
-</script>
