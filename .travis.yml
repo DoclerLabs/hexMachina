@@ -26,6 +26,7 @@ install:
 - haxelib git travix https://github.com/aliokan/travix.git --always
 - haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git --never
 - haxelib git hexcore https://github.com/DoclerLabs/hexCore.git --never
+- haxelib git hexreflection https://github.com/DoclerLabs/hexReflection.git --never
 - haxelib git hexinject https://github.com/DoclerLabs/hexInject.git --never
 - haxelib git hexmvc https://github.com/DoclerLabs/hexMVC.git --never
 - haxelib git hexservice https://github.com/DoclerLabs/hexService.git --never
