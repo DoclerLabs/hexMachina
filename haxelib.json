@@ -10,6 +10,7 @@
   "dependencies": 
   {
 	"hexcore": "git:https://github.com/DoclerLabs/hexCore.git",
+	"hexreflection": "git:https://github.com/DoclerLabs/hexReflection.git",
 	"hexioc": "git:https://github.com/DoclerLabs/hexIoC.git",
 	"hexservice": "git:https://github.com/DoclerLabs/hexService.git",
 	"hexunit": "git:https://github.com/DoclerLabs/hexUnit.git",

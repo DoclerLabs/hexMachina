@@ -32,6 +32,7 @@ addons:
 install:
 - git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
 - git clone --recursive https://github.com/DoclerLabs/hexCore.git ~/hexcore
+- git clone --recursive https://github.com/DoclerLabs/hexReflection.git ./hexreflection
 - git clone --recursive https://github.com/DoclerLabs/hexInject.git ~/hexinject
 - git clone --recursive https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
 - git clone --recursive https://github.com/DoclerLabs/hexService.git ~/hexservice
