@@ -2,8 +2,8 @@
 -cp test
 -cp /home/travis/hexcore/src
 -cp /home/travis/hexcore/test
--cp hexreflection/src
--cp hexreflection/test
+-cp /home/travis/hexreflection/src
+-cp /home/travis/hexreflection/test
 -cp /home/travis/hexinject/src
 -cp /home/travis/hexinject/test
 -cp /home/travis/hexmvc/src
