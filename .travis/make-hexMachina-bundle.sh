@@ -5,6 +5,10 @@ mkdir hexmachina-bundle hexmachina-bundle/src hexmachina-bundle/test
 rsync -a ./hexcore/src ./hexmachina-bundle 
 rsync -a ./hexcore/test ./hexmachina-bundle 
 cp ./hexcore/README.md ./hexmachina-bundle/README-hexcore.md
+# hexReflection
+rsync -a ./hexreflection/src ./hexmachina-bundle 
+rsync -a ./hexreflection/test ./hexmachina-bundle 
+cp ./hexreflection/README.md ./hexmachina-bundle/README-hexreflection.md
 # hexInject
 rsync -a ./hexinject/src ./hexmachina-bundle 
 rsync -a ./hexinject/test ./hexmachina-bundle 
