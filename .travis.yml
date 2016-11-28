@@ -29,7 +29,7 @@ addons:
     - libnss3:i386
     - libgtk2.0-0:i386
 
-before_script:
+before_install:
   - echo $TRAVIS_BRANCH
   - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=master; fi
   - echo $DEPENDENCIES_BRANCH
