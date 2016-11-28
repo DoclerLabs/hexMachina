@@ -32,7 +32,6 @@ addons:
 before_install:
   - echo $TRAVIS_BRANCH
   - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=master; fi
-  - echo $DEPENDENCIES_BRANCH
   - echo $TRAVIS_TAG
   - if [[ "$TRAVIS_TAG" != "" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_TAG; fi
   - echo $DEPENDENCIES_BRANCH
@@ -47,7 +46,7 @@ install:
 - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexState.git ~/hexstate
 - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
 - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
-- git -C ~/hexannotation log --pretty=oneline
+- git -C ~/hexannotation log -1 --pretty=oneline
 - export DISPLAY=:99.0;
 - export AUDIODEV=null;
 - haxe flash/install.hxml
