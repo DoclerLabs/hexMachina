@@ -28,7 +28,13 @@ addons:
     - libxcursor1:i386
     - libnss3:i386
     - libgtk2.0-0:i386
-    
+
+before_script:
+- echo $TRAVIS_BRANCH
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=master; fi
+- echo $DEPENDENCIES_BRANCH
+- echo $TRAVIS_TAG
+
 install:
 - git clone --recursive https://github.com/DoclerLabs/hexUnit.git ~/hexunit
 - git clone --recursive https://github.com/DoclerLabs/hexCore.git ~/hexcore
