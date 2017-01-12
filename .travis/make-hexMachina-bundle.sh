@@ -9,6 +9,10 @@ cp ./hexcore/README.md ./hexmachina-bundle/README-hexcore.md
 rsync -a ./hexreflection/src ./hexmachina-bundle 
 rsync -a ./hexreflection/test ./hexmachina-bundle 
 cp ./hexreflection/README.md ./hexmachina-bundle/README-hexreflection.md
+# hexDsl
+rsync -a ./hexdsl/src ./hexmachina-bundle 
+rsync -a ./hexdsl/test ./hexmachina-bundle 
+cp ./hexdsl/README.md ./hexmachina-bundle/README-hexdsl.md
 # hexInject
 rsync -a ./hexinject/src ./hexmachina-bundle 
 rsync -a ./hexinject/test ./hexmachina-bundle 

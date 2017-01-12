@@ -1,3 +1,4 @@
 build-each.hxml 
 -swf-version 11
+-swf-header 1280:800:60:f68712
 -swf bin/TravisMachinaTest.swf
