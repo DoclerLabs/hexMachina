@@ -68,7 +68,7 @@ script:
 - if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/MainTest.swf; fi
 
 before_deploy:
-- if [ $TRAVIS_HAXE_VERSION == "3.4.0" ]; ./.travis/pre-deploy.sh; fi
+- if [ $TRAVIS_HAXE_VERSION == "3.4.0" ]; then ./.travis/pre-deploy.sh; fi
 
 deploy:
   provider: releases
@@ -84,7 +84,7 @@ deploy:
     tags: true
 
 after_deploy:
-- if [ $TRAVIS_HAXE_VERSION == "3.4.0" ]; ./.travis/post-deploy.sh; fi
+- if [ $TRAVIS_HAXE_VERSION == "3.4.0" ]; then ./.travis/post-deploy.sh; fi
 
 notifications:
   email:
