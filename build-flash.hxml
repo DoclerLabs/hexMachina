@@ -1,4 +1,14 @@
-build-each.hxml 
+build-each.hxml
+
+--each
+
+--macro include('hex')
+--no-output
+-swf-version 11
+-swf bin/docs.swf
+
+--next
+
 -swf-version 11
 -swf-header 1280:800:60:f68712
--swf bin/TravisMachinaTest.swf
+-swf bin/MainTest.swf

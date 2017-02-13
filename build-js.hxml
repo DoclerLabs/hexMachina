@@ -1,2 +1,11 @@
 build-each.hxml
--js bin/TravisMachinaTest.js
+
+--each
+
+--macro include('hex')
+--no-output
+-js bin/docs.js
+
+--next
+
+-js bin/MainTest.js

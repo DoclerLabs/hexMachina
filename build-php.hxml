@@ -1,2 +1,11 @@
 build-each.hxml
+
+--each
+
+--macro include('hex')
+--no-output
+-php bin
+
+--next
+
 -php bin
