@@ -38,24 +38,49 @@ before_install:
   - sudo apt-get install -qq libgtk2.0-0:i386
   
 install:
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexUnit.git ~/hexunit
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCore.git ~/hexcore
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexReflection.git ~/hexreflection
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexInject.git ~/hexinject
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDsl.git ~/hexdsl
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexService.git ~/hexservice
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexState.git ~/hexstate
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
-- git -C ~/hexannotation log -1 --pretty=oneline
-- export DISPLAY=:99.0;
-- export AUDIODEV=null;
-- haxe flash/install.hxml
-- haxelib install dox
-- git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
+  - haxelib newrepo
+#hexLog
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexLog.git ~/hexlog
+  - haxelib dev hexlog ~/hexlog
+#hexCore
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCore.git ~/hexcore
+  - haxelib dev hexcore ~/hexcore
+#hexUnit
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexUnit.git ~/hexunit
+  - haxelib dev hexunit ~/hexunit
+#hexReflection
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexReflection.git ~/hexreflection
+  - haxelib dev hexreflection ~/hexreflection
+#hexAnnotation
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
+  - haxelib dev hexannotation ~/hexannotation
+#hexInject
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexInject.git ~/hexinject
+  - haxelib dev hexinject ~/hexinject
+#hexDSL
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDSL.git ~/hexdsl
+  - haxelib dev hexdsl ~/hexdsl
+#hexMVC
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
+  - haxelib dev hexmvc ~/hexmvc
+#hexService
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexService.git ~/hexservice
+  - haxelib dev hexservice ~/hexservice
+#hexState
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexState.git ~/hexstate
+  - haxelib dev hexstate ~/hexstate
+#hexIoC
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
+  - haxelib dev hexioc ~/hexioc
+#---- dependencies done ----
+  - git -C ~/hexannotation log -1 --pretty=oneline
+  - export DISPLAY=:99.0;
+  - export AUDIODEV=null;
+  - haxe flash/install.hxml
+  - haxelib install dox
+  - git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
 # update node for deploy scripts
-- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
 
 before_script:
   - git config --global user.email "laurent@geturl.net"

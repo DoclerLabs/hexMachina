@@ -9,6 +9,7 @@
   "url": "https://github.com/DoclerLabs/hexMachina",
   "dependencies": 
   {
+	"hexlog": "git:https://github.com/DoclerLabs/hexLog.git",
 	"hexcore": "git:https://github.com/DoclerLabs/hexCore.git",
 	"hexunit": "git:https://github.com/DoclerLabs/hexUnit.git",
 	"hexreflection": "git:https://github.com/DoclerLabs/hexReflection.git",
