@@ -16,6 +16,7 @@
 #all test sources to run the whole test suite
 -cp test
 -cp /home/travis/hexunit/test
+-cp /home/travis/hexlog/test
 -cp /home/travis/hexcore/test
 -cp /home/travis/hexreflection/test
 -cp /home/travis/hexannotation/test
