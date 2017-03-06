@@ -73,11 +73,9 @@ install:
   - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
   - haxelib dev hexioc ~/hexioc
 #---- dependencies done ----
-  - git -C ~/hexannotation log -1 --pretty=oneline
   - export DISPLAY=:99.0;
   - export AUDIODEV=null;
   - haxe flash/install.hxml
-  - haxelib install dox
   - git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
 # update node for deploy scripts
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
