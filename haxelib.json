@@ -9,6 +9,7 @@
   "url": "https://github.com/DoclerLabs/hexMachina",
   "dependencies": 
   {
-	"hexioc": "git:https://github.com/DoclerLabs/hexIoC.git"
+	"hexioc": "git:https://github.com/DoclerLabs/hexIoC.git",
+	"hexunit": "git:https://github.com/DoclerLabs/hexUnit.git"
   }
 }
