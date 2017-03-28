@@ -5,7 +5,6 @@ language: haxe
 
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
 haxe:
-  - "3.2.1"
   - "3.4.0"
   - development
 
@@ -38,34 +37,57 @@ before_install:
   - sudo apt-get install -qq libgtk2.0-0:i386
   
 install:
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexUnit.git ~/hexunit
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCore.git ~/hexcore
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexReflection.git ~/hexreflection
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexInject.git ~/hexinject
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDsl.git ~/hexdsl
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexService.git ~/hexservice
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexState.git ~/hexstate
-- git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
-- git -C ~/hexannotation log -1 --pretty=oneline
-- export DISPLAY=:99.0;
-- export AUDIODEV=null;
-- haxe flash/install.hxml
-- haxelib install dox
-- git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
+  - haxelib newrepo
+#hexLog
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexLog.git ~/hexlog
+  - haxelib dev hexlog ~/hexlog
+#hexCore
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCore.git ~/hexcore
+  - haxelib dev hexcore ~/hexcore
+#hexUnit
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexUnit.git ~/hexunit
+  - haxelib dev hexunit ~/hexunit
+#hexReflection
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexReflection.git ~/hexreflection
+  - haxelib dev hexreflection ~/hexreflection
+#hexAnnotation
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
+  - haxelib dev hexannotation ~/hexannotation
+#hexInject
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexInject.git ~/hexinject
+  - haxelib dev hexinject ~/hexinject
+#hexDSL
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDSL.git ~/hexdsl
+  - haxelib dev hexdsl ~/hexdsl
+#hexMVC
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
+  - haxelib dev hexmvc ~/hexmvc
+#hexService
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexService.git ~/hexservice
+  - haxelib dev hexservice ~/hexservice
+#hexState
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexState.git ~/hexstate
+  - haxelib dev hexstate ~/hexstate
+#hexIoC
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
+  - haxelib dev hexioc ~/hexioc
+#---- dependencies done ----
+  - export DISPLAY=:99.0;
+  - export AUDIODEV=null;
+  - haxe flash/install.hxml
+  - git clone --recursive https://github.com/chipshort/hexDoc-Theme.git ~/hexdoctheme
 # update node for deploy scripts
-- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
 
 before_script:
   - git config --global user.email "laurent@geturl.net"
   - git config --global user.name "Travis-CI"
   
 script:
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxe build-php.hxml && php bin/index.php; fi
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxe build-neko.hxml && neko bin/MainTest.n; fi
+- haxe build-php.hxml && php bin/index.php
+- haxe build-neko.hxml && neko bin/MainTest.n
 - haxe build-js.hxml           && node bin/MainTest.js
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/MainTest.swf; fi
+- haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/MainTest.swf
 
 before_deploy:
 - if [ $TRAVIS_HAXE_VERSION == "3.4.0" ]; then ./.travis/pre-deploy.sh; fi
