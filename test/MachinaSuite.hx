@@ -9,7 +9,7 @@ import hex.HexMVCSuite;
 import hex.HexReflectionSuite;
 import hex.HexServiceSuite;
 import hex.HexUnitSuite;
-import hex.state.HexStateSuite;
+import hex.HexStateSuite;
 
 /**
  * ...
