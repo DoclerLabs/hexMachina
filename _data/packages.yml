@@ -40,3 +40,7 @@
 - name: haxelib install hexcore
   id: hexCore
   url: docs/codecookbook/#hexCore
+  
+- name: haxelib install hexlog
+  id: hexLog
+  url: docs/codecookbook/#hexLog
