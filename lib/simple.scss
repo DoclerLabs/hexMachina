@@ -1281,13 +1281,12 @@ header {
 	}
 }
 
-
 .ratio-sixteen-nine {
-	@include fluid-aspect(16 9, "&--fluid");
+	@include fluid-aspect(16 9);
 }
 
 .ratio-four-three {
-	@include fluid-aspect(4 3, "&--fluid");
+	@include fluid-aspect(4 3);
 }
 .search-overlay {
 	position: fixed;
