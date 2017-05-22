@@ -1262,14 +1262,33 @@ header {
 	}
 }
 
+/**
+ * Fluid Aspect: A Sass mixin for creating intrinsic ratios
+ * from https://gist.github.com/jonathantneal/a9b8901273475d261dd3
+ */
+@mixin fluid-aspect($ratio: 1 1, $selector: "> :first-child") {
+	$selector: unquote($selector);
+
+	padding-bottom: percentage(nth($ratio, 2) / nth($ratio, 1));
+	position: relative;
+
+	#{$selector} {
+		left: 0;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+
 .ratio-sixteen-nine {
-	@include aspect-ratio(16, 9);
+	@include fluid-aspect(16 9, "&--fluid");
 }
 
 .ratio-four-three {
-	@include aspect-ratio(4, 3);
+	@include fluid-aspect(4 3, "&--fluid");
 }
-
 .search-overlay {
 	position: fixed;
 	display: none;
