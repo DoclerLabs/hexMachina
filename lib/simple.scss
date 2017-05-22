@@ -1241,6 +1241,35 @@ header {
 		}
 	}
 }
+/**
+ * Maintain Aspect Ratio Mixin
+ * from https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.ratio-sixteen-nine {
+	@include aspect-ratio(16, 9);
+}
+
+.ratio-four-three {
+	@include aspect-ratio(4, 3);
+}
+
 .search-overlay {
 	position: fixed;
 	display: none;

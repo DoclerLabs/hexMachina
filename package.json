@@ -2,6 +2,9 @@
   "name": "hexmachina-website",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+		"grunt": "grunt"
+  },
   "dependencies": {
     "grunt": "~0.4.5",
     "grunt-cli": "0.1.13",

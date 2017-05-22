@@ -20,5 +20,9 @@
 }
 
 .ratio-sixteen-nine {
-	@include mc_aspect-ratio(16, 9);
+	@include aspect-ratio(16, 9);
+}
+
+.ratio-four-three {
+	@include aspect-ratio(4, 3);
 }
