@@ -24,7 +24,7 @@ class MainMachinaTest
         
 		#if flash
 		//TestRunner.RENDER_DELAY = 0;
-		emu.addListener( new TraceNotifier( Lib.current.loaderInfo ) );
+		emu.addListener( new TraceNotifier( Lib.current.loaderInfo, false, true ) );
 		#elseif js
 		emu.addListener( new ConsoleNotifier( false ) );
 		//emu.addListener( new BrowserUnitTestNotifier( "console" ) );

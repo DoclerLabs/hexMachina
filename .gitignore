@@ -3,3 +3,8 @@ hexMachina.hxproj
 bin/
 hexMachina.zip
 _site/
+.haxelib
+.vscode
+.idea
+*.iml
+out/
