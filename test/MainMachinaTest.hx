@@ -26,11 +26,11 @@ class MainMachinaTest
 		//TestRunner.RENDER_DELAY = 0;
 		emu.addListener( new TraceNotifier( Lib.current.loaderInfo, false, true ) );
 		#elseif js
-		emu.addListener( new ConsoleNotifier( false ) );
+		emu.addListener( new ConsoleNotifier( false, true ) );
 		//emu.addListener( new BrowserUnitTestNotifier( "console" ) );
 		//emu.addListener( new WebSocketNotifier( "ws://localhost:6660" ) );
 		#else
-		emu.addListener( new TraceNotifier( false ) );
+		emu.addListener( new TraceNotifier( Lib.current.loaderInfo, false, true ) );
 		#end
 		
         emu.addTest( MachinaSuite );
