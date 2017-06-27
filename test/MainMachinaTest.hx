@@ -30,7 +30,7 @@ class MainMachinaTest
 		//emu.addListener( new BrowserUnitTestNotifier( "console" ) );
 		//emu.addListener( new WebSocketNotifier( "ws://localhost:6660" ) );
 		#else
-		emu.addListener( new TraceNotifier( Lib.current.loaderInfo, false, true ) );
+		emu.addListener( new TraceNotifier( null, false, true ) );
 		#end
 		
         emu.addTest( MachinaSuite );
