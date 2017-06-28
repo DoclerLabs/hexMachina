@@ -1,3 +1,5 @@
+- name: Download hexMachina v0.26.0
+  link: https://github.com/DoclerLabs/hexMachina/releases/download/0.26.0/hexMachina-bundle-0.26.0.zip
 - name: Download hexMachina v0.25.0
   link: https://github.com/DoclerLabs/hexMachina/releases/download/0.25.0/hexMachina-bundle-0.25.0.zip
 - name: Download hexMachina v0.23.0
