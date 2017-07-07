@@ -71,6 +71,10 @@ install:
 #hexIoC
   - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
   - haxelib dev hexioc ~/hexioc
+#tink_macro
+  - haxelib install tink_macro 0.14.0
+#hexMachina
+  - haxelib dev hexmachina .
 #---- dependencies done ----
   - export DISPLAY=:99.0;
   - export AUDIODEV=null;

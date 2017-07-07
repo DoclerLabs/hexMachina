@@ -10,6 +10,7 @@
   "dependencies": 
   {
 	"hexioc": "git:https://github.com/DoclerLabs/hexIoC.git",
-	"hexunit": "git:https://github.com/DoclerLabs/hexUnit.git"
+	"hexunit": "git:https://github.com/DoclerLabs/hexUnit.git",
+	"tink_macro": "0.14.0"
   }
 }
