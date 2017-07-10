@@ -18,16 +18,16 @@
 
 #all test sources to run the whole test suite
 -cp test
--cp .haxelib/hexunit/git/test
--cp .haxelib/hexlog/git/test
--cp .haxelib/hexcore/git/test
--cp .haxelib/hexreflection/git/test
--cp .haxelib/hexannotation/git/test
--cp .haxelib/hexinject/git/test
--cp .haxelib/hexdsl/git/test
--cp .haxelib/hexservice/git/test
--cp .haxelib/hexmvc/git/test
--cp .haxelib/hexstate/git/test
--cp .haxelib/hexioc/git/test
+-cp /home/travis/hexunit/test
+-cp /home/travis/hexlog/test
+-cp /home/travis/hexcore/test
+-cp /home/travis/hexreflection/test
+-cp /home/travis/hexannotation/test
+-cp /home/travis/hexinject/test
+-cp /home/travis/hexdsl/test
+-cp /home/travis/hexservice/test
+-cp /home/travis/hexmvc/test
+-cp /home/travis/hexstate/test
+-cp /home/travis/hexioc/test
 
 -D debug
