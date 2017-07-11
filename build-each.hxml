@@ -1,19 +1,6 @@
 -main MainMachinaTest
 
-#dependencies
--lib tink_macro
-
-#all libraries
--lib hexlog
--lib hexcore
 -lib hexunit
--lib hexreflection
--lib hexannotation
--lib hexinject
--lib hexdsl
--lib hexservice
--lib hexmvc
--lib hexstate
 -lib hexioc
 
 #all test sources to run the whole test suite
