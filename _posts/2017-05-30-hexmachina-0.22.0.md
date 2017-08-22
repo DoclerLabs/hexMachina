@@ -24,11 +24,11 @@ class DependencyOwner implements hex.di.mapping.IDependencyOwner
 }
 ```
 In this example, `DependencyOwner` request mapping of : 
-| `fromType`  | `withName` |
-| ------------- | ------------- |
-| `String`  | no name  |
-| `InterfaceWithGeneric<String>`  | "name"  |
-| `Void->Void`  | the value of `hex.di.mock.MockConstants.NAME_ONE`  |
+`fromType`  | `withName`
+------------ | -------------
+`String`  | no name  |
+`InterfaceWithGeneric<String>`  | "name"
+`Void->Void`  | the value of `hex.di.mock.MockConstants.NAME_ONE`
 
 Mapping Could be provided by code with static Extension `hex.di.util.MappingDefinitionUtil.addDefinition`: 
 ```haxe
