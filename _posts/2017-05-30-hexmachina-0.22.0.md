@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "0.22.0 - @Dependency and IDependencyOwner"
+title:  "IDependencyOwner, check dependency injection at compiletime"
 image: /img/blog/hexmachina-welcome.jpg
-category: news
+category: News
 tags: [release, inject, dsl]
 ---
-Let's highlight some new feature on this new release. 
+Let's highlight one new feature arrived with hexMachina `0.22.0.` 
 
 ### hex.di.mapping.IDependencyOwner
 With this new feature is possible to check injector dependencies at compiletime. 
@@ -77,7 +77,7 @@ class AnotherDependenciesOwner implements IDependencyOwner
 }
 ```
 
-## To go further
+### To go further
 * [0.22.0 changlog](https://github.com/DoclerLabs/hexMachina/releases/tag/0.22.0)
 * [How to get started?](http://hexmachina.org/docs/getstarted/)
 

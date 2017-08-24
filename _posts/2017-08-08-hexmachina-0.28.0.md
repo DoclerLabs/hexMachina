@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "0.28.0 - @parser"
+title:  "0.28.0 - @parser and code.clone()"
 image: /img/blog/hexmachina-welcome.jpg
-category: news
+category: News
 tags: [release, flow, dsl]
 ---
 Let's highlight some new feature on this new release. 
 
 ### Custom parser can be declared in flow DSL with `@parser` metadata
 Added in `0.24.0`, `custom parser` can now be directly added in DSL file with `@parser` flow keyword. [Few custom parser examples in hexDSL](https://github.com/DoclerLabs/hexDSL/tree/master/src/hex/compiletime/flow/parser/custom).
-```haxe
+```Haxe
 @context( name = 'applicationContext' )
 @parser( hex.compiletime.flow.parser.custom.AddParser )
 {
@@ -40,7 +40,7 @@ Assert.isInstanceOf( clonedCode .locator.instance, MockClassWithoutArgument );
 Assert.notEquals( code.locator.instance, clonedCode .locator.instance );
 ```
 
-## To go further
+### To go further
 * [0.28.0 changlog](https://github.com/DoclerLabs/hexMachina/releases/tag/0.28.0)
 * [How to get started?](http://hexmachina.org/docs/getstarted/)
 

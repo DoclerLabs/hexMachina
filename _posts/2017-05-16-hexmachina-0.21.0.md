@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "0.21.0 - IAnnotationReplace"
+title:  "IAnnotationReplace - use constant in annotation"
 image: /img/blog/hexmachina-welcome.jpg
-category: news
+category: News
 tags: [release, annotation]
 ---
-Let's highlight some new feature on this new release. 
+Let's highlight one new feature on release `0.21.0`. 
 
 ### IAnnotationReplace
 
@@ -48,7 +48,7 @@ Only this order of implementation will work because of the macro execution order
 
 `class MyClass implements IInjectorContainer implements IAnnotationReplace `
 
-## To go further
+### To go further
 * [0.21.0 changlog](https://github.com/DoclerLabs/hexMachina/releases/tag/0.21.0)
 * [How to get started?](http://hexmachina.org/docs/getstarted/)
 

@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "0.27.0 - @type and @lazy"
+title:  "flow - @type and @lazy"
 image: /img/blog/hexmachina-welcome.jpg
-category: news
+category: News
 tags: [release, flow, dsl]
 ---
-Let's highlight some new feature on this new release. 
+Let's highlight two new features in flow arrived with hexMachina `0.27.0`. 
 
 ### Force typing in flow DSL with new `@type`
 By default, every object instancied in DSL use his own type as property type. With the new `@type` flow keyword is possible to apply another type to the property. Not to be confused with `@map_type` use to map object in ApplicationContext injector. 
@@ -93,7 +93,7 @@ public function testBuildingLazyInt() : Void
 	Assert.equals( 'test', LazyClass.value );
 }
 ```
-## To go further
+### To go further
 * [0.27.0 changlog](https://github.com/DoclerLabs/hexMachina/releases/tag/0.27.0)
 * [How to get started?](http://hexmachina.org/docs/getstarted/)
 
