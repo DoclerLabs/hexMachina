@@ -1,16 +1,6 @@
 package;
 
-import hex.unittest.notifier.TraceNotifier;
 import hex.unittest.runner.ExMachinaUnitCore;
-import hex.unittest.runner.TestRunner;
-#if js
-import hex.unittest.notifier.WebSocketNotifier;
-import hex.unittest.notifier.BrowserUnitTestNotifier;
-import hex.unittest.notifier.ConsoleNotifier;
-#elseif flash
-import flash.Lib;
-#end
-
 
 /**
  * ...
@@ -24,13 +14,11 @@ class MainMachinaTest
         
 		#if flash
 		TestRunner.RENDER_DELAY = 80;
-		emu.addListener( new TraceNotifier( Lib.current.loaderInfo, false, true ) );
-		#elseif js
-		emu.addListener( new ConsoleNotifier( false, true ) );
-		//emu.addListener( new BrowserUnitTestNotifier( "console" ) );
-		//emu.addListener( new WebSocketNotifier( "ws://localhost:6660" ) );
+		emu.addListener( new hex.unittest.notifier.TraceNotifier( flash.Lib.current.loaderInfo, false, true ) );
+		#elseif (php && haxe_ver < 4.0)
+		emu.addListener( new hex.unittest.notifier.TraceNotifier( false, true ) );
 		#else
-		emu.addListener( new TraceNotifier( false, true ) );
+		emu.addListener( new hex.unittest.notifier.ConsoleNotifier( false, true ) );
 		#end
 		
         emu.addTest( MachinaSuite );
