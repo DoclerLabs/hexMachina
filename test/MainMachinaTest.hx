@@ -1,6 +1,7 @@
 package;
 
 import hex.unittest.runner.ExMachinaUnitCore;
+import hex.unittest.runner.TestRunner;
 
 /**
  * ...
