@@ -21,6 +21,7 @@ class MainMachinaTest
 		#else
 		emu.addListener( new hex.unittest.notifier.ConsoleNotifier( false, true ) );
 		#end
+		emu.addListener( new hex.unittest.notifier.ExitingNotifier() );
 		
         emu.addTest( MachinaSuite );
         emu.run();
