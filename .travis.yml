@@ -72,7 +72,7 @@ install:
   - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
   - haxelib dev hexioc ~/hexioc
 #tink_macro
-  - haxelib install tink_macro 0.15.0
+  - haxelib install tink_macro 0.16.1
 #hexMachina
   - haxelib dev hexmachina .
 #---- dependencies done ----
