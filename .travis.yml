@@ -6,8 +6,7 @@ language: haxe
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
 
 haxe:
-  - "3.2.1"
-  - "3.3.0-rc.1"
+  - "3.4.0"
   - development
 
 matrix:
@@ -46,12 +45,10 @@ before_script:
   - git config --global user.name "Travis-CI"
   
 script:
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix php;
-  fi
-- if [ $TRAVIS_HAXE_VERSION != "3.2.1" ]; then haxelib run travix neko;
-  fi
-- haxelib run travix flash -swf-version 10.1
-- haxelib run travix js
+- haxe build-php.hxml && php bin/index.php
+- haxe build-neko.hxml && neko bin/MainTest.n
+- haxe build-js.hxml           && node bin/MainTest.js
+- haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/MainTest.swf
 
 before_deploy: "./.travis/pre-deploy.sh"
 
