@@ -45,10 +45,10 @@ before_script:
   - git config --global user.name "Travis-CI"
   
 script:
-- haxe build-php.hxml && php bin/index.php
-- haxe build-neko.hxml && neko bin/MainTest.n
-- haxe build-js.hxml           && node bin/MainTest.js
-- haxe build-flash.hxml -D fdb && haxe flash/run.hxml bin/MainTest.swf
+- haxelib run travix php
+- haxelib run travix neko;
+- haxelib run travix flash -swf-version 10.1
+- haxelib run travix js
 
 before_deploy: "./.travis/pre-deploy.sh"
 
