@@ -9,8 +9,8 @@
   "url": "https://github.com/DoclerLabs/hexMachina",
   "dependencies": 
   {
-	"hexunit": "git:https://github.com/DoclerLabs/hexUnit.git",
-	"hexinject": "git:https://github.com/DoclerLabs/hexInject.git",
-	"hexcommand": "git:https://github.com/DoclerLabs/hexCommand.git"
+    "hexunit": "git:https://github.com/DoclerLabs/hexUnit.git",
+    "hexinject": "git:https://github.com/DoclerLabs/hexInject.git",
+    "hexcommand": "git:https://github.com/DoclerLabs/hexCommand.git"
   }
 }

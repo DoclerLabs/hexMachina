@@ -19,17 +19,24 @@ env:
   - secure: Y7k64lsVnGXXFyEttqcYONkQog9pynxGIXnJAa/sdbehdknjQooDQbqWbd2CDzHs1lp7I5kppD3oM8jjkd+7ZH0EjnhzPr2f1OzdcLN3djml2hrKaDr4EMrQW9K3pDCAKP2CtaQtbxjm2l5QHEUcjLe82d/dS5TgEemUPA7/JYM4afCoXpGnCVZcknf5PbR2W3hyFk1R9+8B++5MuH3pNMwZvYEWwzUQLV4GZppe22N7ZlFjLNKnZ9tOd4QcRT9528ujvIKR0K9antuJDBQKTCQqxCTcQmndDp0lEuBhfC9ZDlrMVTLbKUD4B/0g0wHlMKsiJIWo1L03Ec5aASRV4uKRC/4RSLqmY1EXDEuDb1xG4Pg4/NH2Qpqju0qHE/vT5jYNMr2rmnQpcXZEotyoJ70wtIKRR0iIwsSAvTI5SKyNBXg8Wpkqu83/03IfgFqCXPAvOmuv7Pp8zPtLNcz7XnjTiwRFSGvwOzX8jz/+JwCCagLCo6AEcCDT4HCj6hUtHfWdrcyBBHUD40rFJjEDyYyl5MX9yJonznwiWo8Nu3Gx5f4C5WmdEQpxuwUK5wz4uZdH3gpCu7LZyvjUxdPwJNRp5P0uAdptH/vLyVMSyxBG4yC+KFMjWmj65pk0hW0YdS0JcuzgLrtb4r0TvtyElcv04vN7i0sKhY3ai+63IJ8=
   - TRAVIS_NODE_VERSION="6.6.0"
 
+before_install:
+  - echo $TRAVIS_BRANCH
+  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=master; fi
+  - echo $TRAVIS_TAG
+  - if [[ "$TRAVIS_TAG" != "" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_TAG; fi
+  - echo $DEPENDENCIES_BRANCH
+
 install:
 - haxelib git travix https://github.com/aliokan/travix.git --always
 - haxelib newrepo
 - haxelib git travix https://github.com/aliokan/travix.git --always
-- haxelib git hexcore https://github.com/DoclerLabs/hexCore.git --always
-- haxelib git hexunit https://github.com/DoclerLabs/hexLog.git --never
-- haxelib git hexreflection https://github.com/DoclerLabs/hexReflection.git --never
-- haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git --never
-- haxelib git hexinject https://github.com/DoclerLabs/hexInject.git --never
-- haxelib git hexcommand https://github.com/DoclerLabs/hexCommand.git --never
-- haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git --never
+- haxelib git hexcore https://github.com/DoclerLabs/hexCore.git $DEPENDENCIES_BRANCH --always
+- haxelib git hexlog https://github.com/DoclerLabs/hexLog.git $DEPENDENCIES_BRANCH --never
+- haxelib git hexreflection https://github.com/DoclerLabs/hexReflection.git $DEPENDENCIES_BRANCH --never
+- haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git $DEPENDENCIES_BRANCH --never
+- haxelib git hexinject https://github.com/DoclerLabs/hexInject.git $DEPENDENCIES_BRANCH --never
+- haxelib git hexcommand https://github.com/DoclerLabs/hexCommand.git $DEPENDENCIES_BRANCH --never
+- haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git $DEPENDENCIES_BRANCH --never
 
 - haxelib dev hexmachina .
 - haxelib path hexmachina

@@ -13,7 +13,9 @@ class MainMachinaTest
 	{
 		var emu = new ExMachinaUnitCore();
 
-		#if flash
+		#if travix
+		emu.addListener( new hex.unittest.notifier.TravixNotifier( false, true ) );
+		#elseif flash
 		TestRunner.RENDER_DELAY = 80;
 		emu.addListener( new hex.unittest.notifier.TraceNotifier( flash.Lib.current.loaderInfo, false, true ) );
 		#elseif (php && haxe_ver < 4.0)
