@@ -28,7 +28,7 @@ install:
 - haxelib git hexreflection https://github.com/DoclerLabs/hexReflection.git --never
 - haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git --never
 - haxelib git hexinject https://github.com/DoclerLabs/hexInject.git --never
-- haxelib git hexmvc https://github.com/DoclerLabs/hexCommand.git --never
+- haxelib git hexcommand https://github.com/DoclerLabs/hexCommand.git --never
 - haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git --never
 
 - haxelib dev hexmachina .
