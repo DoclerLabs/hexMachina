@@ -14,7 +14,6 @@ class MainMachinaTest
 		var emu = new ExMachinaUnitCore();
 
 		#if travix
-		travix.Logger.exit( 0 );
 		emu.addListener( new hex.unittest.notifier.TravixNotifier( false, true ) );
 		#elseif flash
 		TestRunner.RENDER_DELAY = 80;
