@@ -1,11 +1,10 @@
 -cp test
+-cp .haxelib/hexlog/git/test
 -cp .haxelib/hexcore/git/test
--cp .haxelib/hexinject/git/test
--cp .haxelib/hexmvc/git/test
--cp .haxelib/hexioc/git/test
--cp .haxelib/hexservice/git/test
+-cp .haxelib/hexreflection/git/test
 -cp .haxelib/hexannotation/git/test
--cp .haxelib/hexstate/git/test
+-cp .haxelib/hexinject/git/test
+-cp .haxelib/hexcommand/git/test
 -cp .haxelib/hexunit/git/test
 
 -main MainMachinaTest

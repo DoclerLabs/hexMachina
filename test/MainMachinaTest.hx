@@ -1,16 +1,7 @@
 package;
 
-import hex.unittest.notifier.TraceNotifier;
 import hex.unittest.runner.ExMachinaUnitCore;
 import hex.unittest.runner.TestRunner;
-#if js
-import hex.unittest.notifier.WebSocketNotifier;
-import hex.unittest.notifier.BrowserUnitTestNotifier;
-import hex.unittest.notifier.ConsoleNotifier;
-#elseif flash
-import flash.Lib;
-#end
-
 
 /**
  * ...
@@ -20,22 +11,19 @@ class MainMachinaTest
 {
 	static public function main() : Void
 	{
-		trace("MainMachinaTest::main()");
 		var emu = new ExMachinaUnitCore();
-        
+
 		#if flash
-		flash.system.System.exit( 1 );
-		//TestRunner.RENDER_DELAY = 0;
-		emu.addListener( new TraceNotifier( Lib.current.loaderInfo ) );
-		#elseif js
-		emu.addListener( new ConsoleNotifier( false ) );
-		//emu.addListener( new BrowserUnitTestNotifier( "console" ) );
-		//emu.addListener( new WebSocketNotifier( "ws://localhost:6660" ) );
+		TestRunner.RENDER_DELAY = 80;
+		emu.addListener( new hex.unittest.notifier.TraceNotifier( flash.Lib.current.loaderInfo, false, true ) );
+		#elseif (php && haxe_ver < 4.0)
+		emu.addListener( new hex.unittest.notifier.TraceNotifier( false, true ) );
 		#else
-		emu.addListener( new TraceNotifier( false ) );
+		emu.addListener( new hex.unittest.notifier.ConsoleNotifier( false, true ) );
 		#end
-		
-        emu.addTest( MachinaSuite );
-        emu.run();
+		emu.addListener( new hex.unittest.notifier.ExitingNotifier() );
+
+		emu.addTest( MachinaSuite );
+		emu.run();
 	}
 }

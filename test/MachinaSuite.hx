@@ -3,11 +3,11 @@ package;
 import hex.HexAnnotationSuite;
 import hex.HexCoreSuite;
 import hex.HexInjectSuite;
-import hex.HexIoCSuite;
-import hex.HexMVCSuite;
+import hex.HexLogSuite;
+import hex.HexReflectionSuite;
 import hex.HexServiceSuite;
 import hex.HexUnitSuite;
-import hex.state.HexStateSuite;
+import hex.HexCommanSuite;
 
 /**
  * ...
@@ -16,5 +16,13 @@ import hex.state.HexStateSuite;
 class MachinaSuite
 {
 	@Suite( "Machina suite" )
-    public var list : Array<Class<Dynamic>> = [ HexUnitSuite, HexCoreSuite, HexInjectSuite, HexServiceSuite, HexMVCSuite, HexIoCSuite, HexStateSuite, HexAnnotationSuite ];
+	public var list : Array<Class<Dynamic>> = [
+		HexLogSuite,
+		HexCoreSuite,
+		HexReflectionSuite,
+		HexAnnotationSuite,
+		HexInjectSuite,
+		HexCommandSuite,
+		HexUnitSuite
+	];
 }
