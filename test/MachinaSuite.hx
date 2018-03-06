@@ -5,9 +5,8 @@ import hex.HexCoreSuite;
 import hex.HexInjectSuite;
 import hex.HexLogSuite;
 import hex.HexReflectionSuite;
-import hex.HexServiceSuite;
 import hex.HexUnitSuite;
-import hex.HexCommanSuite;
+import hex.HexCommandSuite;
 
 /**
  * ...
