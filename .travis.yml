@@ -35,6 +35,7 @@ install:
 - haxelib git hexreflection https://github.com/DoclerLabs/hexReflection.git $DEPENDENCIES_BRANCH --never
 - haxelib git hexannotation https://github.com/DoclerLabs/hexAnnotation.git $DEPENDENCIES_BRANCH --never
 - haxelib git hexinject https://github.com/DoclerLabs/hexInject.git $DEPENDENCIES_BRANCH --never
+- haxelib git hexdsl https://github.com/DoclerLabs/hexDSL.git $DEPENDENCIES_BRANCH --never
 - haxelib git hexcommand https://github.com/DoclerLabs/hexCommand.git $DEPENDENCIES_BRANCH --never
 - haxelib git hexunit https://github.com/DoclerLabs/hexUnit.git $DEPENDENCIES_BRANCH --never
 

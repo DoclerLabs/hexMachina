@@ -10,7 +10,7 @@
   "dependencies": 
   {
     "hexunit": "git:https://github.com/DoclerLabs/hexUnit.git",
-    "hexinject": "git:https://github.com/DoclerLabs/hexInject.git",
+    "hexdsl": "git:https://github.com/DoclerLabs/hexDSL.git",
     "hexcommand": "git:https://github.com/DoclerLabs/hexCommand.git"
   }
 }
