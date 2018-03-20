@@ -1,12 +1,13 @@
 package;
 
-import hex.HexAnnotationSuite;
-import hex.HexCoreSuite;
-import hex.HexInjectSuite;
 import hex.HexLogSuite;
+import hex.HexCoreSuite;
 import hex.HexReflectionSuite;
-import hex.HexUnitSuite;
+import hex.HexAnnotationSuite;
+import hex.HexInjectSuite;
+import hex.HexDSLSuite;
 import hex.HexCommandSuite;
+import hex.HexUnitSuite;
 
 /**
  * ...
@@ -21,6 +22,7 @@ class MachinaSuite
 		HexReflectionSuite,
 		HexAnnotationSuite,
 		HexInjectSuite,
+		HexDSLSuite,
 		HexCommandSuite,
 		HexUnitSuite
 	];
