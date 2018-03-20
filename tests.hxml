@@ -4,6 +4,7 @@
 -cp .haxelib/hexreflection/git/test
 -cp .haxelib/hexannotation/git/test
 -cp .haxelib/hexinject/git/test
+-cp .haxelib/hexdsl/git/test
 -cp .haxelib/hexcommand/git/test
 -cp .haxelib/hexunit/git/test
 

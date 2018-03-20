@@ -5,7 +5,7 @@ import hex.HexCoreSuite;
 import hex.HexReflectionSuite;
 import hex.HexAnnotationSuite;
 import hex.HexInjectSuite;
-import hex.HexDSLSuite;
+import hex.HexDslSuite;
 import hex.HexCommandSuite;
 import hex.HexUnitSuite;
 
@@ -22,7 +22,7 @@ class MachinaSuite
 		HexReflectionSuite,
 		HexAnnotationSuite,
 		HexInjectSuite,
-		HexDSLSuite,
+		HexDslSuite,
 		HexCommandSuite,
 		HexUnitSuite
 	];
