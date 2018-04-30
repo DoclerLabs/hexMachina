@@ -5,7 +5,7 @@ language: haxe
 
 # haxe versions : http://haxe.org/website-content/downloads/versions.json
 haxe:
-  - "3.4.0"
+  - "3.4.7"
   - development
 
 matrix:
@@ -20,59 +20,66 @@ env:
 
 before_install:
   - echo $TRAVIS_BRANCH
-  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=master; fi
-  - echo $TRAVIS_TAG
-  - if [[ "$TRAVIS_TAG" != "" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_TAG; fi
-  - echo $DEPENDENCIES_BRANCH
-  - sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google-chrome.list" "/opt/google/chrome/cron/google-chrome"
-  - sudo dpkg --add-architecture i386
-  - sudo apt-get update
-  - sudo apt-get install -qq libcurl3:i386
-  - sudo apt-get install -qq libglib2.0-0:i386
-  - sudo apt-get install -qq libx11-6:i386
-  - sudo apt-get install -qq libxext6:i386
-  - sudo apt-get install -qq libxt6:i386
-  - sudo apt-get install -qq libxcursor1:i386
-  - sudo apt-get install -qq libnss3:i386
-  - sudo apt-get install -qq libgtk2.0-0:i386
-  
+    - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_BRANCH; else export DEPENDENCIES_BRANCH=master; fi
+    - echo $TRAVIS_TAG
+    - if [[ "$TRAVIS_TAG" != "" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_TAG; fi
+    - echo $DEPENDENCIES_BRANCH
+    - sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google-chrome.list" "/opt/google/chrome/cron/google-chrome"
+    - sudo dpkg --add-architecture i386
+    - sudo apt-get update
+    - sudo apt-get install -qq libcurl3:i386
+    - sudo apt-get install -qq libglib2.0-0:i386
+    - sudo apt-get install -qq libx11-6:i386
+    - sudo apt-get install -qq libxext6:i386
+    - sudo apt-get install -qq libxt6:i386
+    - sudo apt-get install -qq libxcursor1:i386
+    - sudo apt-get install -qq libnss3:i386
+    - sudo apt-get install -qq libgtk2.0-0:i386
+
 install:
   - haxelib newrepo
-#hexLog
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexLog.git ~/hexlog
-  - haxelib dev hexlog ~/hexlog
-#hexCore
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCore.git ~/hexcore
-  - haxelib dev hexcore ~/hexcore
-#hexUnit
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexUnit.git ~/hexunit
-  - haxelib dev hexunit ~/hexunit
-#hexReflection
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexReflection.git ~/hexreflection
-  - haxelib dev hexreflection ~/hexreflection
-#hexAnnotation
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ~/hexannotation
-  - haxelib dev hexannotation ~/hexannotation
-#hexInject
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexInject.git ~/hexinject
-  - haxelib dev hexinject ~/hexinject
-#hexDSL
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDSL.git ~/hexdsl
-  - haxelib dev hexdsl ~/hexdsl
-#hexMVC
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexMVC.git ~/hexmvc
-  - haxelib dev hexmvc ~/hexmvc
-#hexService
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexService.git ~/hexservice
-  - haxelib dev hexservice ~/hexservice
-#hexState
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexState.git ~/hexstate
-  - haxelib dev hexstate ~/hexstate
-#hexIoC
-  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexIoC.git ~/hexioc
-  - haxelib dev hexioc ~/hexioc
-#tink_macro
-  - haxelib install tink_macro 0.16.1
+  - export BRANCH_REF=$DEPENDENCIES_BRANCH
+# hexLog
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexLog.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexLog.git ./hexlog
+  - haxelib dev hexlog ./hexlog
+# hexCore
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexCore.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCore.git ./hexcore
+  - haxelib install ./hexcore/haxelib.json --always
+  - haxelib dev hexcore ./hexcore
+# hexUnit
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexUnit.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexUnit.git ./hexunit
+  - haxelib dev hexunit ./hexunit
+# hexReflection
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexReflection.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexReflection.git ./hexreflection
+  - haxelib dev hexreflection ./hexreflection
+# hexAnnotation
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexAnnotation.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexAnnotation.git ./hexannotation
+  - haxelib dev hexannotation ./hexannotation
+# hexInject
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexInject.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexInject.git ./hexinject
+  - haxelib dev hexinject ./hexinject
+# hexDsl
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexDsl.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDsl.git ./hexdsl
+  - haxelib dev hexdsl ./hexdsl
+# hexCommand
+  - if [[ $( git ls-remote --heads https://github.com/DoclerLabs/hexCommand.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
+  - echo Checking out $DEPENDENCIES_BRANCH
+  - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexCommand.git ./hexcommand
+  - haxelib dev hexcommand ./hexcommand
 #hexMachina
   - haxelib dev hexmachina .
 #---- dependencies done ----
