@@ -1,16 +1,13 @@
 package;
 
-import hex.HexAnnotationSuite;
-import hex.HexCoreSuite;
-import hex.HexDslSuite;
-import hex.HexInjectSuite;
-import hex.HexIoCSuite;
 import hex.HexLogSuite;
-import hex.HexMVCSuite;
-import hex.HexReflectionSuite;
-import hex.HexServiceSuite;
+import hex.HexCoreSuite;
 import hex.HexUnitSuite;
-import hex.HexStateSuite;
+import hex.HexReflectionSuite;
+import hex.HexAnnotationSuite;
+import hex.HexInjectSuite;
+import hex.HexDslSuite;
+import hex.HexCommandSuite;
 
 /**
  * ...
@@ -20,16 +17,13 @@ class MachinaSuite
 {
 	@Suite( "Machina suite" )
 	public var list : Array<Class<Dynamic>> = [
-		HexUnitSuite,
+		HexLogSuite,
 		HexCoreSuite,
+		HexUnitSuite,
 		HexReflectionSuite,
 		HexAnnotationSuite,
 		HexInjectSuite,
 		HexDslSuite,
-		HexServiceSuite,
-		HexMVCSuite,
-		HexStateSuite,
-		HexIoCSuite,
-		HexLogSuite
+		HexCommandSuite,
 	];
 }

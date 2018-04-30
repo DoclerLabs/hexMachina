@@ -1,7 +1,8 @@
 -main MainMachinaTest
 
 -lib hexunit
--lib hexioc
+-lib hexdsl
+-lib hexcommand
 
 #all test sources to run the whole test suite
 -cp test
@@ -12,9 +13,6 @@
 -cp /home/travis/hexannotation/test
 -cp /home/travis/hexinject/test
 -cp /home/travis/hexdsl/test
--cp /home/travis/hexservice/test
--cp /home/travis/hexmvc/test
--cp /home/travis/hexstate/test
--cp /home/travis/hexioc/test
+-cp /home/travis/hexcommand/test
 
 -D debug
