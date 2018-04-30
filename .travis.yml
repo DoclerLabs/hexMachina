@@ -37,7 +37,6 @@ before_install:
   - sudo apt-get install -qq libgtk2.0-0:i386
 
 install:
-  - haxelib newrepo
   - export BRANCH_REF=$DEPENDENCIES_BRANCH
 # hexLog
   - if [[ $( git ls-remote https://github.com/DoclerLabs/hexLog.git $DEPENDENCIES_BRANCH | wc -l ) == "0" ]]; then export DEPENDENCIES_BRANCH=develop; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
