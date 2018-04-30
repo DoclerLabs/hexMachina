@@ -20,21 +20,21 @@ env:
 
 before_install:
   - echo $TRAVIS_BRANCH
-    - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_BRANCH; else export DEPENDENCIES_BRANCH=master; fi
-    - echo $TRAVIS_TAG
-    - if [[ "$TRAVIS_TAG" != "" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_TAG; fi
-    - echo $DEPENDENCIES_BRANCH
-    - sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google-chrome.list" "/opt/google/chrome/cron/google-chrome"
-    - sudo dpkg --add-architecture i386
-    - sudo apt-get update
-    - sudo apt-get install -qq libcurl3:i386
-    - sudo apt-get install -qq libglib2.0-0:i386
-    - sudo apt-get install -qq libx11-6:i386
-    - sudo apt-get install -qq libxext6:i386
-    - sudo apt-get install -qq libxt6:i386
-    - sudo apt-get install -qq libxcursor1:i386
-    - sudo apt-get install -qq libnss3:i386
-    - sudo apt-get install -qq libgtk2.0-0:i386
+  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_BRANCH; else export DEPENDENCIES_BRANCH=master; fi
+  - echo $TRAVIS_TAG
+  - if [[ "$TRAVIS_TAG" != "" ]]; then export DEPENDENCIES_BRANCH=$TRAVIS_TAG; fi
+  - echo $DEPENDENCIES_BRANCH
+  - sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google-chrome.list" "/opt/google/chrome/cron/google-chrome"
+  - sudo dpkg --add-architecture i386
+  - sudo apt-get update
+  - sudo apt-get install -qq libcurl3:i386
+  - sudo apt-get install -qq libglib2.0-0:i386
+  - sudo apt-get install -qq libx11-6:i386
+  - sudo apt-get install -qq libxext6:i386
+  - sudo apt-get install -qq libxt6:i386
+  - sudo apt-get install -qq libxcursor1:i386
+  - sudo apt-get install -qq libnss3:i386
+  - sudo apt-get install -qq libgtk2.0-0:i386
 
 install:
   - haxelib newrepo
