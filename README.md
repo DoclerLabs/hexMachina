@@ -9,10 +9,7 @@ Source code is split in different repositories :
 * [hexAnnotation](https://github.com/doclerlabs/hexAnnotation)
 * [hexInject](https://github.com/doclerlabs/hexInject)
 * [hexDSL](https://github.com/doclerlabs/hexDSL)
-* [hexService](https://github.com/doclerlabs/hexService)
-* [hexMVC](https://github.com/doclerlabs/hexMVC)
-* [hexState](https://github.com/doclerlabs/hexState)
-* [hexIoC](https://github.com/doclerlabs/hexIoC)
+* [hexCommand](https://github.com/doclerlabs/hexCommand)
 
 Organigramme : 
 
@@ -24,14 +21,14 @@ Organigramme :
     |                   +----------+                   |
     |                         |                        |
     |                         v                        |
-    |                   +----------+                   |
-    |                   | hexCore  |----------+        |
-    |                   +----------+          |        |
-    |                         |               |        |
-    |                         v               v        |
-    |                +----------------+ +----------+   |
-    |                | hexReflection  | | hexUnit  |   |
-    |                +----------------+ +----------+   |
+    |                   +----------+                   |   +---------------+
+    |       +---------- | hexCore  |<------------------+---|  tink macro   |
+    |       |           +----------+                   |   +---------------+
+    |       |                 |                        |
+    |       v                 v                        |
+    |  +----------+  +----------------+                |
+    |  | hexUnit  |  | hexReflection  |                |
+    |  +----------+  +----------------+                |
     |                         |                        |
     |                         v                        |
     |                +----------------+                |
@@ -40,23 +37,13 @@ Organigramme :
     |                         |                        |
     |                         v                        |
     |                +----------------+                |
-    |          +-----|   hexInject    |------+         |
-    |          |     +----------------+      |         |
-    |          |              |              |         |
-    |          v              v              v         |
-    |   +------------+ +------------+ +------------+   |   +---------------+
-    |   |   hexMVC   | | hexService | |   hexDSL   |<--+---|  tink macro   |
-    |   +------------+ +------------+ +------------+   |   +---------------+
-    |          |              |              |         |
-    |          v              |              |         |
-    |   +------------+        |              |         |
-    |   |  hexState  |        |              |         |
-    |   +------------+        |              |         |
-    |          |              |              |         |
-    |          v              v              v         |
-    |   +------------------------------------------+   |
-    |   |                  hexIoC                  |   |
-    |   +------------------------------------------+   |
+    |                |   hexInject    |                |
+    |                +----------------+                |
+    |                   |           |                  |
+    |                   v           v                  |
+    |          +------------+  +------------+          |
+    |          | hexCommand |  |   hexDSL   |          |
+    |          +------------+  +------------+          |
     |                                                  |
     +--------------------------------------------------+
 
