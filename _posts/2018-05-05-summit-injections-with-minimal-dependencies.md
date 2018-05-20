@@ -2,7 +2,7 @@
 layout: post
 title:  "Haxe Summit 2018 - Consuming injections with minimal dependencies"
 image: /img/blog/summit-2018-us.jpg
-category: News
+category: Showcase
 tags: [event,video,inject,dsl]
 ---
 Find below the video and slide for Francis’s talk about hexInject at Haxe Summit 2018 in Seattle.

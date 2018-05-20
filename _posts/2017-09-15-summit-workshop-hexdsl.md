@@ -2,7 +2,7 @@
 layout: post
 title:  "Haxe Summit 2017 - A deep dive into hexDSL"
 image: /img/blog/summit-2017-eu.jpg
-category: News
+category: Tutorial
 tags: [event,video,dsl]
 ---
 Find below the video for Laurent’s workshop about hexDSL at Haxe Summit 2017 in Amsterdam.

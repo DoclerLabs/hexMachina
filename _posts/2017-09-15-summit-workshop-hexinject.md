@@ -2,7 +2,7 @@
 layout: post
 title:  "Haxe Summit 2017 - A deep dive into hexInject"
 image: /img/blog/summit-2017-eu.jpg
-category: News
+category: Tutorial
 tags: [event,video,inject]
 ---
 Find below the video for Stepan’s workshop about hexInject at Haxe Summit 2017 in Amsterdam.
