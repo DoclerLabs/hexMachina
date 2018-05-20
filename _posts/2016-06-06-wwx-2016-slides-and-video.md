@@ -3,9 +3,9 @@ layout: post
 title:  "WWX 2016 - slides and video"
 image: /img/blog/wwx2016.jpg
 category: News
-tags: [event,video,index]
+tags: [event,video]
 ---
-Find bellow videos and slides for Francis talks at WWX 2016 in Paris.
+Find below videos and slides for Francis talks at WWX 2016 in Paris.
 
 ### hexMachina - urban framework for hardcore developers
 <iframe width="853" height="480" src="https://www.youtube.com/embed/OJQ38DJCw9k" frameborder="0" allowfullscreen></iframe>
