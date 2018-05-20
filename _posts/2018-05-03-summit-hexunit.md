@@ -3,7 +3,7 @@ layout: post
 title:  "Haxe Summit 2018 - A deep dive into hexUnit"
 image: /img/blog/summit-2018-us.jpg
 category: News
-tags: [event,video]
+tags: [event,video,unit-test]
 ---
 Find below the video for Laurent’s talk about hexUnit at Haxe Summit 2018 in Seattle.
 

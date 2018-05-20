@@ -3,7 +3,7 @@ layout: post
 title:  "Haxe Summit 2017 - DSL, mon amour!"
 image: /img/blog/summit-2017-eu.jpg
 category: News
-tags: [event,video]
+tags: [event,video,dsl]
 ---
 Find below the video for Francis’s talk at Haxe Summit 2017 in Amsterdam.
 
