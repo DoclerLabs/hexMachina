@@ -89,6 +89,7 @@ install:
   - if [ $( git ls-remote https://github.com/DoclerLabs/hexDsl.git $BRANCH_REF | wc -l ) == "0" ]; then export DEPENDENCIES_BRANCH=master; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
   - echo Checking out $DEPENDENCIES_BRANCH
   - git clone --recursive -b $DEPENDENCIES_BRANCH https://github.com/DoclerLabs/hexDsl.git ~/hexdsl
+  - haxelib install ~/hexdsl/haxelib.json --always
   - haxelib dev hexdsl ~/hexdsl
 # hexCommand
   - if [ $( git ls-remote https://github.com/DoclerLabs/hexCommand.git $BRANCH_REF | wc -l ) == "0" ]; then export DEPENDENCIES_BRANCH=master; else export DEPENDENCIES_BRANCH=$BRANCH_REF; fi
